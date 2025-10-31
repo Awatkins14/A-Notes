@@ -10,6 +10,7 @@ Module 1 10/29/2025
 	- Procedures
 	- Impacts 
 
+----------------------------------------------
 CompTIA Troubleshooting Methodology 
 1- Identify the problem 
 2- Establish a theory 
@@ -19,16 +20,19 @@ CompTIA Troubleshooting Methodology
 6- document findings 
 7- Teach moment 
 
+------------------------------------------------------
 Typical Duties of an entry level It support pro:
 - solve teach issues 
 - install software
 - help fix devices
 
+----------------------------------------------------
 typical entry- level it support job titles:
 - IT support specialist 
 - IT support Technician 
 - Help Desk Technician  
 
+-------------------------------------
 Words  
 - operating procedures (SOPs) 
 - central processing unit (CPU)
@@ -37,7 +41,7 @@ Words
 
 
 
-
+-----------------------------------
 Skills and Abilities 1.1.2
 - problem Solving 
 	- step-by-step process 
@@ -53,11 +57,13 @@ Skills and Abilities 1.1.2
 	- Lifelong learner 
 
 
+-------------------------------------------------
 The troubleshooting Methodology 1.2
 - learning outcomes 
 	- What is the troubleshooting methodology?
 	- Why would a technician want to utilize a process to troubleshoot?
 
+-----------------------------------------------
 Best Practice Methodology 1.2.1
 - causes, symptoms, and consequences
 	- A computer system has a fault in the hard disk drive (cause).
@@ -78,6 +84,7 @@ Best Practice Methodology 1.2.1
 	5- Verify full-system functionality and, if applicable, implement preventive measures.
 	6- Document the findings, lessons learned, actions, and outcomes.
 
+-------------------------------------------------
 Identify the Problem 1.2.2
 -Gather Information from the User
 	- What are the exact error messages appearing on the screen or coming from the speaker?
@@ -91,19 +98,22 @@ Identify the Problem 1.2.2
 	- Check when a backup was last made
 
 
+---------------------------------------------------------
 Establish and Test a Theory 1.2.3
 - Conduct Research
 
-
+---------------------------------------------------------
 Question the Obvious 1.2.4
 - step-by-step on what should happen 
 - observing the user 
 - break the troubleshooting process into compartments or categories
 	- such as power, hardware components, drivers/firmware, software, network, and user actions
 
+------------------------------------------------------------
 Establish a New Theory or Escalate 1.2.5
 - Choosing whether to escalate a problem is complex because you must balance the need to resolve a problem in a timely fashion against the possibility of incurring additional costs or adding to the burdens that senior staff are already coping with. You should be guided by policies and practices in the company you work for. When you escalate a problem, make sure that what you have found out or attempted so far is documented. After that, describe the problem clearly to whoever takes over or provides you with assistance.
 
+-----------------------------------------------------------
 Implement a Plan of Action 1.2.6
 - next steps to solve the problem
 - There are typically three generic approaches to resolving an IT problem:
@@ -116,7 +126,7 @@ Implement a Plan of Action 1.2.6
 	- made notes on what you did 
 - Refer to Vendor Instructions 
 
-
+----------------------------------------------------------------
 Verify and Document 1.2.7
 -  test that it fixes the reported problem and that the system as a whole continues to function normally
 	- Trying to use a component or performing the activity that prompted the problem report

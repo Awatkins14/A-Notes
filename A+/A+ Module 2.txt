@@ -1,2 +1,369 @@
 Module 2 10/29/2025
 -------------------------------------------
+Cable Types
+-Personal computer : front
+	- Optical disc drive(going away)
+	- unused optical disc drive Bays 
+	- front I/O panel (audio and USB)
+	- power Button 
+	- Temperature display on Case 
+	- fan Vents for Airflow 
+
+-Personal computer : Back
+	- power supply with Fan 
+	- chassis fan airflow cutout 
+	- Motherboard (I/O panel)
+	- Expansion Card Slot (in use)
+	- Expansion Card Slot(not in use)
+
+- Universal serial bus (USB) Cables
+	-USB 2.0 (black)
+		- Type A
+		- Type B
+		- Type B Mini 
+		- Type B Micro	
+	-USB 3.0 and 3.1 (you can see sometime if it blue )
+		- Type A 
+		- Type B
+		- Type B micro 
+		- Type C
+
+- Video Cables
+	- Mini-HDMI
+	- HDMI (most poplar)
+	- DisplayPort 
+	- VGA (Blue 15 pins) (Legacy) 
+	- DVI (Legacy) 
+		- DVI-A
+		- DVI-D (Single link)	
+		- DVI-I (Single link)
+		- DVI-D (Dual link)
+		- DVI-I (Dual link)
+
+-SATA Hard Drive Cables
+	- Data Cable 
+	- Power Cable 
+
+------------------------------------------------
+Motherboards 
+- The purpose of a motherboard 
+	- it make connections to everything 
+
+- The Bus Systems 
+	-wires 
+
+-Motherboard Functions 
+	- Video Bus 
+	- Memory Bus
+	- Data Bus
+
+- Motherboard form factors 
+	- Proprietary (shape and size for that computer)
+	- Custom Designs ( can go into different ones)
+	- ITX form Factor (custom computer)
+
+- Motherboard Expansion connectors
+	-PCI 
+		- video card 
+		- PCI 
+		- 4X 
+		- 1X
+
+--------------------------------------
+Words 
+- power supply unit (PSU)
+- input/output (I/O)
+- electrostatic discharge (ESD)
+- electromagnetic interference (EMI)
+- Vertical Alignment (VA)
+- Twisted Nematic (TN)
+- In-Plane Switching (IPS)
+- Organic Light-Emitting Diode (OLED) 
+- High-Definition Multimedia Interface (HDMI)
+- Multi-Stream Transport (MST)
+- Serial Advanced Technology Attachment (SATA)
+- External Serial Advanced Technology Attachment (eSATA)
+- random-access memory (RAM)
+- central processing unit (CPU)
+- megahertz (MHz)
+- gigahertz (GHz)
+
+-----------------------------------------
+lab Explore the Lab Interface 2.1.2
+	- Move from your starting location in the networking closet to Office 2.
+	- Add the monitor to Office 2.
+	- Use an HDMI cable to connect the monitor to the Office2 computer.
+	- Use an AC power cable to give the monitor power from the outlet.
+	- Add the keyboard and mouse to the workspace and plug them into the back of the computer.
+	- Turn on the monitor and the computer.
+
+--------------------------------------------
+Peripheral Devices 2.1.3
+	- I/O ports on a motherboard
+	- Interfaces, Ports, and Connectors
+		-A hardware port is the external connection point for a bus interface, allowing data transfer to and from devices. 
+	- Peripheral cable for the Universal Serial Bus (USB) interface
+	- Binary Data Storage and Transfer units
+		-1000—Kilobits (Kb/s or Kbps) and kilobytes (KB/s and KBps).
+		-1000x1000—Megabits (Mb/s) or megabytes (MB/s).
+		-1000x1000x1000—Gigabits (Gb/s) and gigabytes (GB/s).
+
+----------------------------------------------
+Universal Serial Bus Cables 2.1.4
+- USB Connector Types
+	- Type A: Flat rectangular connector for host and some peripheral devices, inserted with the USB symbol facing up.
+	- Type B: Square connector with a beveled top for large devices like printers.
+	- Type B Mini: Smaller connector for smaller peripheral devices like early digital cameras, but now rarely used.
+	- Type B Micro: Flatter connector for smaller devices like smartphones and tablets.
+
+- Cable Length
+	- 3 meters for LowSpeed devices
+	- 5 meters for FullSpeed and HighSpeed devices
+
+-------------------------------------------------
+Lab: Install USB Devices 2.1.7
+
+	- Place the USB Hub on the workbench and connect it to the computer.
+	- Connect the following devices to the USB Hub:
+		- Inkjet Printer
+		- Laser Printer
+		- Scanner
+	- Place the portable USB hard drive on the workbench and connect it to the computer.
+
+----------------------------------------------------------
+Display Types 2.1.8
+
+	- In-Plane Switching (IPS): A type of liquid crystal display technology where the liquid crystals are aligned parallel to the screen, allowing for consistent light transmission and color reproduction.
+		- Pros: Superior color accuracy and wide viewing angles, making them ideal for graphic design and professional use.
+		- Cons: Typically, slower response times compared to TN panels, which may affect fast-paced gaming.
+	
+	-Twisted Nematic (TN): A type of liquid crystal display technology where the liquid crystals twist 90 degrees between the electrodes to control light passage and create images on the screen.
+		-Pros: Faster response times and higher refresh rates, which are preferred for gaming.
+		-Cons: Poorer color reproduction and limited viewing angles.
+
+	-Vertical Alignment (VA): A type of liquid crystal display technology where the liquid crystals are aligned vertically to the glass substrates and tilt when voltage is applied to control light passage and create images.
+		- Pros: Better color accuracy and viewing angles than TN.
+		- Cons: Slower response times than TN but better than IPS in some cases. VA panels can exhibit color shifting when viewed from extreme angles.
+
+	- Organic Light-Emitting Diode (OLED):display is a type of display technology where each pixel emits its own light through organic compounds when an electric current is applied.
+		- Pros: Excellent color accuracy, contrast ratios, energy efficiency, and true blacks due to self-emissive pixels.
+		- Cons: Potential for burn-in, where static images can leave permanent marks if displayed for long periods.
+
+	- Mini-LED Technology: display is a type of display technology that uses thousands of tiny LEDs for backlighting, allowing for more precise control of brightness and contrast in the image.
+		- Pros: Mini-LED technology offers improved brightness, better contrast and black levels, enhanced color accuracy, and reduced halo effect, allowing for thin and lightweight display designs suitable for a variety of applications.
+		- Cons: Mini-LED displays are more expensive, can consume more power than OLEDs, and while they reduce blooming, they do not achieve the true blacks of OLED technology and add complexity to the manufacturing process.
+
+--------------------------------------------------------------
+Display Components 2.1.9
+
+-  Touch Screens and Digitizers:
+	- Integral for interactive displays, allowing direct interaction through touch or stylus. This is common in smartphones, tablets, and some laptops.
+
+- Inverter:
+	- Crucial in older LCDs for converting DC power to AC for the backlight. Modern displays with LED backlighting typically do not require an inverter.
+
+- Pixel Density: 
+	-Higher density results in sharper images.
+
+- Refresh Rates: 
+	- Higher rates (measured in Hz) provide smoother motion, which is important for gaming and video playback.
+
+- Screen Resolution: 
+	-Defines clarity and detail of the display. Common resolutions include:
+	- Full HD (1920x1080)
+	- Quad HD (2560x1440)
+	- 4K (3840x2160)
+	- Newer Resolutions: 5K (5120x2880) and 8K (7680x4320) are emerging, offering even higher clarity and detail.
+
+- Color Gamut:
+	- Refers to the range of colors a display can produce based on the RGB color model. A wider color gamut allows for more vibrant and accurate color reproduction, enhancing the visual experience for activities such as photo editing, video production, and gaming. Common color gamuts include sRGB, Adobe RGB, and DCI-P3, with DCI-P3 offering a broader range of colors compared to sRGB. Additionally, color depth plays a crucial role, with 24-bit color (often referred to as true color) supporting approximately 16.7 million colors, while 32-bit color includes an alpha channel for transparency, providing even more detailed color representation and smoother gradients.
+
+- Video Cable Bandwidth
+	- Video cable bandwidth is determined by two main factors:
+		- Resolution: Measured in pixels (e.g., 1920x1080 for Full HD, 3840x2160 for 4K).
+		- Refresh Rate: Measured in hertz (Hz) or frames per second (fps).
+
+-------------------------------------------------------------------------
+HDMI and DisplayPort Video Cables 2.1.10
+ 
+- High-Definition Multimedia Interface (HDMI)
+	- HDMI cables are essential for multimedia setups due to its simplicity and versatility:
+		- Functionality: Transmits both high-definition video and audio signals through a single cable.
+		- Standard Use: Commonly used for connecting consumer electronics such as:
+			- Televisions
+			- Monitors
+			- Gaming consoles
+		- Versions: Available in various versions, with the latest offering:
+			- Higher resolutions
+			- Increased refresh rates
+			- Advanced features like HDR (High Dynamic Range) for enhanced color and contrast
+		- Advantages:
+			- Single-cable solution simplifies connections
+			- Broad compatibility with a wide range of devices
+
+- DisplayPort
+	- DisplayPort offers superior performance for high-resolution and multi-display configurations, making it a top choice for demanding visual applications.
+	
+	- Purpose: Digital display interface for connecting a video source to a display device, such as a computer monitor.
+	- Preferred Use:
+		- Professional environments
+		- Gaming setups
+	- Key Features:
+		- Supports higher resolutions and refresh rates than HDMI
+		- Multi-Stream Transport (MST) allows multiple displays to connect through a single port, ideal for multi-monitor setups
+	- Additional Capabilities:
+		- Transmits audio
+		- Supports adaptive sync technologies like:
+			- AMD FreeSync
+			- NVIDIA G-Sync
+		- Reduces screen tearing in gaming applications
+
+------------------------------------------------------------------
+Thunderbolt Interface 2.1.11
+	
+- Thunderbolt can be used as a display interface like DisplayPort or HDMI and as a general peripheral interface like USB.
+	- Thunderbolt 1 and 2: Use the same physical interface as MiniDP and are compatible with DisplayPort, allowing a monitor with a DisplayPort port to connect via a Thunderbolt port and adapter cable. Thunderbolt ports are marked with a lightning bolt icon. Thunderbolt 2 supports up to 20 Gbps and allows daisy-chaining multiple monitors.
+
+	- Thunderbolt 3: Switches to the USB-C physical interface, using the same port, connector, and cabling. Converter cables are available for connecting Thunderbolt 1 or 2 devices to Thunderbolt 3 ports. USB devices function normally in Thunderbolt 3 ports, but Thunderbolt devices won't work in non-Thunderbolt USB-C ports. Thunderbolt 3 supports up to 40 Gbps over short, high-quality cables (up to 0.5 meters).
+
+	- Thunderbolt 4: Maintains the USB-C interface and supports up to 40 Gbps, with improved minimum performance requirements and expanded capabilities, such as support for docks with up to four Thunderbolt 4 ports.
+
+	- Thunderbolt 5: Also uses the USB-C interface, offering even higher speeds and enhanced features, though specific details may vary as the technology evolves. Thunderbolt ports are versatile, supporting high-speed data transfer, video output, and daisy-chaining multiple devices.
+
+--------------------------------------------------------------------------------
+Lightning Interface 2.1.12
+- developed by Apple, is a proprietary connector used primarily in iPhone and iPad devices.
+
+	- Industry Standardization: 
+		- USB-C is widely adopted for its versatility, faster data transfer, and higher power delivery.
+	- Regulatory Pressure: 
+		- Bodies like the European Union advocate for a common charging standard to reduce electronic waste and improve convenience.
+	- Technological Advancements: 
+		- USB-C offers superior features, making it a more future-proof option.
+
+----------------------------------------------------------------------
+Serial Advanced Technology Attachment Interface 2.1.13
+
+	- Serial Advanced Technology Attachment (SATA)
+		-  is the standard for connecting internal storage drives in desktop PCs, using up to 1-meter cables with compact 7-pin connectors, each supporting a single device.
+		- SATA Data cable 
+		- SATA power Cable 
+------------------------------------------------------------------------
+Molex Power Connectors 2.1.14
+- Internal storage device data cables are designed solely for data transfer and do not carry power. To supply power, newer devices utilize a SATA power connector, whereas legacy components connect to the power supply unit (PSU) using a 4-pin Molex connector. These connectors are typically made of white or clear plastic.
+
+-The Molex connector features wire insulation color codes to indicate different voltage levels: red for 5 volt direct current (VDC), yellow for 12 volt direct current (VDC), and black for ground. Direct current (DC) refers to the unidirectional flow of electric charge, which is essential for powering electronic components.
+
+-----------------------------------------------------------------------------
+External SATA 2.1.15
+
+- standard allows peripheral drives to connect using a cable up to 2 meters (78 in.) in length.
+
+-------------------------------------------------------------------------------
+Lab: Set Up a Desktop Computer 2.1.16
+
+- In this lab, your task is to set up the computer as follows:
+
+	- Plug a power strip into the wall.
+	- Plug the computer into the power strip.
+	- Connect the following components to the computer:
+		- Keyboard
+		- Mouse
+		- Speakers
+	- Add the following objects to the bench and connect them to the computer using the appropriate cables:
+		- Monitor
+		- Printer
+	-Plug the following devices into the power strip:
+		-Monitor
+		-Printer
+	-Connect the computer to the network port on the wall plate.
+
+-----------------------------------------------------------------------
+2.1.17 lesson review 
+
+- Which of the following is the MOST common interface for peripheral devices?
+	- USB
+
+- Which of the following BEST describes a key feature of the DisplayPort interface that is used for connecting video monitors to computers?
+	- DisplayPort can send both video and audio signals over the same cable.
+
+- Which interface is primarily used for internal hard drives in modern desktop PC systems?
+	- SATA
+
+- A marketing manager needs to connect a laptop to a large wall-mounted LED TV in an auditorium to make a presentation that includes high-resolution video and audio.
+	- Which of the following cable types would work BEST for connecting the laptop to the display?
+		- HDMI
+
+- A user reports that he is unable to access data on an external hard drive. You investigate the problem and determine that the USB cable connection to the hard drive is damaged. You replace the cable.
+	- Which of the following actions should you take next?
+		- Test the solution.
+
+- A company is purchasing new laptops for their graphic artist division.
+	- Which of the following display technologies provides better contrast and deeper blacks, resulting in better picture quality?
+		- OLED
+
+- Your company has just upgraded your laptop computer. After receiving your new computer, you plug your external USB 2.0 hard disk into your new USB 3.0 port.
+	- Which of the following is the MOST accurate statement regarding how this device will function?
+		- The device will work but only transfer at USB 2.0 speeds.
+
+- Which of the following is the maximum data transfer speed for USB 3.2 Gen 2 devices?
+	- 10 Gbps
+
+- You are installing a new SATA hard drive in your Windows workstation.
+	- Which of the following connectors should you use to connect your hard drive to the motherboard?
+		- 7-pin connector
+
+- Which of the following components is most likely to use a Molex power connector?
+	- Case fan or older hard disk drive (HDD)
+
+- What is the primary purpose of the Thunderbolt interface?
+	- To enable high-speed data transfer and support multiple types of connections
+
+- Which connector on a computer is used to attach a mouse to a modern computer system?
+	- USB
+
+- Susan works in the research and development department. She recently purchased a large high-speed external drive and has attached the drive to her computer using a USB cable. Her drive requires a minimum data transfer speed of 5 Gbps and needs to have access to 600 mA/15 volts of USB power to function properly.
+	- Although the correct drivers are installed, when she plugs her drive into her workstation, the drive is not working. To troubleshoot the problem, she has connected her drive to her coworker's computer, where the drive functions properly. No additional cables are required for this drive.
+		- Which of the following is the MOST likely reason that Susan's external hard drive is not working?
+			- Susan has connected her drive to a USB 2.0 port, which does not have the required data transfer speed.
+
+- What is the maximum data transfer speed supported by USB 2.0?
+	- 480 Mbps
+
+- You are building a new computer and have purchased a motherboard that includes four built-in SATA connectors.
+	- Which of the following MOST accurately lists the maximum number of SATA devices you can connect to the motherboard using the integrated ports?
+		- Four
+
+------------------------------------------------------------------------------
+Motherboard Functions 2.2.1
+
+- random-access memory (RAM)
+	-  is nonpersistent, meaning it holds data only when the PC is powered on.
+
+- CPU, cache, and RAM are fast but volatile. Mass storage and removable storage devices provide slower but permanent data retrieval
+
+- The motherboard's system clock synchronizes all PC operations and provides the basic timing signal for the CPU, measured in:
+	- megahertz (MHz)
+	- gigahertz (GHz)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
