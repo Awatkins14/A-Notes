@@ -87,6 +87,11 @@ Words
 - central processing unit (CPU)
 - megahertz (MHz)
 - gigahertz (GHz)
+- random-access memory (RAM)
+- solid-state drive (SSD)
+- hard disk drive (HDD)
+- Serial Advanced Technology Attachment (SATA) 
+- External SATA (eSATA)
 
 -----------------------------------------
 lab Explore the Lab Interface 2.1.2
@@ -346,14 +351,59 @@ Motherboard Functions 2.2.1
 	- megahertz (MHz)
 	- gigahertz (GHz)
 
+---------------------------------------------------------------------------
+Electrical Safety and ESD 2.2.2
+
+- Electrical Safety
+	- turn off before opening the case 
+	- hold power for few seconds to drain any remaining 
+
+- Electrostatic Discharge
+	- ESD wrist strap on ESD mat
+
+-------------------------------------------------------------------------
+Motherboard CPU and System Memory Connectors 2.2.3
 
 
+- All motherboards 
+	- CPU sockets 
+	- Memory Slots 
+	- m.2 Drive connector 
+	- I/o port (USB,video, audio, etc)
+	- adapter card slots 
+	- SATA Disk Drive Connectors 
+ 
+
+- System Memory Slots
+	- random-access memory (RAM)
+		-  DDR3, DDR4, and DDR5
+	- dual inline memory modules (DIMMs)
+	- Power Management Integrated Circuits (PMIC)
+
+-----------------------------------------------------------------------------
+Motherboard Storage Connectors 2.2.4
+
+- solid-state drive (SSD)
+- hard disk drive (HDD)
+
+Serial Advanced Technology Attachment Interface
+- Serial Advanced Technology Attachment (SATA) 
 
 
+M.2 Interface
 
 
+External SATA Interface
+- External SATA (eSATA) cables are designed for external connections, featuring better shielding than internal SATA cables to support longer lengths (up to 2 meters) and withstand external environments.
 
+-----------------------------------------------------------------------------
+Peripheral Component Interconnect Express Interface 2.2.5
 
+- Motherboard PCI and PCI Express expansion slots
+	- x16 PCIe Slot 
+	- x8 PCIe Slot 
+	- x1 PCIe Slot 
+	- PCI Slot 
 
 
 
