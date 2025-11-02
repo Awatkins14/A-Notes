@@ -405,13 +405,212 @@ Peripheral Component Interconnect Express Interface 2.2.5
 	- x1 PCIe Slot 
 	- PCI Slot 
 
+-----------------------------------------------------------------------------
+Peripheral Component Interconnect Interface 2.2.6
 
+- Peripheral Component Interconnect (PCI)
+	- is a legacy bus type that has been superseded by PCI Express (PCIe).
+	- PCI uses parallel communication and is typically 32-bit, operating at 33.3 MHz with a transfer rate of up to 133 MBps.
+	- Early PCI cards were designed for 5V signaling, but 3.3V and dual-voltage cards became more common.
+	- To prevent incompatible cards from being inserted into motherboard slots, different keying is used for 5V, 3.3V, and dual-voltage cards.
 
+-------------------------------------------------------------------------------
+Motherboard Form Factors 2.2.7 
+- defines its shape, layout, compatible case, power supply, and the number of adapter cards that can be installed
 
+Advanced Technology eXtended Form Factor
+- advanced technology extended (ATX) 
+	- specification is the standard form factor for most desktop PC motherboards and cases.
 
+- Micro-ATX (mATX)
+	- standard specifies a 9.6 x 9.6 inch (244 x 244 mm) square board, with a maximum of four expansion slots.
 
+Information Technology eXtended Form Factor
+- Small form factor (SFF) 
+	- PCs are popular for home use and mini servers, often using Via's Mini-ITX (information technology extended) form factor.
+
+- Mini-ITX boards measure 6.7 x 6.7 inches (170 x 170 mm) and have one expansion slot. 
+
+--------------------------------------------------------------------------------------
+Motherboard installation 2.2.8
+
+1. Review the Documentation:
+	- Familiarize yourself with the motherboard's installation procedure using the provided documentation.
+	- Check if any jumper settings need adjustment. Note that modern motherboards often handle configurations through the BIOS/UEFI rather than physical jumpers.
+
+2. Install the I/O Shield 
+	- If your motherboard doesn't come with a pre-installed I/O shield, align the shield with the rear I/O ports and snap it into place in the case.
+
+3. Insert Standoffs
+	- Place standoffs in the case to match the mounting holes on the motherboard. Ensure that standoffs are only positioned where the motherboard has corresponding holes to avoid short circuits
+
+4. Pre-install the CPU and Memory (Optional but recommended)
+	- Install the CPU, memory, and CPU cooler on the motherboard before securing the board in the case. This provides easier access and reduces the risk of damage.
+
+5. Align and Secure the Motherboard
+	- Carefully place the motherboard onto the standoffs, aligning it with the I/O shield and ensuring all standoffs line up with the holes.
+	- Secure the motherboard with the appropriate screws, ensuring it is firm and stable without overtightening.
 	
+6. Final Assembly
+	- Connect power supplies, disk drives, and any additional adapter cards to the motherboard.
+	- Attach all necessary data and power connectors.
 
+7. Cable Management 
+	- Plan and route cables neatly to maintain airflow and prevent clutter inside the case.
+
+--------------------------------------------------------------------------------------
+Motherboard Headers and Power Connectors 2.2.10 
+
+- In addition to slots and sockets for system devices, motherboards also include connectors for components such as case buttons, speakers, and fans.
+
+Headers 
+- Power button (soft power)
+	- Sends a signal that can be interpreted by the OS as a command to shut down rather than switching the PC off. Holding down the power button for a few seconds will cut the power, bypassing the OS.
+
+- Drive (HDD) activity lights
+	- Show when an internal hard disk is being accessed. The corresponding connector is usually labeled "HDD LED" or similar on the motherboard.
+
+- Audio ports
+	- Allow speakers and/or headphones and a microphone to be connected. The front panel audio ports typically connect to the motherboard via an HD Audio header, often labeled "HD Audio" (or "AC'97" for older systems).
+
+- USB ports
+	- Internal USB 2 connections are made via 9-pin headers. These headers can support up to two 4-pin USB ports, with the 9th pin used for correct cable orientation. USB 3 headers use a 20-pin (2x10) format and can connect to two USB 3.x ports, supporting faster data transfer rates compared to USB 2.0.
+
+
+Power Connectors
+- Main Power Connector
+	- The primary P1 motherboard power connector is a distinctive 24-pin block (2 rows of 12 pins) with square pin receptacles.
+
+- Fan Connectors
+	- 3-pin Molex KK format connectors: Typically used for fans, these connectors control fan speed by varying the voltage.
+	- 4-pin fan Molex KK format connectors: These support precise fan-speed control via pulse width modulation (PWM), with the PWM signal carried by the blue wire. There will be one for the CPU and one or more for case fans and components such as memory and video adapters.
+
+--------------------------------------------------------------------------
+Lab: Choose and Install a Motherboard 2.2.11 
+
+- You work at a computer repair store. You are in the process of building a new computer system. The customer wants a motherboard with the following features:
+
+- 16x PCI Express slot for video card support
+- M.2 storage support
+- Support for 64-bit processors
+- Dual-channel memory support
+- Support for up to 64 GB of memory
+- In this lab, your task is to:
+
+- Select and install the motherboard that meets the scenario requirements.
+- Connect the following computer case cables:
+- Power switch
+- Power LED 3-1 pin
+- HDD LED
+- Speaker
+- Fan front
+- Fan rear
+- USB (Black cable- 2.0)
+- Front panel audio
+- USB 3.0
+- Connect the following connectors from the power supply:
+- CPU power
+- Main motherboard power
+
+----------------------------------------------------------------------------------
+ DVI and VGA Video Cables 2.3.1
+
+-  cathode ray tube (CRT)
+
+Digital Visual Interface
+- Digital video interface (DVI)
+	- supports both analog and digital outputs
+
+DVI port and connector types
+- DVI-A supports only analog output
+- while DVI-D supports only digital output
+- DVI-I supports both analog and digital outputs
+
+- DVI-A 
+- DVI-D (single link) 
+- DVI-I (single link)
+- DVI-D (dual link)
+- DVI-I (dual link)
+
+Video Graphics Array Interface
+- The 15-pin video graphics array (VGA) 
+-  VGA typically supports resolutions up to Full HD (1920x1080)
+
+------------------------------------------------------------------------------------
+Lab: Select and Configure Dual Monitors 2.3.2
+
+- A Marketing employee who creates and edits graphics, videos, and presentations has requested dual monitors to help them be more efficient and manage multiple creative applications simultaneously.
+
+- You have already placed a second monitor to the left of the computer. Use the items in the inventory to complete this task by doing the following:
+
+- Select and install a PCIe video card that provides dual-monitor support using DVI and HDMI cables.
+- Connect a 6-pin PCIe power supply connector to the video card.
+- Connect the original monitor to the new video card using the existing DVI cable.
+- Connect the new monitor using an HDMI cable.
+- Power on the computer and set the new monitor as the main display with the Start menu and taskbar.
+- Select Identify, then drag the screens to reflect their physical placement.
+
+------------------------------------------------------------------------------------------
+2.6 Module Quiz
+
+- You are building a PC workstation and are ready to install a newer hard drive (HDD) into an empty drive bay in the PC case.
+- Which of the following steps should you complete first?
+	- Verify that the power supply and SATA cables can reach the HDD.
+
+- What should be done when disassembling a computer to ensure correct reconnection of header connectors?
+	- Document the position and orientation of connectors
+
+- You are tasked with connecting a legacy DVI monitor to a new workstation that only has DisplayPort outputs. You use a DisplayPort to DVI adapter cable, but the monitor still does not display an image.
+- Upon inspection, you notice that the DVI monitor has a DVI-A port.
+- What is the MOST likely reason the connection is not working?
+	- The DisplayPort to DVI adapter does not support analog signals required by the DVI-A port.
+
+- During a network audit, you discover that several older network devices in your organization still rely on RS-232 serial ports for configuration and management.
+- You need to determine the potential limitations and challenges of continuing to use these serial connections in a modern IT environment.
+- Which of the following analyses BEST identifies a key limitation of using RS-232 serial connections?
+	- RS-232 serial connections require specialized cables and adapters, which may not be readily available or compatible with modern devices.
+
+- What should you check before installing an M.2 SSD in a motherboard slot?
+	- The supported adapter lengths indicated on the motherboard
+
+- You are troubleshooting a workstation where the display is not functioning correctly. The monitor and the desktop computer are connected using a VGA cable.
+- Upon inspection, you notice the following: the monitor powers on, the VGA cable is securely connected, and the desktop computer is functioning normally. However, the display resolution is blurry and does not meet the expected Full HD (1920x1080).
+- Based on your analysis, what is the MOST likely cause of the issue?
+	- The VGA cable is of poor quality and cannot support Full HD resolution.
+
+- How does the type of motherboard affect a computer system?
+	- It affects the range of devices and adapter cards that can be installed.
+
+- Why is mass storage necessary in a computer system?
+	- To preserve data and files when the computer is turned off
+
+- Which of the following is most commonly found on the front panel of a PC case?
+	- Power button
+
+- You decided to upgrade your PC with a faster processor. To do this, you ordered a new motherboard over the internet that supports the processor that you want to use.
+- When the motherboard arrives, you discover that the motherboard uses the Micro-ATX form factor. Your current case is an ATX mid-tower with a standard ATX motherboard inside.
+- Which steps must you take for the Micro-ATX motherboard to work in the ATX case?
+	- No additional steps are necessary. You can install the Micro-ATX motherboard in the ATX case.
+
+- A company is purchasing new laptops for their graphic artist division.
+- Which of the following display technologies provides better contrast and deeper blacks, resulting in better picture quality?
+	- OLED
+
+- You are installing a new SATA hard drive in your Windows workstation.
+- Which of the following connectors should you use to connect your hard drive to the motherboard?
+	- 7-pin connector
+
+- A marketing manager needs to connect a laptop to a large wall-mounted LED TV in an auditorium to make a presentation that includes high-resolution video and audio.
+- Which of the following cable types would work BEST for connecting the laptop to the display?
+	- HDMI
+
+- You are an IT professional tasked with setting up a conference room that includes both modern digital projectors and older analog video equipment.
+- You notice that the older equipment only has VGA ports, while the projectors have HDMI inputs.
+- Which solution would BEST address the connectivity issue using adapter cables?
+	- Use a VGA to HDMI adapter cable to connect the older equipment to the projectors.
+
+- Why are adapter cables important when integrating legacy devices with modern systems?
+	- They allow legacy devices to connect to modern systems by converting incompatible interfaces.
 
 
 
