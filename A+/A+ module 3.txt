@@ -1,0 +1,411 @@
+Module 3 Study Materials
+---------------------------------------------------------
+Power Supply Units 3.1.1
+
+- power supply unit (PSU) 
+	- The power supply unit (PSU) delivers low-voltage direct current (DC) power to PC components
+	- It contains a rectifier to convert alternating current (AC) from the building to DC voltage, transformers to step down to lower voltages, and regulators to ensure consistent output with filters and regulators. 
+
+- low line (120 VAC)  and high line (230 VAC) 
+- AC voltage supply varies by country and distribution circuits, so PSUs have a wide tolerance range: 100-127 VAC for low-line and 220-240 VAC for high-line.
+
+-----------------------------------------------------------
+Lab: Install a Power Supply 3.1.2
+
+- You are the IT administrator for a small corporate network. You are repairing the computer in the IT Administration Office, which appears to have a failed power supply. After testing the power supply and confirming the failure, you removed it from the computer. Now, you need to select a replacement power supply.
+
+- In this lab, your task is to:
+
+- Install a power supply:
+	- The power supply must have the appropriate power connectors for the motherboard and the CPU. Consult the motherboard documentation to see its power requirements.
+	- The power supply must support adding a graphics card that requires its own power connector.
+	- In the sim, the power supply is seated just below the motherboard.
+- Make the following connections from the power supply:
+	- Connect the motherboard power connector.
+	- Connect the CPU power connector.
+	- Connect the power connectors for the SATA hard drives.
+Start the computer:
+	- Plug the computer in using the existing cable plugged into the power strip.
+	- Turn on the power supply using the switch on the back.
+	- Turn on the computer and boot into Windows.
+----------------------------------------------------------------------
+Wattage Rating 3.1.3
+
+- Power (Watts) = Voltage (V) × Current (I)
+- The Power Supply Unit (PSU) must provide enough wattage for all components combined.
+- Typical PSU Wattage:
+	- Standard desktop: 400–500 W
+	- Gaming PCs: 600 W or more
+	- Enterprise servers/workstations: >1000 W
+
+- Problems from an Underpowered PSU
+- System Instability: random shutdowns, reboots, crashes
+- Component Damage: PSU overheating → can harm itself or other parts
+
+- Power Distribution (Rails)
+- A rail is a wire carrying current at a specific voltage.
+- Modern systems mainly use the +12 V rail, since it powers CPU and GPU.
+	- Output Rail (VDC)	Max Load (A)	Max Output (W)
+	+3.3 V			20		130
+	+5 V			20		130
+	+12 V			33		396
+	-12 V			0.8		9.6
+	+5 V (standby)		2.5		12.5
+
+	- Note:+3.3 V and +5 V rails often share a combined power limit.
+	- The +12 V rail is the most critical for modern systems.
+
+- Energy Efficiency
+	- Efficiency = how much of the wall power (AC) becomes usable DC power.
+	- Example:
+		- 300 W PSU @ 75% efficiency = draws 400 W, wastes 100 W as heat.
+		- More heat = more cooling needed = higher energy cost.
+
+	- 80 PLUS Efficiency Ratings
+	Rating		20% Load	50% Load	100% Load	Notes
+	Bronze		82%		85%		82%		Entry-level efficiency
+	Silver		85%		88%		85%		Moderate efficiency
+	Gold		87%		90%		87%		Common in gaming PCs
+	Platinum	90%		92%		89%		High efficiency
+	Titanium	90% @10%	92%		94%		90%
+	
+	-ENERGY STAR 80 PLUS PSUs must be ≥80% efficient at 20–100% load.
+
+-----------------------------------------------------------------------------
+Power Supply Connectors 3.1.4
+
+- The Power Supply Unit (PSU) sends DC voltage to all computer components.
+- Common voltage levels:
+	- +3.3 VDC
+	- +5 VDC
+	- +12 VDC
+- Voltage regulators ensure each component gets the correct amount of power.
+
+- P1 Connector = 24-pin ATX power connector
+	- Supplies main power to the motherboard.
+	- Earlier systems used a 20-pin version (still backward compatible with adapters).
+	- Provides +3.3 V, +5 V, +12 V, and ground connections.
+
+- PCIe (Graphics Card) Power Connectors
+	- Supply extra power to GPUs (beyond what the PCIe slot gives).
+	- Common types:
+		- 6-pin PCIe = up to 75 W
+		- 8-pin PCIe = up to 150 W
+		- 16-pin (new 12VHPWR for PCIe 5.0 GPUs) = up to 600 W
+	- Tip: Always match the connector type to the GPU’s requirement to avoid underpowering it.
+
+- Drive Power Connectors
+- Molex Connector
+	- 4-pin connector used for older devices like:
+		- IDE hard drives
+		- Optical drives
+		- Some case fans
+	- Provides +12 V and +5 V
+
+- SATA Power Connector
+	- Slim, 15-pin connector for modern drives (HDDs, SSDs, optical drives).
+	- Provides +3.3 V, +5 V, and +12 V.
+
+- Key Notes
+	- Always ensure the connector type and voltage rating match the device.
+	- Never force a connector it should fit easily.
+	- Incorrect connections can cause damage to components or the PSU.
+
+----------------------------------------------------------
+20-pin to 24-pin Motherboard Adapter 3.1.5
+- ATX PSU Standards
+	- The ATX (Advanced Technology eXtended) power supply standard has gone through multiple revisions.
+	- These updates changed the main motherboard connector design to support newer hardware with higher power needs.
+
+
+- Original ATX Connector (20-pin)
+	- Early ATX motherboards used a 20-pin (2×10) P1 connector.
+	- Wire color coding:
+		- Yellow = +12 V
+		- Red = +5 V
+		- Orange = +3.3 V
+		- Black = Ground
+	- Tip: The 20-pin connector supplied enough power for older CPUs, RAM, and expansion cards.
+
+- Modern ATX Connector (24-pin)
+	- Modern motherboards use a 24-pin (2×12) P1 connector.
+	- The extra 4 pins provide additional +12 V, +5 V, and +3.3 V power lines for newer components that draw more power (like PCIe slots and extra memory).
+
+- 20+4-pin Compatibility
+	- Many modern PSUs include a 20+4-pin adapter:
+		- The extra 4 pins can detach to fit older 20-pin motherboards.
+		- When combined, it becomes a full 24-pin connector for newer boards.
+	- Purpose: Ensures backward compatibility between old and new motherboards.
+
+Key Notes
+	- Always check the motherboard manual for the required connector type.
+	- Never force a 24-pin connector into a 20-pin socket that doesn’t support it.
+	- Using the proper adapter ensures stable power delivery and prevents system damage.
+---------------------------------------------------------------------------------------
+Modular Power Supplies 3.1.6
+- Overview
+	- A modular PSU has detachable power cables, allowing you to connect only the cables your system needs.
+	- This contrasts with a non-modular PSU, where all cables are permanently attached.
+
+- Benefits of Modular PSUs
+	- Reduced Clutter
+		- Only necessary cables are used, which keeps the interior tidy.
+	- Improved Airflow
+		- Fewer cables mean less obstruction for case fans and airflow.
+	- Better Cooling
+		- Reduced cable clutter improves overall system cooling efficiency.
+
+- Example
+	- A non-modular PSU may have 4–5 Molex/SATA connectors, but your PC may only use 2.
+	- With a modular PSU, you can remove unused cables, reducing clutter and improving airflow.
+
+- Key Notes
+	- Modular PSUs are especially useful in gaming PCs, high-performance builds, and compact cases.
+	- Some high-end PSUs are fully modular (all cables detachable), while others are semi-modular (essential cables like 24-pin ATX and CPU power remain attached).
+
+-------------------------------------------------------------------------------------------
+Redundant Power Supplies 3.1.7
+- Overview
+	- Redundant PSUs are used to maintain system uptime and prevent data loss, especially in enterprise environments.
+	- Systems may have two PSUs:
+		- Primary PSU: powers the system normally.
+		- Redundant/failover PSU: automatically takes over if the primary fails.
+- Purpose & Benefits
+	- Continuous Operation
+		- Essential in data centers and high-availability systems.
+	- Data Protection
+		- Minimizes the risk of data loss during PSU failure.
+	- System Reliability
+		- Keeps servers running even during power failures or PSU malfunctions.
+
+-  Server Implementation
+	- PSUs connect to a backplane, which is a circuit board providing electrical connections between components.
+	- Hot-swappable PSUs:
+		- Faulty PSU can be replaced without shutting down the system.
+		- Critical for maintaining uptime and ensuring services remain available.
+
+- Desktop vs Server Use
+	- Desktops: Rarely use redundant PSUs because continuous uptime is less critical.
+	- Servers/Enterprise systems: Standard feature due to need for reliability and data integrity.
+
+- Redundant PSUs are a key topic for enterprise hardware setups—remember their role in hot-swapping and failover scenarios.
+
+-------------------------------------------------------------------------------------------
+Lab: Troubleshoot Power Supply Problems 3.1.9
+
+- You've received a service request from an employee experiencing a critical issue where their system shuts down unexpectedly before it can fully boot. You believe the power supply unit (PSU) may be at fault. If it does need to be replaced, select one that includes PCIe connectors for future hardware updates.
+
+- A quick reference card is included in the exhibits to explain how to use the Power Supply Tester.
+
+- Your task is to test the existing PSU and, if needed, select a compatible replacement that meets both current and future needs. To complete this task, do the following:
+	- Attempt to boot the computer to verify the issue, and then complete these steps (Instructions 1-2 on quick reference card):
+		- Place the Power Supply Tester on the workbench.
+		- Unplug the computer.
+		- Disconnect power to internal hard drives
+	- Test the power supply (instructions 3-6 on quick reference card):
+		- Transfer the Connector, Power Supply, 20+4 pin, and Connector, Power Supply, 4-pin processor to the power supply tester.
+		- Attach a Connector, SATA 15-pin power connector to the power supply tester.
+		- Plug the computer in and view the Power Supply Tester results.
+	- Unplug the power cable from the computer and move the bad power supply to the workbench next to the tester. Leave the cables connected to the tester.
+	- Select and install a new power supply:
+		- Select a power supply from the inventory that has the same 20+4 and 4-pin connectors and the 6-pin PCIe connectors.
+		- Reconnect the Connector, Power Supply, 20+4 pin and Connector, Power Supply, 4-pin to the motherboard and Connector, SATA 15-pin to each drive.
+	- Plug the computer in, turn on the power supply, and then start the computer.
+
+-------------------------------------------------------------------------------------------
+Fan Cooling Systems 3.1.10
+- Overview
+	- Computer components generate heat due to electrical resistance.
+	- Excessive heat can:
+		- Damage components
+		- Cause system instability or crashes
+	- CPUs are particularly sensitive to overheating.
+	- Note: Other components like RAM, GPUs, and chipsets also need cooling.
+
+- Purpose of Fan Cooling
+	- Dissipate Heat
+		- Moves hot air away from components.
+	- Maintain Safe Operating Temperatures
+		- Keeps CPUs, GPUs, and other devices within manufacturer-specified thermal limits.
+	- Prevent Malfunctions
+		- Reduces risk of crashes or permanent hardware damage.
+
+- Key Points
+	- Intel and AMD improve CPU thermal efficiency, but all CPUs require active cooling.
+	- Fans are a cost-effective and common cooling solution.
+	- Proper airflow in the case is important:
+	- Intake fans bring in cool air
+	- Exhaust fans remove hot air
+
+- For high-performance PCs or servers, additional fans or alternative cooling (like liquid cooling) may be necessary.
+
+-------------------------------------------------------------------------------------------
+Heat Sinks and Thermal Paste 3.1.11
+
+- Overview
+	- Heat sinks help dissipate heat from components to prevent overheating.
+	- Two types:
+		- Passive Heat Sinks
+		- Active Heat Sinks
+- Passive Heat Sinks
+	- Also called heat spreaders.
+	- Used by: memory modules (RAM), some chipsets.
+	- Characteristics:
+		- No fan
+		- Rely on increased surface area and natural airflow to cool components
+
+Active Heat Sinks
+	- Used by: CPUs, high-end GPUs, some integrated graphics chipsets.
+	- Components:
+		- Metal block (copper or aluminum)	
+		- Fins for increased surface area
+		- Fan for forced air convection
+	- Attachment: mounted to the component using thermal paste or thermal pads to eliminate air gaps for efficient heat transfer.
+
+- Thermal Paste vs Thermal Pads
+	Feature			Thermal Paste			Thermal Pad
+	Heat Transfer		High efficiency			Moderate
+	Ease of Application	Requires careful application	Easier to apply
+	Reliability		Long-lasting if applied correctly	May degrade faster
+	- Thermal paste is generally preferred for CPUs due to better heat conductivity.
+
+- CPU Heat Sink Installation
+	- Attached to CPU socket on the motherboard.
+	- Secured using:
+		- Retaining clips
+		- Push pins (release/reset with a half-turn of a screwdriver)
+
+----------------------------------------------------------------------
+Fans 3.1.12
+- Overview
+	- Fans are used to improve airflow and dissipate heat that passive heat sinks cannot handle.
+	- Found in:
+		- Power supplies
+		- Chassis exhaust points
+		- Heat sinks (most CPU/GPU heat sinks have fans)
+
+- Airflow and Cooling
+	- Cool air is drawn from front vents; warm air is expelled through back vents.
+	- Chassis designs may include:
+		- Plastic shrouds or baffles to direct airflow over the CPU
+		- Clips to secure airflow channels
+	- Tip: Proper airflow is essential—minimize cable clutter and cover unused expansion slots with blanking plates.
+
+- Fan Control & Monitoring
+	- Fans connect to motherboard fan power ports.
+	- Thermometer sensors at each fan location:
+		- Set appropriate fan speeds
+		- Detect fan failures
+
+- Maintenance
+	- Fans and heat sinks lose effectiveness if dust accumulates.
+	- Clean regularly using:
+		- Soft brush
+		- Compressed air
+		- PC-approved vacuum cleaner
+	- Tip: Regular cleaning improves cooling efficiency and prolongs component lifespan.
+
+--------------------------------------------------------------------------------------
+Liquid Cooling Systems  3.1.13
+
+- Overview
+	- Used in high-end gaming PCs, workstations, or PCs in high ambient temperatures.
+	- Pumps coolant (usually water) through the system for more effective cooling than air alone.
+	- Often quieter than multiple fans.
+
+- Open-Loop Liquid Cooling Components
+	- Water Loop / Tubing and Pump
+		- Circulates coolant through the system via a reservoir.
+	- Water Blocks and Brackets
+		- Attached to components (CPU, GPU, etc.)
+		- Remove heat by convection, similar to heat sink/fan assemblies
+		- Connected to the water loop
+	- Radiators and Fans
+		- Positioned at air vents to expel heat from the liquid coolant
+	- Tip: Think of water blocks as a “liquid heat sink” transferring heat to the radiator.
+
+- Closed-Loop (All-In-One) Systems
+	- Pre-assembled for single components (CPU or GPU)
+	- Easier to install and maintain than open-loop systems
+	- Typically maintenance-free for standard use
+
+- Exam Tip:
+	- Open-loop = customizable, supports multiple components, requires maintenance.
+	- Closed-loop (AIO) = simpler, single-component cooling, mostly maintenance-free.
+
+--------------------------------------------------------------------------------------
+Lesson Review 3.1.14
+ - Which of the following voltages are provided by an ATX power supply? (Select three.)
+	- 12v 
+	- 5
+	- 3.3
+
+- Which of the following will ensure optimal system cooling? (Select three.)
+	- Keep the ambient temperature below 80 degrees F.
+	- Bundle cables together and secure unused cables to the case.
+	- Leave space between the case and any walls or obstructions.
+
+- What is the primary purpose of a 20+4-pin P1 adapter cable on an ATX power supply unit (PSU)?
+	- To provide compatibility with both 20-pin and 24-pin motherboards
+
+
+- You need to replace the power supply in your home desktop computer.
+- Which of the following specifications are the MOST likely to affect your power supply choice? (Select three.)
+	- Output wattage
+	- Type and number of connectors
+	- Form factor
+
+- A hardware technician is ordering power supply units (PSUs) for the organization's desktop computers. Most PSUs designed for use with desktop PCs are based on which form factor?
+	- ATX
+
+- An employee submits a support ticket stating that their computer will not turn on.
+- Which of the following troubleshooting steps should you take first? (Select two.)
+	- Make sure that the power cord is plugged into the wall.
+	- Make sure that the surge protector is turned on.
+
+- A hardware technician installed a new power supply unit (PSU) in a workstation and removed unnecessary power connector cables. What type of PSU did the technician install?
+	- Modular
+
+- Your company relocated you from the United States to their United Kingdom office in London. You brought your personal computer with you, and you are in the process of setting it up. Your computer was previously configured to receive 115 VAC, but the electricity in London uses 230 VAC.
+- Which of the following would allow your computer to run on 230 VAC?
+	- Inspect the power supply unit for a manual voltage switch and move it to 230 VAC. Otherwise, no action is necessary.
+
+- You have a desktop computer that you want to upgrade. You add several internal and external components. You realize that you need to ensure that your power supply can support these new components.
+- Which of the following power supply ratings BEST describes the rating you would use to determine this?
+	- Watt rating
+
+- Which of the following thermal solutions might you find on memory modules?
+	- Passive heat sink
+
+- You have a motherboard that uses a 24-pin ATX connector.
+- Which types of power supply could you use with this motherboard? (Select two.)
+	- A power supply with a 24-pin ATX connector only
+	- A power supply with a 20-pin ATX and a +4-pin connector
+
+- Which of the following motherboard power connectors typically connect directly to the motherboard? (Select two.)
+	- 24-pin motherboard power
+	- 4-pin CPU power
+
+
+- You have a desktop computer that provides a 250-watt power supply. You recently added a four-disk RAID 10 array to the system, and now it spontaneously shuts down.
+- Which of the following would MOST likely solve this issue?
+	- Upgrade to a power supply that provides more watts.
+
+- You are testing the power supply in a PC system by measuring the voltage on the 12 V rail using a multimeter. The voltage is registering as +10.1 volts.
+- What should you do?
+	- Replace the power supply.
+
+- Which component is responsible for transferring heat from the CPU to the liquid in a liquid cooling system?
+	- Water block 
+
+
+
+
+
+
+
+
+
+
+
+
