@@ -398,8 +398,527 @@ Lesson Review 3.1.14
 - Which component is responsible for transferring heat from the CPU to the liquid in a liquid cooling system?
 	- Water block 
 
+------------------------------------------------------------------------------------------
+Mass Storage Devices 3.2.2
+
+- Overview
+	- Mass storage (non-volatile storage) retains data even when powered off.
+	- Uses magnetic, optical, or solid-state technology.
+	- Internal storage drives are called fixed disks.
+
+- Common Form Factors
+Form Factor		Typical Use					Description
+5.25-inch		Optical drives (DVD, Blu-ray), front-bay devices	Large bays with removable panels
+3.5-inch			Desktop HDDs					Common in PCs and servers
+2.5-inch			Laptop HDDs, SSDs					Smaller, used in notebooks and compact systems
 
 
+- Drive Bays and Caddies
+	- Drive bays hold internal drives.
+	- Caddies/adapters allow mounting drives of different sizes (e.g., 2.5" → 3.5").
+	- Some caddies use rails for easy tool-less removal without opening the case.
+
+- Removable & External Storage
+	- Removable storage allows data transfer and archiving between systems.
+	- External drives (USB, Thunderbolt) provide:
+		- Backup solutions
+		- Extra storage capacity	
+		- Support for alternate drive types
+	- Examples: External HDDs, SSDs, optical drives, and USB flash drives.
+
+- Factors When Choosing a Storage Device
+	- Reliability
+		- Risk of failure or data corruption
+		- Measured by device lifespan and error rates
+	- Performance
+		- Read/write speed
+		- Sequential vs. random access
+		- Data throughput: MB/s or GB/s
+		- IOPS (Input/Output Operations Per Second)
+	- Use Case
+		- OS drive → needs high performance
+		- Database or media server → needs high reliability
+		- Backup or archive → prioritize capacity and longevity
+
+- Major Storage Vendors
+	- Seagate
+	- Western Digital
+	- Hitachi
+	- Fujitsu
+	- Toshiba
+	- Samsung
+
+- Exam Tip:
+	- Understand which technology (magnetic, optical, SSD) best fits a scenario based on speed, durability, and capacity.
+
+------------------------------------------------------------------------------------
+Solid-State Drives 3.2.3
+
+-  Overview
+	- SSDs use flash memory technology for persistent mass storage (non-volatile).
+	- Offer much faster read speeds than mechanical HDDs.
+	- More durable, shock-resistant, and energy-efficient.
+	- Prices have dropped significantly, making SSDs more common in modern PCs.
+	- hard disk drives (HDDs)
+	- solid state drive (SSD)
+
+- Advantages vs. HDDs
+Feature				SSD						HDD
+Speed				Faster (especially for reads)			Slower (mechanical delay)
+Durability			No moving parts → more shock-resistant		Moving parts → prone to wear
+Noise				Silent						Audible spinning and clicking
+Power Use			Lower						Higher
+Cost per GB			Higher (but dropping)				Lower
+Performance in Large Transfers	Can struggle with multi-GB continuous writes	Consistent for sequential transfers
+
+
+- Flash Memory & Lifespan
+	- Flash memory wears out after many write cycles.
+	- Wear leveling algorithms spread data writes evenly across memory blocks to extend life.
+	- NAND Flash Types
+Type			Description		Reliability		Cost
+SLC (Single-Level Cell)	1 bit per cell		Very high		Expensive
+MLC (Multi-Level Cell)	2+ bits per cell		Moderate		Cheaper
+
+	- Exam Tip: SLC = faster + lasts longer, but more expensive.
+
+- Typical Setup
+	- Single-drive systems: SSD used as main drive.
+	- Dual-drive systems: SSD for OS and apps, HDD for data storage.
+
+- SSD Interfaces
+	- SATA (Serial ATA)
+		- Common 2.5-inch SSDs use standard SATA data + power connectors.
+		- mSATA SSDs plug directly into a combined motherboard port.
+		- SATA max transfer rate: 600 MB/s → may bottleneck faster SSDs.
+	
+	- PCI Express (PCIe) / NVMe
+		- Connects directly to the PCIe bus for higher speed.
+		- Uses NVMe (Non-Volatile Memory Express) for efficient data transfer.
+		- Available as:
+			- PCIe expansion cards
+			- M.2 form factor SSDs
+	- M.2 SSDs:
+		- Compact, ideal for laptops and desktops.
+		- Powered through the bus (no cable needed).
+		- Common size: M.2 2280 → 22 mm wide × 80 mm long.
+		- Keying types:
+			- B key → SATA
+			- B/M key → 2-lane PCIe
+			- M key → 4-lane PCIe (fastest)
+
+	- PCIe Speeds:
+	Version		Transfer Rate per Lane
+	PCIe 4.0		16 GT/s
+	PCIe 5.0		32 GT/s
+
+
+	- SAS (Serial Attached SCSI)
+		- Used in enterprise environments (servers/workstations).
+		- Provides:
+			- Higher reliability
+			- Better speed and multi-device connectivity
+		- Uses point-to-point serial communication for efficiency.
+
+- Handling Precautions
+	- SSDs are sensitive to Electrostatic Discharge (ESD).
+	- Always use anti-static protection (wrist strap, mat) when handling.
+
+- Key Takeaways
+	- SSDs outperform HDDs in speed and durability.
+	- NVMe M.2 drives deliver top-tier performance for modern systems.
+	- SATA SSDs are more affordable and compatible with older motherboards.
+	- SAS SSDs dominate in enterprise and server applications.
+
+---------------------------------------------------------------------------
+Hard Disk Drives 3.2.4 
+
+- Overview
+	- HDDs store data on spinning metal or glass platters coated with a magnetic material.
+	- Data is read and written by read/write heads that move across the platter surfaces.
+	- Each platter spins on a spindle, and the heads move via an actuator arm.
+
+	- Think of an HDD like a record player:
+	- Platters = records, heads = needle, spindle = turntable motor.
+
+- How It Works
+	- Each platter side is divided into tracks, and each track is divided into sectors.
+	- Each sector stores 512 bytes of data.
+	- This structure is called drive geometry or low-level formatting.
+
+- HDD Components
+	- Platters – Store magnetic data.
+	- Spindle – Spins the platters at high speeds.
+	- Read/Write Heads – Magnetically read and write data.
+	- Actuator Arm – Moves the heads across the platters.
+
+- Performance Factors
+	- Spindle Speed (RPM)
+		- Determines how fast platters spin and affects access time.
+		- Common speeds:
+			- 15,000 RPM → Enterprise-grade, ~180 MB/s transfer rate
+			- 10,000 RPM → High-performance
+			- 7,200 RPM → Standard desktop drives (~110 MB/s)
+			- 5,400 RPM → Low-power or laptop drives
+
+	- Access Time
+		- Measured in milliseconds (ms).
+		- Includes:
+			-  Seek Time: Time for head to move to the correct track.
+			- Access Time: Total delay before data can be read.
+		- Typical values:
+			- High-performance HDD: <3 ms'
+			- Average HDD: ~6 ms
+
+	- Data Transfer Rate
+		- Measures how fast data moves between the platter and system.
+		- Example:
+			- 15,000 RPM drive: up to 180 MB/s
+			- 7,200 RPM drive: around 110 MB/s
+
+- Interfaces & Form Factors
+	- Interface:
+		- Most HDDs use the SATA interface (Serial ATA).
+
+	Form Factors:
+	Type		Size				Typical Use
+	3.5-inch		Larger, faster, more storage	Desktops
+	2.5-inch		Smaller, quieter, less power	Laptops & externals
+
+	- 2.5-inch drives can vary in thickness:
+		- 15 mm
+		- 9.5 mm
+		- 7 mm 
+		- 5 mm
+
+- Key Takeaways
+	- HDDs use mechanical movement → slower than SSDs.
+	- RPM and access time determine performance.
+	- More fragile due to moving parts.
+	- Still widely used for bulk storage because of low cost per GB.
+
+---------------------------------------------------------------------------
+Redundant Array of Independent Disks 3.2.5
+
+- Overview
+	- RAID stands for Redundant Array of Independent (or Inexpensive) Disks.
+	- Combines multiple HDDs or SSDs into one logical storage unit for better performance, fault tolerance, or both.
+	- The OS sees the RAID array as one single drive.
+
+	- Think of RAID like teamwork:
+		- If one drive fails, others help keep the data safe and system running.
+
+- Why Use RAID
+	- Protects against data loss if a drive fails.
+	- Can boost performance by spreading (striping) data across multiple drives.
+	- Reduces downtime in case of hardware failure. 
+	
+	- Risk			Without RAID		With RAID
+	Boot Drive Fails		System crashes		System can stay running
+	Data Drive Fails		Files lost		Files can be recovered from redundancy
+
+- RAID Implementation
+	- RAID can be set up in two main ways:
+	- Software RAID
+		- Managed by the operating system.
+		- Uses the CPU for RAID operations (slightly slower).
+		- Less expensive but not as fast or reliable as hardware RAID.
+	- Hardware RAID
+		- Managed by a dedicated RAID controller (adapter card).
+		- Drives connect to the controller’s SATA ports instead of the motherboard.
+		- Often supports hot-swapping (replace failed drives without shutting down).
+		- Faster and more reliable, but more costly.
+	- Some motherboards include built-in RAID support in the chipset.
+
+
+- Common RAID Levels
+RAID Level				Description					Key Benefit
+RAID 0 (Striping)								Splits data across drives	 							Best performance ⚠️ No redundancy
+RAID 1 (Mirroring)								Duplicates data on two drives	 					Full redundancy ⚠️ Half capacity
+RAID 5 (Striping with Parity)					Distributes data + parity across 3+ drives			Good balance of speed + protection
+RAID 6 (Double Parity)							Like RAID 5 but with 2 parity blocks					 Survives 2 drive failures
+RAID 10 (1+0)									Combines mirroring and striping						High speed + redundancy ⚠️ Expensive (needs 4+ drives)
+
+- Key Terms
+	- Fault Tolerance: System keeps working even if a drive fails.
+	- Hot-swapping: Replacing a failed drive without turning off the system.
+	- Parity: Extra data used to rebuild information if a disk fails.
+
+- Key Takeaways
+	- RAID protects data and improves performance by using multiple drives together.
+	- RAID 0 = Speed, RAID 1 = Safety, RAID 5/6/10 = Best of both worlds.
+	- Hardware RAID = more reliable and supports hot-swapping.
+
+----------------------------------------------------------------------------------
+RAID 0 and RAID 1 3.2.6
+
+- Overview
+	- When setting up a RAID array, the RAID level determines how data is stored, protected, and accessed.
+	- Choosing the right level depends on:
+		- Fault tolerance (protection from drive failure)
+		- Performance (read/write speed)
+		- Capacity (usable storage)
+		- Cost (how many drives are needed)
+	- Tip: Always use identical drives in size, type, and speed to avoid wasted space or performance bottlenecks.
+
+- RAID 0 – Striping (No Parity)
+	- How It Works
+		- Splits (stripes) data evenly across two or more drives.
+		- Multiple disks can read/write simultaneously, increasing speed.
+		- Logical volume = sum of all drive capacities, but limited by smallest drive.
+
+	- Advantages
+		- Best read/write performance.
+		- Uses 100% of total disk capacity.
+		- Great for temporary or non-critical data (like cache or scratch disks).
+	
+	- Disadvantages
+		- No redundancy – if one drive fails, all data is lost.
+		- Not suitable for storing important files.
+
+	- Requirements
+		- Minimum: 2 drives
+
+- Comparison Summary
+Feature				RAID 0 (Striping)		RAID 1 (Mirroring)
+Minimum Drives			2			2
+Redundancy			None			Full
+Performance			Very Fast		Good (faster reads)
+Fault Tolerance			None			Survives 1 drive failure
+Storage Efficiency		100%			50%
+Best For				Gaming, temporary files	Critical data, OS drives
+
+- Key Takeaways
+	- RAID 0 = Speed only. No safety.
+	- RAID 1 = Safety first. Redundant copy of data.
+	- RAID 1 rebuilds quickly, while RAID 0 offers no rebuild option (data lost).
+	- Always choose based on importance of data vs. performance needs.
+----------------------------------------------------------------------------------
+RAID 5 and RAID 10 3.2.7 
+
+- RAID 5 (Striping with Distributed Parity)
+	- Minimum Drives: 3
+	- How it Works: Data is striped (split up) across all disks like RAID 0, but parity (error correction info) is also stored across all disks.
+	- Fault Tolerance: Can survive 1 disk failure — lost data can be rebuilt using parity.
+	- Performance:
+		- Read speed: Fast (can read from multiple disks).
+		- Write speed: Slower (must calculate parity).
+	- Storage Efficiency: (n−1)/n — one drive’s worth of space is used for parity.
+	- Example: 3 drives of 80 GB → 160 GB usable.
+	- Use Case: File servers or environments needing good performance and redundancy.
+	- Key Idea: RAID 5 = Fast reads + 1 drive fault tolerance + good capacity efficiency.
+
+- RAID 10 (Stripe of Mirrors)
+	- Minimum Drives: 4 (and must be even)
+	- How it Works: Combines RAID 1 (mirroring) and RAID 0 (striping):
+		- Pairs of disks are mirrored (for safety).
+		- Those mirrored pairs are striped (for speed).
+	- Fault Tolerance: One disk from each mirror pair can fail — still runs fine.
+	- Performance:
+		- Read and Write: Very fast (no parity calculation).
+	- Storage Efficiency: 50% (half of total disk space used for mirroring).
+	- Use Case: Databases or critical systems needing speed and high reliability.
+	- Key Idea: RAID 10 = RAID 1’s protection + RAID 0’s speed = fast & safe (but uses 50% of storage).
+
+----------------------------------------------------------------------------------------
+RAID 6 (Striping with Double Parity) 3.2.8 
+
+- How it Works:
+	- Like RAID 5, data is striped across multiple disks.
+	- Two sets of parity information are stored (instead of one), allowing the system to rebuild data even if two disks fail.
+
+- Requirements:
+	- Minimum drives: 4
+	- Usable storage: Total capacity minus the size of two disks (because two are used for parity).
+		- Example: 4 × 1 TB drives → 2 TB usable space
+- Performance:
+	- Read speed: Good (similar to RAID 5)
+	- Write speed: Slower (because two parity sets must be calculated and written)
+
+- Fault Tolerance:
+	- Can survive two simultaneous disk failures — great for large or mission-critical systems.
+
+- pros:
+	- Very high fault tolerance
+	- Great for big storage arrays
+	- Keeps working even after one or two disk failures
+- cons: 
+	- Slower writes (extra parity work)
+	- More expensive (needs extra disks + stronger controller)
+	- Longer rebuild times
+
+- Use Case:
+	- Enterprise servers, data centers, or systems that cannot afford downtime or data loss.
+
+- Quick Tip to Remember:
+	- RAID 6 = RAID 5 + Extra Parity = Survives 2 Disk Failures
+	 
+
+
+----------------------------------------------------------------------------------------
+Removable Storage Drives 3.2.10 
+
+- Definition:
+	- Removable storage includes devices or media that can be easily moved between computers without opening the case.
+
+- 1. Drive Enclosures
+	- Let you use HDDs or SSDs as external drives.
+	- Provide:
+		- Data interface: USB, Thunderbolt, or eSATA
+		- Power connector (if needed)
+		- Physical protection for the drive
+	- Some advanced versions are NAS (Network Attached Storage) devices → connect directly to a network and can support RAID for data redundancy.
+	- Example: External USB hard drives or SSDs.
+
+- 2. Flash Drives and Memory Cards
+	- Flash Drives (USB / Thumb / Pen Drives):
+		- Use flash memory and plug into a USB port.
+		- Portable and great for quick file transfers.
+	- Memory Cards:
+		- Common in cameras, phones, and tablets for photos, videos, and data.
+		- Need a card reader to connect to a PC (internal or external via USB).
+	- Motherboards often have USB headers for internal card readers.
+
+- 3. Types of SD Cards
+	Type		Capacity
+	SD		Up to 2 GB
+	SDHC		Up to 32 GB
+	SDXC		Up to 2 TB
+
+- 4. SD Card Speed Ratings
+	Type			Speed
+	SD (original)		Up to 25 MBps
+	UHS (Ultra High Speed)	Up to 108 MBps
+	UHS-II			Up to 156 MBps (full-duplex) or 312 MBps (half-duplex)
+	UHS-III			Up to 312 MBps (FD312) or 624 MBps (FD624)
+	SD Express		Up to 985 MBps (uses PCIe + NVMe tech)
+	- Tip: Smaller cards (like microSD) can fit into standard readers using an adapter (caddy).
+
+- Quick Recap
+	- Enclosures → Make drives external (USB, Thunderbolt, etc.)
+	- Flash drives → Portable USB storage
+	- Memory cards → For cameras/phones; need a reader
+	- SD Types: SD → SDHC → SDXC (increasing capacity)
+	- Speed Ratings: Faster UHS versions = better performance
+
+----------------------------------------------------------------------------------------
+Optical Drives 3.2.11
+
+- Definition:
+	- Optical drives use lasers to read and write data on discs like CDs, DVDs, and Blu-ray Discs (BDs).
+	- These are often used for music, video, software, and data storage.
+	- Note: Though durable, scratches can make discs unreadable.
+
+
+- Types of Optical Media
+Type		Full Name	      Capacity						Base Transfer Rate	Formats
+CD		Compact Disc	      Up to 700 MB						150 KBps			CD-R (recordable), CD-RW (rewritable)
+DVD		Digital Versatile Disc 4.7 GB (single-layer) → 17 GB (dual-layer, double-sided)	1.32 MBps			DVD±R/RW (supports + and - formats)
+Blu-ray (BD)	   Blu-ray Disc			 25 GB per layer						4.5 MBps, up to 72 MBps (16x)	BD-ROM (read-only), BD-RE (rewritable)
+
+
+- Types of Writable Media
+Type					Description
+Recordable (R)									Written once in a single session.
+Multisession Recordable			Written in multiple sessions, but cannot erase data.
+Rewritable (RW / RE)							Can be erased and rewritten several times.
+
+- Installation & Connectivity
+	- Internal Optical Drive:
+		- Installed in a 5.25-inch drive bay.
+		- Connects via SATA data and power cables.
+	- External Optical Drive:
+		- Connects via USB, eSATA, or Thunderbolt.
+		- Often needs an external power supply (AC adapter).
+		- Uses tray-loading or slot-loading mechanisms.
+	- Tip: A small manual eject hole allows disc removal using a paper clip if power fails or the eject button doesn’t work.
+----------------------------------------------------------------------------------
+Lab: Install SATA Devices 3.2.12
+
+You work part-time at a computer repair store. You are building a new computer. A customer has purchased two serial ATA (SATA) hard drives for his computer.
+
+In this lab, your task is to install both hard drives on the computer.
+
+Read the motherboard documentation to identify the location of the internal SATA connectors.
+Install the hard drives and connect them to the motherboard.
+Plug in the correct power connector from the power supply for both drives.
+Boot the computer into the BIOS and verify that both drives are detected.
+Installing hard drives in the simulated interface can be a bit tricky. Keep in mind the following tips:
+
+Add the drives to the computer using the Drive Bays view.
+The SATA connectors on the hard drives are visible in the Drive Bays view.
+To connect a SATA cable from a hard drive to the motherboard, use the Workspace tab to view partial connections.
+To connect the power supply, switch to the Drive Bays view. In the Workspace tab, find the power supply inside the System Case, then use the Selected Item pane to find the appropriate connectors.
+Windows is not installed, so the operating system will not start.
+
+
+-------------------------------------------------------------------------------------
+
+3.2.13 Lesson Review
+
+- You are in the process of purchasing several new Windows-based computers to replace broken or outdated computers. You have heard that solid-state drives (SSDs) can significantly increase systems' overall performance.
+Which of the following BEST describe the features of solid-state drives (SSDs) compared to hard disk drives (HDDs)? (Select two.)
+	- An SSD uses flash technology to store data.
+	- An SSD opens files faster than an HDD.
+
+- You have an existing computer running Windows 11. You want to configure a RAID 1 array in the computer. You install two new SATA drives and then use the RAID controller integrated in the motherboard to define a RAID 1 array using both drives.
+When you boot the computer, Windows does not show the logical RAID drive. What should you do?
+	- Install the driver for the RAID controller.
+
+- You work for a small company as the human resources specialist. Since the company is fairly small, you are maintaining all of the employee information on your desktop computer, which is running Windows 11. This computer has two high-capacity hard disks. You want to ensure that this information is protected from a hard disk failure, so you want to set up a Windows software RAID system.
+Which of the following would be your BEST solution?
+	- Use mirrored volumes.
+
+- What distinguishes SD Express cards from earlier versions of SD cards?
+	- They offer much higher speeds
+
+- One of your customers wants you to build a personal server that he can use in his home. One of his concerns is making sure that he has at least one data backup stored on the server in the event that a disk fails. You have decided to back up his data using RAID.
+Since this server is for personal use only, the customer wants to keep costs down. Therefore, he would like to keep the number of drives to a minimum.
+Which of the following RAID systems would BEST meet the customer's specifications?
+	- Raid 1
+
+- You have configured Disk 3 and Disk 4 on your Windows 11 workstation as a RAID 1 array with the NTFS file system, and you have assigned F as the drive letter for the array. Each disk has an individual storage capacity of 1 TB.
+However, when you check the available storage size of F, you notice that it only lists 1 TB (instead of 2 TB) of available disk storage space. What should you do to resolve the issue?
+	- Nothing. The RAID array is working as designed.
+
+- You are configuring a new system, and you want to use a RAID 0 array for the operating system using SATA disks and a special controller card that includes a RAID processor.
+Which RAID method should you use?
+	- Hardware
+
+- What is an advantage of RAID 5 over RAID 1?
+	- RAID 5 improves performance over RAID 1.
+
+
+- You want to create a software RAID 1 array on your Windows 11 workstation using Disk 1 and Disk 2.
+What do you need to do with Disk 1 and Disk 2 before configuring them for a RAID 1 array?
+	- Convert the disks from basic to dynamic.
+
+- You are a sales representative for a large pharmaceutical company. You often want to share information from your laptop quickly with customers during onsite visits.
+Which of the following storage media would BEST allow you to quickly and inexpensively share your files with the customers?
+	- Flash drive
+
+- Which Blu-ray standard defines rewritable discs?
+	- BD-RE
+
+- You want to create a high-performance Windows laptop with both a 2-TB hard drive and a 1-TB SSD drive.
+Which of the following are data storage recommendations for your high performance system? (Select two.)
+	- Store heavily used information on the hard drive.
+	- Store data that requires high performance on the SSD drive.
+
+- Which of the following drive configurations uses striping with parity for fault tolerance?
+	- RAID 5 
+
+- You are building a new computer that will contain two hard disks. To provide increased performance, you have decided to configure the drives using RAID technology.
+Which of the following will BEST meet your needs?
+	- RAID 0 
+
+- Which storage device uses aluminum platters for storing data?
+	- Hard disk 
+
+-----------------------------------------------------------------------
+
+
+ 
 
 
 
