@@ -916,9 +916,144 @@ Which of the following will BEST meet your needs?
 	- Hard disk 
 
 -----------------------------------------------------------------------
+System RAM and Virtual Memory 3.3.1
+
+- CPU Memory Hierarchy:
+	- Registers → Cache → RAM → Storage (SSD/HDD)
+	- CPU cache is very fast but small, so RAM supports it by storing active programs and data.
+
+- System RAM (Random Access Memory)
+	- Type: Volatile memory → loses data when power is off.
+	- Speed: Faster than SSDs, much faster than HDDs.
+	- Capacity: Measured in GB → affects:
+		- Number of applications you can run simultaneously
+		- Ability to work with large files efficiently
+	- Process Execution:
+		- Program/data loaded from fixed disk → RAM
+		- CPU fetches instructions from RAM → Cache → Registers
+
+- Memory Bus: Data and Address Pathways
+	Pathway		Function
+	Data Bus		Transfers information per clock cycle (typical: 64-bit for single channel)
+	Address Bus	Tracks memory locations → limits max memory CPU can access
+  
+	- 32-bit CPU: 32-bit address bus → max 4 GB memory
+	- 64-bit CPU:
+		- Theoretical: 64-bit address space → 16 exabytes
+		- Practical: Most use 48-bit address bus → max 256 TB memory
+- Key Points
+	- 64-bit CPUs can address more memory locations than 32-bit CPUs.
+	- Data bus width (e.g., 64-bit) determines how much memory can be transferred per cycle.
+	- RAM is temporary memory for running programs; storage (HDD/SSD) is permanent memory.
+
+- Quick Tip for Exam:
+	- Think of it like a pipeline: Storage feeds RAM → RAM feeds CPU cache → CPU executes instructions. 
+	- More RAM = smoother multitasking and faster program execution.
+
+----------------------------------------------------------------------------------------------
+RAM Types 3.3.2
+
+-Modern RAM is mostly DDR SDRAM (Double Data Rate Synchronous Dynamic RAM). RAM evolution:
+-  DRAM (Dynamic RAM):
+	- Stores bits as electrical charges in capacitors.
+	- 1 = charged, 0 = not charged.
+-  SDRAM (Synchronous DRAM):
+	- Synchronized to the system clock, so memory operations align with CPU instructions.
+- DDR SDRAM (Double Data Rate SDRAM):
+	- Transfers data on both rising and falling clock edges → doubles data rate.
+	- Modules labeled by peak transfer rate (e.g., PC1600, PC2100).
+
+- DDR Calculation Example (DDR-200 / PC1600)
+Step			Explanation
+Clock Speed		100 MHz (memory bus & internal clock)
+Data Rate		2 operations per cycle → 200 MT/s (megatransfers/sec)
+Peak Transfer Rate	200 MT/s × 8 bytes/transfer = 1600 MB/s → PC1600
 
 
- 
+
+-DDR Generations Comparison
+Type	Data Rate (MT/s)		Transfer Rate (GB/s)	Max Module Size
+DDR1	200–400			1.6–3.2			1 GB
+DDR2	400–1066			3.2–8.5			4 GB
+DDR3	800–2133			6.4–17.066		16 GB
+DDR4	1600–3200		12.8–25.6			32 GB
+DDR5	4800–8000+		38.4–51.2+		128 GB+
+
+	- MT/s: Megatransfers per second → millions of data transfers per second.
+	- Transfer rate: Speed at which data is transferred by the memory controller.
+
+- Timing and Latency
+	- RAM modules have internal timings, e.g., 14-15-15-35 CAS 14.
+	- CAS latency: Delay (in clock cycles) between memory controller request and data availability.
+		- Lower CAS latency = faster access.
+	- Important when comparing modules of the same type and speed.
+
+- Architectural Improvements
+	- DDR4:
+		- Higher density → larger capacities.
+		- Improved power efficiency and channel design → better throughput.
+	- DDR5:
+		- Dual 32-bit subchannel per DIMM → more efficient access.
+		- Reduced latency and higher power efficiency.
+- Quick Exam Tips:
+	- DDR = Double Data Rate → 2 transfers per clock cycle.
+	- DDR5 > DDR4 > DDR3 in speed, capacity, and efficiency.
+	- Always check CAS latency for performance comparison.
+
+---------------------------------------------------------------------------------------
+Memory Modules 3.3.3 
+
+- Definition:
+	- A memory module is a printed circuit board holding multiple RAM chips that act as a single unit.
+	- Desktop RAM: Packaged as DIMMs (Dual Inline Memory Modules).
+	- Laptop/Compact RAM: Packaged as SODIMMs (Small Outline DIMMs).
+	- Notches on the edge connector indicate DDR generation (DDR3, DDR4, DDR5) → prevents incorrect insertion.
+	- High-speed modules often include heat sinks for cooling.
+	- ESD Precaution: Always handle memory modules with anti-static measures.
+
+- DIMM vs SODIMM
+	- Feature		DIMM				SODIMM
+	Size			Larger				Smaller
+	Use Case			Desktops, Workstations, Servers	Laptops, Mini-PCs, Compact Systems
+	Capacity		Higher (up to 128+ GB with DDR5)	Lower (4–32 GB typical)
+	Performance		Higher				Slightly lower
+	Installation		Straight into memory slot		Insert at 45º angle into slot
+
+- Installation & Compatibility
+	- DDR type must match motherboard:
+		- DDR5 → DDR5 slot only.
+		- Mixing DDR types is not possible.
+	- Bus Speed Consideration:
+		- Use modules with the same rated speed as the motherboard.
+		- Mixing speeds → system runs at slowest module speed.
+	- Memory Slots:
+		- Similar to expansion slots.
+		- Catches at ends secure the module.
+		- SODIMM slots often pop up at 45º for insertion/removal.
+
+- Quick Exam Tips
+	- Notches = DDR generation → never force a mismatch.
+	- Desktop → DIMM, Laptop → SODIMM.
+	- Modules with heat sinks = high-speed / high-performance RAM.
+	- Anti-ESD handling is mandatory.
+
+-------------------------------------------------------------------------------
+Lab: Select Memory by Sight 3.3.4
+
+You work at a computer repair store. You are building a computer using spare parts. You need to install the correct memory module for the computer.
+
+In this lab, your task is to:
+
+Examine the motherboard memory slots and the memory modules available in the Inventory to find the correct memory.
+If necessary, zoom in on the motherboard to get a better look at the memory slots.
+Install a single memory module in the motherboard.
+In this lab, you are required to identify the memory in the Inventory by sight.
+
+-----------------------------------------------------------------------------------
+Multi-channel System Memory 3.35
+	
+
+
 
 
 
