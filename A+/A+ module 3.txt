@@ -1050,8 +1050,571 @@ Install a single memory module in the motherboard.
 In this lab, you are required to identify the memory in the Inventory by sight.
 
 -----------------------------------------------------------------------------------
-Multi-channel System Memory 3.35
+Multi-channel System Memory 3.3.5
 	
+- Purpose:
+	- Modern CPUs are faster than memory can supply data. Multi-channel memory architecture increases memory bandwidth to prevent a bottleneck.
+
+
+- Single-Channel vs. Dual-Channel
+Feature			Single-Channel			Dual-Channel
+Data Bus			64-bit				2 × 64-bit = 128-bit
+Bandwidth		Standard			Doubled
+Requirement		Any RAM				CPU, motherboard, memory controller support; ordinary RAM modules used
+	- Dual-channel kits are sold for convenience, but the modules are identical to regular RAM.
+
+- Dual-Channel Configuration
+	- Slot Arrangement:
+		- Motherboards often have 4 DIMM slots in color-coded pairs.
+		- Each color = one channel (e.g., A1/A2 = Channel A, B1/B2 = Channel B).
+	- Installation Rules:
+		- Use identical modules (speed, capacity, timings, CAS latency).
+		- Insert into corresponding slots (e.g., A1 + B1).
+		- Enable via PC firmware if necessary.
+	- Mismatched Modules / Flex Mode:
+		- If module sizes differ: dual-channel works for the smallest size, remainder runs single-channel.
+		- Odd module counts may default to single-channel.
+		- Flex mode allows partial dual-channel operation.
+			- Example: A1 = 2 GB, B1 = 6 GB → 2 GB dual-channel, remaining 4 GB single-channel.
+
+- Triple-Channel & Quad-Channel Memory
+	- Some CPUs/chipsets support 3- or 4-channel memory.
+	- System defaults to as many channels as modules are installed.
+
+- DDR5 Multi-Channel Architecture
+	- Each DDR5 DIMM has 2 × 32-bit channels.
+	- Dual-channel DDR5 → 4 × 32-bit channels, distributing memory load more efficiently.
+	- Benefits: higher density per module, lower latency, better utilization for multi-core CPUs.
+
+-------------------------------------------------------------------------------------
+3.3.7
+Lab: Install Triple Channel Memory
+
+You work at a computer repair store. You are building a new computer for a customer. The computer has an Intel i7-960 processor, and you need to install memory in the computer.
+
+In this lab, your task is to complete the following:
+
+Install a total of three memory modules.
+Configure the memory to run in triple channel mode.
+For triple channel operation, memory should be installed in matched sets (same capacity and same speed).
+Select the largest and fastest memory supported by the motherboard.
+Install the memory according to the motherboard recommendations.
+After you install the memory, boot into the BIOS setup (press F2) and verify that the memory is running in triple channel mode.
+As you complete the lab, consult the motherboard documentation and find answers to the following questions:
+
+What is the maximum amount of memory supported by the motherboard?
+	- DDR3
+	- so 4 GB but when instade windows OS it can be 3-3.5 GB or less 
+
+What is the maximum capacity of a single module?
+	- 1600MHz
+
+What is the maximum speed supported?
+
+Which memory slots should be used for triple channel operation?
+	- A1 B1 C1
+
+-------------------------------------------------------------------------
+CPU Architecture 3.4.1
+
+- Definition:
+	-  The CPU (Central Processing Unit) — or processor — is the computer’s main component that executes program instructions. Every running program (OS, app, or firmware) is converted into machine instructions that the CPU understands.
+
+- CPU Instruction Cycle
+	- Fetch:
+		- The control unit retrieves the next instruction from system memory into the CPU’s pipeline.
+	- Decode:
+		- The control unit interprets the instruction and decides what needs to be done.
+		- It sends the instruction to either the ALU (Arithmetic Logic Unit) or FPU (Floating Point Unit) if math is required.
+	- Execute:
+		- The ALU or FPU performs the actual operation (e.g., calculations, logic comparisons).
+	- Write-Back:
+		- The result is saved to a register, cache, or system memory for later use.
+
+- CPU Components
+	- Register:
+		- Tiny, ultra-fast storage areas inside the CPU.
+		- Operate at the same clock speed as the CPU.
+		- Store temporary data during processing.
+	- Cache:
+		- Small, high-speed memory located on or near the CPU.
+		- Stores frequently used data and instructions to reduce access time to slower system RAM.
+		- Levels:
+			- L1 Cache: Fastest, smallest (inside the CPU core).
+			- L2 Cache: Larger, slightly slower.
+			- L3 Cache: Shared between cores, largest and slowest of the three.
+
+- Key Point
+	- Registers and cache help the CPU work faster by reducing delays caused by fetching data from slower system memory.
+
+-------------------------------------------------------------------------------------------
+x86 CPU Architecture 3.4.2
+
+- Overview:
+	- CPU architecture determines how a processor handles instructions, affecting speed, efficiency, and performance.
+	- There are two main types of architectures
+
+RISC vs. CISC
+Feature			RISC (Reduced Instruction Set Computing)					CISC (Complex Instruction Set Computing)
+Instruction Set		Small, simple, and optimized						Large and complex
+Execution		Faster, uses fewer cycles per instruction					Slower per instruction, but can do more per instruction
+Best For			Power-efficient and high-speed systems (phones, tablets, embedded devices)	General-purpose computing (PCs, laptops, servers)
+Example			ARM architecture (used in mobile devices)					x86 architecture (used in desktops and servers)
+
+
+
+- x86 Architecture (CISC Design)
+	- Used in most desktop and server CPUs.
+	- Supports:
+		- 32-bit (IA-32) and
+		- 64-bit (x86-64) instruction sets.
+	- Developed mainly by Intel and AMD.
+
+- Core CPU Components
+	- ALU (Arithmetic Logic Unit): Performs math and logic operations.
+	- Control Unit: Manages the fetch → decode → execute cycle.
+	- Cache Memory: Small, high-speed memory built into the CPU.
+		- L1 Cache: Fastest, smallest, inside each core.
+		- L2 Cache: Larger, slower, per core.
+		- L3 Cache: Shared among cores, largest, slower than L1/L2.
+
+- Performance Features
+	- Multi-Core Processors:
+		- Contain multiple processing cores on a single chip.
+		- Enable parallel processing (doing multiple tasks at once).
+		- Great for multitasking, gaming, and content creation.
+	- Hyper-Threading (Intel) / SMT (AMD):
+		- Allows each core to handle two threads at once.
+		- Simulates additional cores for improved efficiency and responsiveness.
+
+- CPU Examples
+	- Intel Core Series (i3, i5, i7, i9)
+	- AMD Ryzen Series (3, 5, 7, 9)
+	- These CPUs use multi-core and hyper-threading features for high performance in gaming, video editing, and data-heavy tasks.
+
+- Key Takeaway
+	- RISC: Efficiency and speed → mobile and embedded systems.
+	- CISC/x86: Flexibility and performance → desktops and servers.
+	- Understanding these differences helps choose the right CPU for specific workloads.
+
+-----------------------------------------------------------------------------------
+x64 CPU Architecture 3.4.3
+
+
+- Overview:
+	- The x64 (x86-64) architecture is the 64-bit extension of the older x86 (32-bit) architecture.
+	- It was developed by AMD (as AMD64) and later adopted by Intel (as Intel 64 or EM64T).
+
+- x86 vs. x64 Overview
+Feature			x86 (32-bit)			x64 (64-bit)
+Instruction Width	32 bits				64 bits
+Max Addressable Memory	4 GB				Over 4 GB (up to terabytes)
+CPU Registers		32-bit wide			64-bit wide
+Software Support		Runs only 32-bit software		Runs both 32-bit and 64-bit software
+Typical Use		Older systems (1990s–2010s)	Modern PCs, servers, and laptops
+
+
+- Key Features of x64 Architecture
+	- 64-bit instructions, data paths, and memory addressing
+		- Enables larger amounts of RAM and faster data handling.
+	- Backward Compatibility:
+		- Can run 32-bit programs, but 32-bit CPUs cannot run 64-bit software.
+	- Software Requirements:
+		- OS, drivers, and apps must be compiled for 64-bit use.
+		- Device drivers must match OS architecture
+			- 64-bit OS requires 64-bit drivers.
+
+- Examples in Modern Systems
+	- Operating Systems:
+		- Windows 11 (64-bit only)
+		- Most modern Linux distributions (64-bit)
+		- macOS (64-bit since Catalina — dropped 32-bit support)
+	- Mobile Example:
+		- Apple’s A7 chip (iPhone 5s) started the 64-bit transition.
+	- Applications:
+		- Adobe Creative Cloud and similar apps are now 64-bit for better performance and memory handling.
+
+
+- Performance & Security Benefits
+	- Better performance: Handles larger data sets and multitasking more efficiently.
+	- More memory capacity: Supports more than 4 GB of RAM.
+	- Virtualization Support:
+		- Intel VT-x and AMD-V technologies improve virtual machine performance.
+	- Enhanced Security:
+		- Data Execution Prevention (DEP) — blocks code from running in non-executable memory regions.
+
+- Key Term
+	- Device Driver: Software that allows the operating system to communicate with hardware components.
+		- Must match the OS architecture (64-bit OS → 64-bit driver).
+
+- Quick Summary
+	- x64 = 64-bit version of x86.	
+	- Supports more RAM, higher performance, 64-bit virtualization, and better security.
+	- Now the standard for all modern computers.
+
+--------------------------------------------------------------------------------------
+ARM CPU Architecture 3.4.4
+
+- What it is:
+	- ARM = Advanced RISC Machines — CPU designs licensed to companies like Apple, Qualcomm, Nvidia, and Samsung.
+	- Used in mobile devices, Apple M1/M2 Macs, Chromebooks, and some Windows tablets/laptops.
+	- Often designed as a System-on-Chip (SoC) — CPU + GPU + memory + networking + storage controller in one chip.
+
+- Key Characteristics
+	- Based on RISC (Reduced Instruction Set Computing) → simpler, faster instructions → high efficiency.
+	- Compared to x86/x64 (CISC), ARM uses less power and generates less heat.
+	- Ideal for mobile and fanless systems due to low power use and small size.
+
+- Software Compatibility
+	- OS, drivers, and apps must be compiled for ARM to run natively.
+	- Emulation allows ARM devices to run x86/x64 software (e.g., Windows on ARM, Apple Rosetta 2),
+but this usually comes with a performance penalty.
+	- Example:
+		- iOS/macOS optimized for ARM.
+		- Android built mainly for ARM.
+		- Windows 10/11 ARM can emulate x86/x64 programs.
+
+- Advantages
+	- Power-efficient → longer battery life.
+	- Low heat output → allows passive cooling (no fans).
+	- Integrated design → cheaper, thinner, and lighter devices.
+	- High performance per watt (especially Apple’s M1/M2).
+
+- Physical Design
+	- ARM SoCs are soldered to the motherboard (non-replaceable).
+	- Integration reduces space, cost, and need for extra components.
+	- Used in fanless laptops, phones, tablets, and other compact devices.
+
+- Quick Recap
+Feature			ARM (RISC)		x86/x64 (CISC)
+Instruction Type		Simple			Complex
+Power Use		Low			Higher
+Heat Output		Low			Higher
+Performance per Watt	High			Moderate
+Typical Devices		Mobile, fanless		Desktops, servers
+Software Compatibility	Needs recompilation	Widely supported
+
+
+------------------------------------------------------------------------------------------------
+CPU Features 3.4.5
+
+- Clock Speed
+	- Clock speed = how fast a CPU executes instructions (measured in GHz).
+	- Good for comparing CPUs of the same architecture, but not reliable across different ones (e.g., ARM vs x64).
+	- Performance limited by power and heat — CPUs can’t just keep getting faster.
+	- Efficiency improved by optimizing pipelines to do more work per clock cycle.
+
+- Multithreading (SMT / Hyper-Threading)
+	- Allows one physical core to handle multiple instruction streams (threads).
+	- Reduces CPU idle time → boosts performance for multithreaded apps.
+	- Examples:
+		- Intel Hyper-Threading (HT)
+		- AMD Simultaneous Multithreading (SMT)
+	- Example: A 4-core CPU with SMT appears as 8 logical cores (4C/8T).
+	- Used in tasks like video editing, gaming, and virtualization.
+
+- Symmetric Multiprocessing (SMP)
+	- Uses 2+ physical CPUs in one system.
+	- OS distributes work across all CPUs automatically.
+	- Common in servers and high-end workstations.
+	- Requires:
+		- Multisocket motherboard
+		- CPUs of the same model/specifications
+		- SMP-capable operating system
+
+- Chip-Level Multiprocessing (CMP / Multicore CPUs)
+	- Multiple cores built onto one physical CPU chip.
+	- Each core = its own execution unit + cache.
+	- Shared caches often used for efficiency.
+	- Simplifies design vs. SMP (no multiple sockets needed).
+	- Common notations:
+		- 8C/16T → 8 cores, 16 threads (supports multithreading).
+	- Now standard in desktops, laptops, and servers.
+
+- Virtualization Support
+	- Enables multiple operating systems (VMs) to run on one machine.
+	- Look for CPUs with hardware virtualization:
+		- Intel VT-x
+		- AMD-V
+	- These make VMs run smoother and faster by offloading work from software to hardware.
+
+- Advanced Virtualization Features
+	- SLAT (Second Level Address Translation):
+		- Intel: Extended Page Table (EPT)
+		- AMD: Rapid Virtualization Indexing (RVI)
+		- Improves memory management for VMs → faster performance.
+	- IOMMU (Input-Output Memory Management Unit):
+		- Helps manage hardware access by VMs.
+		- Improves security and performance.
+	- Ideal virtualization CPUs:
+		- High core count
+		- Multithreading support (HT/SMT)
+		- SLAT and IOMMU support
+
+- Quick Recap Table
+Feature			Description				Example
+Clock Speed		Measures CPU speed (GHz)			4.0 GHz
+SMT / Hyper-Threading	1 core = multiple threads			Intel HT, AMD SMT
+SMP			Multiple CPUs in one system		High-end servers
+CMP / Multicore		Multiple cores on one chip			8C/16T CPU
+Virtualization		Run multiple OSs				Intel VT-x, AMD-V
+SLAT			Boosts VM memory efficiency		Intel EPT, AMD RVI
+IOMMU			Handles device access for VMs		Used in advanced virtualization
+
+------------------------------------------------------------------------------
+3.4.6
+CPU Socket Types
+
+- What is a CPU Socket?
+	- The CPU socket connects the processor to the motherboard.
+	- Each CPU brand (Intel or AMD) has its own socket type — they are not interchangeable.
+	- ZIF (Zero Insertion Force) mechanism lets you install the CPU without pressure, preventing pin damage.
+	- Tip: Always use anti-ESD precautions (wear a wrist strap or ground yourself) when handling CPUs. They are sensitive to static electricity.
+
+- Intel Socket Types
+	- Intel uses LGA (Land Grid Array) sockets.
+		- Pins are on the motherboard socket.
+		- CPU has flat contact pads.
+
+- Common Intel Sockets:
+Socket		Description				CPU Generation
+LGA 1200		Used for Intel 10th & 11th Gen Core CPUs	Comet Lake and Rocket Lake
+LGA 1700		Used for Intel 12th Gen and newer CPUs	Alder Lake and later
+
+- Intel Feature:	
+	- Turbo Boost — automatically increases CPU speed during heavy workloads.
+Intel Feature:
+Turbo Boost — automatically increases CPU speed during heavy workloads.
+
+- Handling Tips (Intel or AMD):
+	- Always align Pin 1 on the CPU with Pin 1 on the socket.
+	- When removing a CPU attached to a heat sink:
+		- Gently twist the heat sink to loosen it.
+		- Do not pull straight up — it can rip the CPU out of the socket.
+		- Unlock the latch before removing the CPU.
+	- When reinstalling:
+		- Clean old thermal paste off both surfaces.
+		- Apply a small amount of new thermal paste (pea-sized or "X" pattern).
+		- Too much paste = bad heat transfer or possible damage.
+
+- AMD Socket Types
+	- AMD mostly uses PGA (Pin Grid Array) sockets.
+		- Pins are on the CPU, and the holes are on the motherboard.
+	- However, some high-end AMD CPUs (like servers) use LGA instead.
+
+- Common AMD Sockets:
+Socket	Description				Used For
+AM4	Most common for Ryzen desktop CPUs		Mainstream desktops
+TR4	For Threadripper CPUs			High-performance desktops
+SP3	Uses LGA design for EPYC CPUs		Servers and data centers
+
+
+- LGA vs PGA Summary
+Feature			Intel (LGA)				AMD (PGA)
+Pin Location		On motherboard socket			On CPU itself
+Durability		Less risk to CPU pins			Easier to bend pins
+Used For			Desktop & server CPUs (LGA 1200, 1700)	Ryzen (AM4), Threadripper (TR4), EPYC (SP3)
+Installation		ZIF lever + contact pads			ZIF lever + insert pins
+
+- Key Takeaways
+	- Intel → LGA sockets (pins on motherboard).
+	- AMD → PGA sockets (pins on CPU) — except SP3 (LGA).
+	- Always match CPU and motherboard socket types.
+	- Use thermal paste and anti-static precautions during installation.
+	- ZIF sockets prevent damage by eliminating force during installation.
+
+-----------------------------------------------------------------------------
+3.4.7
+CPU Types and Motherboard Compatibility
+
+-Overview
+	- CPUs are constantly being updated — new generations = new sockets + new chipsets.
+	- Intel and AMD use different socket designs — you can’t mix brands.
+	- Compatibility depends on:
+		- Socket type (physical fit)
+		- Chipset support (features and firmware)
+		- CPU generation (matching BIOS and architecture)
+	-  Even if a CPU fits physically, it may not work unless the chipset and BIOS support it.
+
+- Chipsets and Motherboard Features
+	- The chipset controls what features the motherboard supports:
+	- Overclocking
+	- PCIe lanes
+	- Memory type and speed
+
+Brand	High-End Chipset		Budget Chipset		Notes
+Intel	Z-Series (Z690, Z790)	B- and H-Series		Z-series allows overclocking
+AMD	X-Series (X670)		B-Series, A-Series	X-series = more features, PCIe lanes
+
+Form Factors affect how many components you can install:
+
+Form Factor		Size		Typical Use
+ATX			Full-size	Most expansion slots and RAM slots
+MicroATX		Medium		Fewer expansion slots
+Mini-ITX			Small		Compact builds (1 GPU slot, 2 RAM slots)
+
+
+- Installing a CPU and Motherboard
+	- Socket Alignment → Match CPU and socket (e.g., LGA for Intel, AM4/AM5 for AMD).
+		- Use notches or triangle markers for correct orientation.
+	- Secure CPU → Place it gently in the socket. Lock it with the ZIF lever (no force).
+	- Apply Thermal Paste → Small pea-sized amount in center of CPU.
+	- Attach Cooler → Align and tighten evenly. Connect cooler to CPU fan header.
+	- Install Motherboard → Align with standoffs in the case and secure with screws.
+	-  If you remove a CPU cooler, twist gently to loosen — don’t pull straight up.
+
+- Upgrading CPUs
+	- Upgrades are limited — new CPUs often need new sockets/chipsets.
+	- Even if compatible, upgrades might not give major performance gains without updating other components (RAM, motherboard, GPU).
+
+
+
+- Core Configurations and Performance
+Term			Description			Benefit
+Single-Core		One core = one task at a time	Simpler tasks
+Multi-Core		Multiple cores = multiple tasks	Better multitasking
+Hyper-Threading / SMT	Each core runs 2 threads		More efficiency in parallel tasks
+
+- Examples:
+	- Gaming: Needs high single-core speed → Intel i5 / AMD Ryzen 5
+	- Virtualization: Needs many cores + SMT → Ryzen 9 / Threadripper / Core i9
+	- Workstations: Needs many cores + threads → AMD Threadripper / Intel Xeon
+
+- Desktop CPU Families
+Brand	CPU Tiers					Socket				Notes
+Intel	i3 → i5 → i7 → i9 (plus Pentium & Celeron)		LGA 1700 (12th–13th Gen)		Supports DDR5 + PCIe 5.0
+AMD	Ryzen 3 → 5 → 7 → 9 → Threadripper			AM4 → AM5			AM5 adds DDR5 + PCIe 5.0; AM5 = LGA style
+
+- Workstations
+	- Used for video editing, 3D rendering, and software development.
+	- Similar components to servers, but for desktop environments.
+	- Use Threadripper (AMD) or Xeon (Intel) CPUs.
+
+- Servers
+	- Designed for high reliability and multitasking.
+	- Support multiple CPU sockets and ECC memory (error-correcting RAM).
+	- Use server-grade motherboards with advanced cooling and scalability.
+
+Brand		Server CPU		Socket
+Intel Xeon	Xeon Scalable		LGA 4189, older LGA 3647
+AMD EPYC		EPYC Genoa / Bergamo	SP3, newer SP5
+
+- Mobile Devices
+	- Prioritize battery life and cooling over raw power.
+	- Use ARM-based CPUs (phones/tablets) or mobile variants of desktop chips (e.g., Intel Core i7 Mobile, AMD Ryzen Mobile).
+	- Mobile CPUs are often soldered to the motherboard — not upgradeable.
+
+- Quick Comparison Chart
+Category	Typical CPU		Socket		Upgradeable?
+Desktop		Intel Core / AMD Ryzen	LGA 1700 / AM5	Usually
+Workstation	Xeon / Threadripper	LGA 4189 / TR4	Usually
+Server		Xeon / EPYC		LGA 4189 / SP5	Usually
+Mobile		Intel/AMD Mobile / ARM	Soldered	no 
+
+- Key Takeaways
+	- Always match CPU, socket, and chipset.
+	- Z-series (Intel) and X-series (AMD) = high-end boards with overclocking.
+	- AM5 and LGA 1700 are current mainstream sockets.
+	- Multi-core + SMT = best for multitasking and virtualization.
+	- Mobile CPUs trade power for efficiency and are non-replaceable.
+
+-------------------------------------------------------------------------------------------
+3.5
+Challenge Lab: Troubleshoot Memory
+
+You are an IT helpdesk technician. Your company uses Issue Trax as its ticket management software.
+
+To complete this lab, open Issue Trax on the ITAdmin computer. Read the open ticket and resolve the problem. Add a comment describing what actions you took, then close the ticket.
+
+Note: The problem will be considered "resolved" when the Exec computer successfully boots into Windows with at least 8 GB of RAM installed.
+
+
+
+Hi, my desktop in the Executive Office won't turn on. Instead, it beeps. I googled the problem and it looks like it may be a memory issue. Can you come fix it for me? P.S. I have software that requires 8GB of memory to run properly. Could you upgrade that while you're here?
+
+i test the memory that was in the executive office and seen that one memory DIMM2 was bad so i replace that one the other was good then i look at the motherbored and add a DIMM3 DIMM5 DIMM6  to the motherbored to it him up to 8 test to see if the memory was in the BION and it was and the computer start right up.
+
+------------------------------------------------------------------------------------------------
+3.7 Module Quiz
+
+- Due to a power failure, power is no longer coming from the wall outlet, and your computer is now off. You do not have a UPS, and you need to remove a disc from the DVD drive. What is the easiest method for retrieving the disc?
+	- Push a straightened paper clip into the hole on the front of the drive.
+
+
+- Which of the following is simulated memory that is created through a paging file on the hard drive?
+	- Virtual memory
+
+- An engineer is designing a new computer system and wants to provide active cooling to improve airflow and dissipate heat from around the components. What will the engineer use in the system?
+	- Fans
+
+- Which of the following will ensure optimal system cooling? (Select three.)
+	- Keep the ambient temperature below 80 degrees F.
+	- Leave space between the case and any walls or obstructions.
+	- Bundle cables together and secure unused cables to the case.
+
+
+- One of the video editors in your company is worried that they could lose a lot of data if their hard drive fails. They have asked you to come up with a solution. To do this, you have decided to implement a RAID 10 solution on their desktop workstation.
+Which of the following is the MINIMUM number of hard disks that you can use?
+	- Four 
+
+- You have an existing computer running Windows 11. You want to configure a RAID 1 array in the computer. You install two new SATA drives and then use the RAID controller integrated in the motherboard to define a RAID 1 array using both drives.
+When you boot the computer, Windows does not show the logical RAID drive. What should you do?
+	- Install the driver for the RAID controller.
+
+- You have a computer with a quad-core 64-bit processor that uses the x86-x64 instruction set. You want to install the 32-bit application on the computer.
+Which of the following BEST describes the action that you should perform?
+	- Install the application normally.
+
+- You have just installed a new CPU in your workstation along with a CPU heat sink and fan.
+Which of the following should you do next as a best practice?
+	- Update the UEFI after installing the processor.
+
+- Why can 64-bit CPUs handle more memory than 32-bit CPUs?
+	- They support a wider memory-addressing capability.
+
+- Which storage device uses aluminum platters for storing data?
+	- Hard disk 
+
+- Which of the following should you always do to avoid damage when you prepare to install a CPU? (Select two.)
+	- Ensure that the CPU and motherboard socket type match.
+	- Use anti-static protection.
+
+- How is the peak transfer rate for DDR-200 (PC1600) calculated?
+	- By multiplying the data rate (200 MT/s) by 8 bytes per transfer
+
+- What might happen if a PC power supply has a wattage rating lower than what the system requires?
+	- The PC may shut down unexpectedly or fail to power on.
+
+- You have been asked to configure the drives in a computer. The end user wants to use striping without incorporating any fault tolerance.
+Which of the following will BEST meet these requirements?
+	- RAID 0 
+
+- You have an existing system that has a single DDR3 memory module installed. You would like to add more memory to the three remaining empty memory slots.
+Which of the following steps should you take to ensure you get the right memory for the system? (Select two.)
+	-  Purchase additional modules that are the same as those currently installed.
+	- Check the motherboard documentation to find which modules are supported.
+
+- Which of the following is the purpose of cache memory?
+	- It allow a processor to access data more quickly.
+
+- What might be necessary to enable dual-channel mode on a dual-channel motherboard?
+	- Activating dual-channel mode within the PC's firmware
+
+- You are testing the power supply in a PC system by measuring the voltage on the 12 V rail using a multimeter. The voltage is registering as +10.1 volts.
+What should you do?
+	- Replace the power supply.
+
+- You notice your applications are loading and running slowly when you switch between them. You also notice that your hard disk drive light is constantly lit.
+Which of the following is MOST likely the cause of these issues?
+	- Disk thrashing
+
+Which of the following actions does an ATX power supply perform? (Select two.)
+	- Converts AC to DC
+	- Aids in thermal management
+
+-----------------------------------------------------------------------------------------
+
+
 
 
 
