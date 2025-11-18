@@ -1,0 +1,311 @@
+Module 4 
+----------------------------------------------------------------
+4.1.1 — BIOS and UEFI
+
+- What Is Firmware?
+	- Firmware is special program code stored on the motherboard, usually 	  in flash memory.
+	  Its job is to:
+		- Start and test hardware when the computer powers on
+		- Prepare the system so the operating system (OS) can load
+	- This startup process is called initialization.
+
+- BIOS vs. UEFI
+	- For many years, computers used BIOS (Basic Input/Output System).
+	- Modern systems use UEFI (Unified Extensible Firmware Interface), which is more advanced.
+	- UEFI Improvements Over BIOS
+	- UEFI supports:
+		- 64-bit CPU operation
+		- Graphical user interface (GUI) with mouse control
+		- Faster boot times
+		- Networking at boot (PXE, remote diagnostics)
+		- Stronger boot security (Secure Boot)
+		- Ability to run in Legacy BIOS mode for compatibility
+	- UEFI basically replaces BIOS but can still emulate it when needed.
+
+- Accessing Firmware Setup
+	- You enter the firmware setup screen by pressing a key when the system first powers on.
+	- Common firmware access keys:
+		- Esc
+		- Del
+		- F1
+		- F2
+		- F10
+		- F12
+	- You usually press the key when the PC logo appears.
+	- Fast Boot Tip
+		- Modern PCs boot very quickly.	
+		- If you miss the key:
+	- On Windows, Shift + Restart
+	- This opens UEFI firmware settings from the recovery menu.
+
+- Navigation and Controls
+	- Legacy BIOS interface
+		- Blue/black text screen
+		- Keyboard only (arrow keys)
+		- Esc = go back
+		- F10 = save & exit (varies by system)
+		- Option to load default settings
+	- UEFI interface
+		- Graphical menus
+		- Mouse support
+		- More detailed configuration options
+		- Some advanced menus may still use keyboard navigation
+
+- Visual Summary
+	- BIOS
+		- Text-only
+		- 16-bit
+		- Keyboard only
+		- Older systems
+		- Slower boot
+	- UEFI
+		- Graphical
+		- 64-bit
+		- Mouse support
+		- Faster & more secure
+		- Supports larger drives (over 2 TB)
+		- Modern standard
+
+--------------------------------------------------------------------
+4.1.3 — Boot and Device Options
+	
+	- The boot option sequence (also called boot priority or boot order) controls the order in which the system firmware (BIOS/UEFI) looks for a bootable device.
+	- The boot device that appears first in the list is the one the system tries to load an OS from.
+
+
+-Common Boot Device Types
+	-1. Fixed Disk (HDD or SSD)
+		- Most common boot device
+		- SATA drives should ideally be connected to the lowest-numbered SATA port
+		- Modern systems often use NVMe SSDs (M.2 or PCIe) as boot drives
+			- Much faster than SATA SSDs
+			- Usually appear in UEFI as “Windows Boot Manager” or the NVMe model name
+
+	- 2. Optical Drive (CD / DVD / Blu-ray)
+		- Used when:
+			- Installing an OS from a disc
+			- Repairing an existing OS
+			- Running diagnostic utilities
+		- Set as highest priority when you want to boot from a disc.
+
+	- 3. USB Flash Drive
+		- most modern systems allow booting from a USB that is formatted as a bootable device.
+		- Common uses:
+			- Installing operating systems (Windows, Linux, etc.)
+			- Running recovery tools
+			- BIOS/UEFI updates
+		- Must be placed first in the boot order to boot from the USB.
+
+	- 4. Network Boot / PXE (Preboot Execution Environment)
+		- Allows booting from:
+			- A network server
+			- A network-based OS image
+		- Used in:
+			- Enterprise environments
+			- Mass OS deployment
+			- Diskless workstations
+		- Boots through the network adapter, which retrieves boot files from a server.
+
+- Configuring Boot Order
+	- You can change the boot order inside the UEFI/BIOS setup under a menu commonly labeled:
+		- Boot Options
+		- Boot Sequence
+		- Boot Priority
+		- Boot Configuration
+	- You can reorder devices such as:
+		- Windows Boot Manager
+		- NVMe SSD
+		- SATA HDD/SSD
+		- USB Storage Device
+		- Optical Drive
+		- PXE Boot Network Adapter
+
+- CompTIA A+ Tip
+	- If a computer won’t boot, always check:
+		- Wrong device set as first priority
+		- A USB drive is inserted and taking priority
+		- The boot drive isn’t detected
+	- Misconfigured boot order is one of the most common causes of “No Boot Device Found.”
+
+---------------------------------------------------------------------------
+4.1.4 – USB Permissions (A+ Notes)
+	- What it is
+	- Computer firmware (BIOS/UEFI) lets you turn hardware on or off, including USB ports.
+	
+	- Why it matters
+		- USB ports can be a security risk, because:
+			- People can plug in unauthorized USB drives
+			- Malware can spread through USB devices
+			- Users might copy data they should not have
+		- Because of this, firmware gives you control over USB permissions.
+
+	- What you can control
+		- In the UEFI/BIOS setup screen, you may be able to:
+			- Enable or disable all USB ports
+			- Enable or disable specific USB ports
+			- Disable USB storage only, while keeping keyboard/mouse working
+			- Lock down external devices for security policies
+
+	- Where you change it
+		- You find USB permissions in the firmware setup under menus like:
+			- Security
+			- Advanced
+			- Onboard Devices
+			- Integrated Peripherals
+	- Admins often disable USB ports in:
+		- Schools
+		- Businesses
+		- Public computers
+	- To prevent unauthorized access.
+
+-------------------------------------------------------------------------------------
+4.1.5 – Fan Considerations (A+ Notes)
+- Why fans matter
+	- Cooling fans keep the computer from overheating.
+	- If dust builds up or airflow is blocked, parts can get too hot and become damaged.
+	- Good maintenance
+		- Clean fans regularly (dust reduces airflow).
+		- Make sure airflow is balanced — about the same amount going in and out.
+		- Fans should be placed so they move hot air out and cool air in (don’t push hot air downward).
+
+- Fan Settings in BIOS/UEFI
+	- You can usually control fan speeds in menus like Cooling, Power, or Advanced.
+	- Common fan modes:
+		- Balanced – normal cooling for everyday use
+		- Cool – higher fan speed for max cooling
+		- Quiet – fans run slower, system gets warmer
+		- Fanless – fans off; uses passive cooling only
+		- Custom – you set the speed yourself
+	- Other settings
+		- Minimum temperature – the temperature at which fans turn on
+		- Duty cycle – how much power the fan receives (higher % = faster spin)
+		- UEFI shows current temperature readings from probes near each fan
+
+- Temperature Monitoring
+	- 1. Manual Check (BIOS/UEFI)
+		- Restart computer
+		- Press key (F2, Del, F12, Esc, etc.)
+		- Look for Monitoring or Sensors
+		- Shows CPU temp and other system temps in real time
+	- 2. Third-Party Apps
+		- Run inside Windows
+		- Use system sensors to read temperatures
+		- Can warn you when the PC gets too hot
+	- Examples: HWMonitor, Core Temp, Open Hardware Monitor (not required for A+ but good to know)
+
+--------------------------------------------------------------------------------
+4.1.6
+Boot Passwords and Secure Boot
+
+- Boot Passwords
+	- Boot passwords protect the system before the operating system loads.
+	- There are two main types:
+
+	- 1. Supervisor / Administrator / Setup / BIOS Password
+		- Protects access to the BIOS/UEFI setup menu.
+		- Prevents people from changing system settings (boot order, security settings, etc.).
+	- 2. User / System Password
+		- Locks the entire computer before it boots.
+		- The system will not start until the user enters the password.
+		- Used mainly on servers or workstations that don’t have people logging in regularly.
+	- Note:
+		- If multiple people use the computer, everyone must know the password, which reduces security.
+		- That’s why system passwords are mainly used on non-interactive systems (like monitoring stations).
+- Secure Boot
+	- Secure Boot is a UEFI security feature that stops malware from loading at startup.
+
+	- How it works
+		- The firmware checks the OS bootloader against trusted digital keys stored in UEFI.
+		- If the bootloader is signed and trusted, it loads normally.
+		- If the bootloader is edited, infected, or unsigned, the system blocks it from running.
+
+	- Why Secure Boot is important
+		- Protects against rootkits and boot-level malware.
+		- Required by most modern operating systems.
+
+	- Trusted keys
+		- UEFI usually comes with pre-loaded keys for:
+		- Microsoft Windows
+		- Common Linux distros (Ubuntu, Fedora, openSUSE)
+	- You can:
+		- Add keys
+		- Remove keys
+		- Disable Secure Boot if needed (for certain OS installs or custom bootloaders)
+
+-------------------------------------------------------------------------------
+4.1.8
+Trusted Platform Modules
+
+- What Encryption Does
+	- Encryption scrambles data so only someone with the correct decryption key can read it.
+	- Keeping this key safe is extremely important.
+
+- Hashing (Important Difference)
+	- Hashing creates a unique code based on data.
+	- It checks integrity (that the data hasn’t changed).
+	- You cannot get the original data back from a hash.
+	- Used for comparing files or verifying passwords.
+
+- Trusted Platform Module (TPM)
+	- A TPM is a small hardware chip on the motherboard that securely stores:
+		- Cryptographic keys
+		- Digital certificates
+		- Hashed passwords
+
+	- Key Features
+		- Each TPM has a unique, permanent endorsement key → this creates a “root of trust.”
+		- At boot, the TPM checks hashes of:
+			- Firmware
+			- Bootloader
+			- Operating system kernel to make sure nothing has been changed or tampered with.
+
+- Why TPM Is Important
+	- Stores keys in tamper-resistant hardware
+		- Far safer than storing keys in software or files.
+	- Helps secure:
+		- Boot process
+		- Disk encryption (like BitLocker)
+		- Certificates and login data
+	- Keys stored in a TPM cannot be easily extracted by malware.
+
+- Managing a TPM
+	- You can:
+		- Enable
+		- Disable
+		- Reset (clear)
+		the TPM through BIOS/UEFI.
+		The OS (like Windows) also offers management tools.
+
+- Hardware Security Module (HSM)
+	- If a computer does not have a TPM, a secure USB device can be used instead.
+	- An HSM is:
+		- A USB thumb drive used to store encryption keys.
+		- “Secure” means you must authenticate with:
+			- A password
+			- A PIN
+			- A fingerprint
+
+- Why Use an HSM?
+	- Backup if a TPM fails
+	- Move encrypted drives between computers
+	- Add hardware-level key security to systems without TPM
+
+-----------------------------------------------------------------------------
+4.1.10
+Lab: Configure BIOS/UEFI Security
+You are the IT administrator for a small corporate network. You need to configure additional security in the BIOS for the computer in Office 1.
+
+In this lab, your task is to:
+
+Restart the computer in the BIOS.
+Press F2 while the computer is booting.
+Configure the following security settings:
+Add an admin password used to make changes to BIOS settings.
+Password: t67xab1
+Add a password that prevents hard disk access even when the hard disk is moved to another system.
+Password: dog8b0b (0 is a zero)
+Enable the TPM.
+Enable chassis intrusion detection to show an alert during POST when an intrusion is detected.
+Save your changes.
+Restart the computer to verify the changes you have made.
+At the bottom of the BIOS window, select Send Ctrl + Alt + Del to restart the computer if necessary.
