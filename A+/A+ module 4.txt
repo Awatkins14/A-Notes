@@ -611,3 +611,552 @@ In this lab, your task is to diagnose and correct the problems with this system.
 You'll know that you've successfully corrected all the problems when the computer successfully boots to Windows.
 
 In this scenario, all the problems are things that could occur when replacing a power supply.
+
+------------------------------------------------------------------------
+4.2.7 Troubleshoot Boot Sector Issues
+
+* **What Is a Boot Sector Issue?**
+
+  * A boot sector issue happens **after power and cabling are confirmed working**
+  * The system cannot find or load boot files
+  * The disk exists, but the OS will not start
+
+* **Common Causes of Boot Sector Corruption**
+
+  * Disk faults or failing drives
+  * Sudden power loss or improper shutdown
+  * Incorrect installation of multiple operating systems
+  * Malware or boot-sector viruses
+
+* **Symptoms of Boot Sector Problems**
+
+  * Blank screen after POST
+  * Error messages such as:
+
+    * “Boot device not found”
+    * “Operating system not found”
+    * “Invalid drive specification”
+  * System loops back to BIOS/UEFI
+
+---
+
+### **Boot Information Formatting: MBR vs GPT**
+
+* **Master Boot Record (MBR)**
+
+  * Used by **legacy BIOS systems**
+  * Stored in the **first sector** of the disk
+  * Contains:
+
+    * Partition table
+    * Code pointing to the active boot sector
+  * Boot sector:
+
+    * Loads the OS bootloader
+    * Uses:
+
+      * BCD (Windows)
+      * GRUB or LILO (Linux)
+  * Limitations:
+
+    * Only **one active partition**
+    * Less reliable than GPT
+
+* **GUID Partition Table (GPT)**
+
+  * Used with **UEFI systems**
+  * Not limited to a single sector
+  * Provides:
+
+    * More partitions
+    * Better reliability
+    * Improved recovery options
+  * Stores:
+
+    * Partition data
+    * OS boot loader information
+
+---
+
+### **Boot Errors Related to MBR/GPT Damage**
+
+* “Boot device not found”
+* “OS not found”
+* “Invalid drive specification”
+* These errors usually mean:
+
+  * MBR or GPT partition records are corrupted
+
+---
+
+### **Steps to Troubleshoot Boot Sector Issues**
+
+* **1. Check display connections**
+
+  * Make sure:
+
+    * Monitor is powered on
+    * Video cable is securely connected
+  * A loose cable can cause a blank screen
+
+* **2. Confirm the issue is not power or cabling**
+
+  * Drive spins up or shows activity
+  * Disk appears in BIOS/UEFI
+  * If not detected → not a boot sector issue
+
+* **3. Inspect boot error messages**
+
+  * Error text often points to:
+
+    * MBR corruption
+    * GPT partition damage
+    * Missing boot files
+
+* **4. Scan for malware**
+
+  * Use antivirus **boot disk / rescue media**
+  * Boot outside the OS
+  * Scan and repair:
+
+    * Boot sector
+    * Startup files
+
+* **5. Use OS repair tools**
+
+  * If no recovery disk is available:
+
+    * Boot from OS installation media
+    * Select **Repair** or **Recovery options**
+  * These tools can:
+
+    * Rebuild boot files
+    * Repair MBR or GPT
+    * Restore boot configuration
+
+---
+
+### **Quick Exam Tips**
+
+* Disk detected but OS won’t load → **boot sector issue**
+* MBR = legacy BIOS
+* GPT = UEFI
+* Malware can corrupt boot sectors
+* Antivirus boot disks are a common fix
+* OS install media can repair boot files
+
+-----------------------------------------------------------------
+4.2.8 Troubleshoot OS Errors and Crash Screens
+
+* **What Happens at This Stage of Boot**
+
+  * A boot device **has already been found**
+  * Boot sector code loads into memory
+  * Control is handed from firmware to the operating system
+  * Errors at this point are usually:
+
+    * **Software-related**
+    * **Driver-related**
+    * Not usually basic hardware failures
+
+---
+
+### **Common Causes of OS Errors**
+
+* Faulty or incompatible device drivers
+* Corrupted operating system files
+* Defective hardware components (RAM, GPU, storage)
+* Overheating
+* Power supply instability
+
+---
+
+### **Blue Screen of Death (BSOD)**
+
+* **What Is a BSOD?**
+
+  * A critical Windows crash screen
+  * Appears when Windows encounters a serious error
+  * System must restart to prevent damage
+
+* **What BSOD Indicates**
+
+  * System memory faults
+  * Hardware device issues
+  * Driver failures
+  * Corrupted OS files
+
+* **Common BSOD Causes**
+
+  * Bad or outdated drivers
+  * Recently installed hardware or software
+  * Failing RAM
+  * Overheating CPU or GPU
+  * Power supply problems
+
+---
+
+### **How to Troubleshoot a BSOD**
+
+* **1. Scan the QR code**
+
+  * Use a phone or camera
+  * Links to Microsoft support information
+
+* **2. Check Event Viewer**
+
+  * Error is logged in:
+
+    * **System log**
+    * Source: **BugCheck**
+  * Look for:
+
+    * First hexadecimal error code (example: `0x0A`)
+  * Search the code online to identify the cause
+
+* **3. Analyze memory dump (if available)**
+
+  * Systems with support contracts may:
+
+    * Generate memory dump files
+    * Allow deeper analysis by support teams
+
+* **4. Identify recent changes**
+
+  * New drivers?
+  * New hardware?
+  * Recent updates?
+  * Roll back changes if needed
+
+---
+
+### **Crash Screens on Other Operating Systems**
+
+* **Windows**
+
+  * Blue Screen of Death (BSOD)
+
+* **macOS**
+
+  * Spinning pinwheel (wait cursor)
+  * Indicates catastrophic failure or system hang
+
+* **Linux**
+
+  * Kernel panic
+  * “Something has gone wrong” message
+
+---
+
+### **Quick Exam Tips**
+
+* If boot device loads but OS crashes → **OS or driver issue**
+* BSOD = Windows-only crash screen
+* BugCheck = key Event Viewer source
+* Hex error codes help identify the problem
+* Recent changes are often the cause
+
+----------------------------------------------------------------
+4.2.10
+Lab: Troubleshoot Drive Availability
+You work at a computer repair store. A customer has just bought a used computer at a very good price. The previous owner said the computer worked, but when it was brought home, the computer would not start.
+
+In this lab, your task is to diagnose and correct the problems preventing this system from booting into Windows.
+
+You'll know that you've successfully corrected all the problems when:
+
+The computer recognizes all the components in the BIOS.
+The computer boots to Windows.
+Keep in mind the following when working on the system:
+
+The computer was in use and working previously.
+The previous owner mentioned that he replaced the hard drive when preparing to sell the computer.
+The new owner of the computer wants the machine to boot into Windows every time to avoid any possible issues in the future.
+
+-----------------------------------------------------------------------
+
+4.2.11 Troubleshoot Drive Reliability and Performance
+
+* **Built-In Drive Diagnostics (S.M.A.R.T.)**
+
+  * Most fixed disks support **S.M.A.R.T.**
+
+    * Self-Monitoring, Analysis, and Reporting Technology
+  * Purpose:
+
+    * Monitors drive health
+    * Alerts OS if failure is predicted
+  * If you suspect:
+
+    * Drive failure
+    * Slow performance
+    * Long read/write times
+      → Run advanced diagnostics
+
+---
+
+### **Diagnostic Tools**
+
+* **Vendor Diagnostic Utilities**
+
+  * Most drive manufacturers provide tools to:
+
+    * Test drive health
+    * Run extended scans
+    * Check performance
+  * Some computers include:
+
+    * Built-in system diagnostics
+
+* **Windows Diagnostic Tools**
+
+  * Windows can:
+
+    * Query S.M.A.R.T. data
+    * Run manual disk tests
+  * Third-party tools (example):
+
+    * SpeedFan (shows S.M.A.R.T. attributes)
+
+---
+
+### **Performance Metrics**
+
+* Diagnostic tests can report:
+
+  * **IOPS** (Input/Output Operations Per Second)
+* Interpreting results:
+
+  * Lower than vendor baseline → **drive likely faulty**
+  * Similar to baseline → issue may be elsewhere
+
+---
+
+### **Other Causes of Poor Drive Performance**
+
+* **System Load**
+
+  * Too many applications running
+  * CPU or RAM bottlenecks
+
+* **File Fragmentation (HDD only)**
+
+  * Files scattered across disk
+  * Causes longer access times
+
+* **Low Free Space**
+
+  * Limited remaining capacity slows performance
+
+---
+
+### **Failing Sectors and Blocks**
+
+* **HDDs**
+
+  * Develop **bad sectors**
+* **SSDs**
+
+  * Develop **bad blocks**
+* Effects:
+
+  * Extended read/write times
+  * File corruption
+  * Files may:
+
+    * Fail to open
+    * Disappear
+* Disk firmware response:
+
+  * Marks damaged areas as unusable
+
+---
+
+### **Data Recovery Options**
+
+* **Hard Disk Drives (HDD)**
+
+  * If files are corrupted and no backup exists:
+
+    * Use file recovery utilities
+  * Recovery may be partially successful
+
+* **Solid-State Drives (SSD)**
+
+  * File recovery is **usually not possible**
+  * Requires highly specialized tools
+
+---
+
+### **Best Practices**
+
+* If S.M.A.R.T. warnings appear:
+
+  * Back up data immediately
+  * Replace the drive
+* Do not rely on recovery tools as a long-term solution
+
+---
+
+### **Quick Exam Tips**
+
+* S.M.A.R.T. = predictive drive failure alerts
+* Low IOPS vs baseline = failing drive
+* Fragmentation only affects HDDs
+* SSD recovery is very difficult
+* Always back up first
+
+
+-----------------------------------------------------------------------
+
+4.2.12 Troubleshoot RAID Failure
+
+* **What Is RAID?**
+
+  * RAID = **Redundant Array of Independent Disks**
+  * Purpose:
+
+    * Protect data if **one disk fails**
+    * Improve reliability and/or performance
+  * Data protection methods:
+
+    * **Mirroring** (duplicate data)
+    * **Parity** (recovery data spread across disks)
+  * RAID can be:
+
+    * **Hardware-based** (RAID controller)
+    * **Software-based** (operating system feature)
+  * RAID appears to the OS as:
+
+    * One logical **volume**
+    * Can be partitioned and formatted like a normal drive
+
+---
+
+### **Important RAID Note**
+
+* **RAID 0**
+
+  * Has **NO redundancy**
+  * If **one disk fails → entire volume fails**
+  * Used when **speed > reliability**
+
+---
+
+### **Common RAID Failure Scenarios**
+
+#### **1. Device Failure (Single Disk Failure)**
+
+* Symptoms:
+
+  * Volume marked as **Degraded**
+  * Data is still accessible
+  * System can still boot (if bootable RAID)
+* Action:
+
+  * Replace failed disk **as soon as possible**
+
+---
+
+#### **2. Array Failure**
+
+* Occurs when:
+
+  * More disks fail than RAID level allows
+  * Example:
+
+    * RAID 5 usually tolerates **one disk failure**
+* Result:
+
+  * Volume becomes unavailable
+  * Boot volume failure = OS will not start
+
+---
+
+### **Hot Swapping & Rebuilding**
+
+* **Hot Swapping**
+
+  * Replace a failed disk **while system is running**
+  * Only supported on compatible systems
+  * Failed disks are usually marked by:
+
+    * **Red LED**
+
+⚠ **WARNING**
+
+* Never remove a healthy disk
+
+* Removing the wrong disk can cause total array failure
+
+* Always back up data first
+
+* **Rebuilding the Array**
+
+  * After inserting replacement disk:
+
+    * Use RAID utility to rebuild
+    * Hardware RAID → Controller utility
+    * Software RAID → OS utility
+  * During rebuild:
+
+    * Performance will be **severely reduced**
+    * Large amounts of data are rewritten
+
+---
+
+### **Troubleshooting RAID Problems**
+
+#### **Unavailable Volume / “Array Missing”**
+
+* Causes:
+
+  * Too many failed disks
+  * RAID controller failure
+* If boot volume is affected:
+
+  * OS will not load
+* Solution:
+
+  * Restore from backup
+  * Attempt file recovery if possible
+
+---
+
+#### **Controller Failure**
+
+* Symptoms:
+
+  * RAID utility not accessible
+  * Boot errors related to RAID
+* Data recovery:
+
+  * Usually possible
+  * Some file corruption may occur
+* Fix:
+
+  * Replace controller
+  * Import disks into another compatible system
+
+---
+
+#### **Boot Process Issues**
+
+* Use:
+
+  * RAID configuration utility during boot
+* If utility cannot be accessed:
+
+  * Controller likely failed
+
+---
+
+### **Exam Tips**
+
+* RAID ≠ backup
+* RAID 0 = no fault tolerance
+* Degraded = still working but vulnerable
+* Rebuilds hurt performance
+* Never hot-swap a healthy disk
+
+----------------------------------------------------------------------
