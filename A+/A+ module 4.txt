@@ -309,3 +309,305 @@ Enable chassis intrusion detection to show an alert during POST when an intrusio
 Save your changes.
 Restart the computer to verify the changes you have made.
 At the bottom of the BIOS window, select Send Ctrl + Alt + Del to restart the computer if necessary.
+
+---------------------------------------------------------------------------------
+4.2.1
+Troubleshoot Power Issues
+
+
+- Why Power Matters
+	- Every computer part needs steady, clean power to run.
+	- If a PC won’t turn on, turns off suddenly, or randomly restarts, it is often a power problem.
+
+- How the Power Supply Works
+	- The Power Supply Unit (PSU) does three things:
+		- Converts AC → DC (wall power → computer power)
+		- Sends 12V power right away (fans spin, hard drive spins)
+		- Tests 5V and 3.3V lines
+		- If all power rails are stable, it sends a “power good” signal to the CPU so the system can start
+
+- Basic Checks for “No Power” Problems
+	- 1. Look for signs of life
+		- Are LED lights on?
+		- Do fans spin?
+		- Do you hear the system start?
+	- If nothing turns on → likely a power issue.
+
+- Troubleshooting Steps
+	- Check the surroundings
+		- Make sure other devices in the room work
+			- Could be a blackout or bad circuit.
+
+- Test the wall outlet
+	- Plug in a lamp or phone charger.
+		-If it doesn’t work → bad outlet → call an electrician.
+
+- Check PSU connections
+	- Ensure:
+		- PSU switch = ON
+		- Power cable is tight
+		- PSU cable is fully plugged into the motherboard
+
+- Try a different power cable
+	- The cable’s fuse or wiring might be bad.
+	- Swap with a known-good cable.
+
+- Disconnect extra devices
+	- Remove:
+		- Graphics card
+		- Extra drives
+		- Add-on cards
+	- If it powers on now → PSU is underpowered or a device is faulty.
+
+- Test the PSU
+	- Use:
+		- A power supply tester, or
+		- A multimeter (if trained and safe)
+	- IMPORTANT:
+		- Never open a PSU (dangerous voltage inside).
+		- Take safety precautions when testing live power.
+
+- If the Issue Is Still Unknown
+	- Then the problem is likely:
+		- A bad PSU, or
+		- A bad motherboard
+
+- Watch for warning signs
+	- Turn it off IMMEDIATELY if you see:
+		- Smoke
+		- Sparks
+		- Strange smells
+		- Odd noises
+	- Do NOT leave a failing power supply running.
+
+------------------------------------------------------------------------
+4.2.2
+Lab: Troubleshoot System Power
+
+As an IT Administrator at a mid-sized company, your role includes monitoring and managing the Issue Trax help desk system to ensure timely resolution of reported problems.
+
+Each ticket will include the information to determine which device is affected and the issue that needs to be resolved.
+
+A new ticket just arrived. Do the following:
+
+Assign the ticket to you.
+Read and determine the device and problem.
+Examine the hardware and resolve any issues.
+Add a comment to and close the ticket.
+
+------------------------------------------------------------------------------
+4.2.3 Troubleshoot POST Issues
+
+- What Is POST?
+	- POST (Power-On Self-Test) is a built-in diagnostic check run by the BIOS/UEFI after the CPU receives the power good signal.
+	- POST checks hardware needed to boot, such as:
+		- CPU
+		- RAM
+		- Motherboard
+		- Video adapter
+		- Keyboard
+
+- Important Note About Modern PCs
+	- POST runs very fast on modern systems
+	- You usually see a logo screen, not text
+	- Messages appear only if there is an error
+
+- Symptoms of POST Problems
+	- You may have a POST issue if:
+		- Fans spin
+		- Power lights turn on
+		- Screen stays blank
+		- No beeps from the speaker
+		- System never boots
+
+- Steps to Troubleshoot POST Issues
+	- 1. Ask what changed
+		- Was the BIOS/UEFI updated recently?
+		- A failed firmware update can stop POST.
+	- 2. Reset the system
+		- Perform a reset procedure (power off, unplug, discharge power)
+	- 3. Check cables and connections
+		- Make sure:
+			- RAM is fully seated
+			- Adapter cards are secure
+			- Storage cables are connected correctly
+			- A loose or backward cable can stop POST.
+	- 4. Remove non-essential devices
+		- Disconnect everything except:
+			- CPU
+			- One RAM stick
+			- Motherboard
+			- Video output
+			- Add devices back one at a time to find the bad part.
+	- 5. Check the power supply
+		- Fans spinning ≠ PSU working correctly
+		- PSU may fail to send the power good signal, stopping POST
+	- 6. Check CPU or firmware
+		- Try:
+			- Replacing CPU with a known-good one (if possible)
+			- Re-flashing or updating BIOS/UEFI
+	- 7. Check motherboard jumpers
+		- Some boards have jumpers for:
+			- Recovery mode
+			- CPU settings
+			- Wrong jumper position = no boot
+
+- POST Error Messages & Beep Codes
+	- If POST detects a problem:
+		- Error shows on screen OR
+		- Error is reported with beep codes
+		- Use the manufacturer’s website to confirm meanings.
+
+- Common POST Beep Codes (IBM PC)
+| Beep Code                 | Meaning                              |
+| ------------------------- | ------------------------------------ |
+| **1 short beep**          | Normal POST (system OK)              |
+| **2 short beeps**         | POST error (check screen)            |
+| **No beep**               | PSU, motherboard, or speaker problem |
+| **Continuous beep**       | RAM or memory controller issue       |
+| **Repeating short beeps** | PSU or motherboard problem           |
+| **1 long, 1 short**       | Motherboard error                    |
+| **1 long, 2–3 short**     | Video adapter error                  |
+| **3 long beeps**          | Keyboard issue (stuck key)           |
+
+- Keyboard POST Issues
+	- Some PCs won’t boot if a key is stuck
+	- Check:
+		- Nothing resting on keyboard
+		- No dust or liquid inside
+	- Clean using:
+		- Compressed air
+		- Approved cleaning swabs
+
+------------------------------------------------------------------------
+
+4.2.4
+Lab: Troubleshoot System Startup
+You work at a computer repair store. A customer brought in a computer and asked you to upgrade the motherboard. You replaced the motherboard with a newer model, but the computer will not boot now.
+
+In this lab, your task is to diagnose and correct the problems with this system.
+
+You'll know you've successfully corrected all the problems when the computer boots to Windows and stays powered on for ten seconds.
+
+In this scenario, all of the problems are things that could occur when replacing a motherboard.
+
+----------------------------------------------------------------------
+
+## **4.2.5 Troubleshoot Boot Issues**
+
+* **What Is a Boot Issue?**
+
+  * A boot issue occurs **after POST** completes
+  * The system cannot find or load an operating system
+  * The boot process stops with an error message
+
+* **How the Boot Process Works**
+
+  * After POST, the system:
+
+    * Checks devices in the **boot order**
+    * Looks for a **boot manager**
+  * If the first device fails, it tries the next
+  * If no bootable device is found → boot stops
+
+* **Common Boot Error Messages**
+
+  * “No bootable device found”
+  * “Operating system not found”
+  * “Insert boot media and press any key”
+
+* **Symptoms of Boot Problems**
+
+  * POST completes successfully
+  * Manufacturer logo appears
+  * System does **not** load the OS
+  * Error message appears or system halts
+
+* **Steps to Troubleshoot Boot Issues**
+
+  * **1. Check for wrong boot device**
+
+    * Remove:
+
+      * USB drives
+      * External hard drives
+      * CDs/DVDs
+    * These can override the boot order
+
+  * **2. Verify boot order**
+
+    * Enter BIOS/UEFI
+    * Make sure the correct drive is first:
+
+      * HDD / SSD
+      * NVMe (M.2)
+    * Save changes and reboot
+
+  * **3. Check fixed disk power**
+
+    * Look for:
+
+      * Drive activity LED
+      * Spinning sound (HDD)
+    * Reseat power connectors
+
+  * **4. Check data connections**
+
+    * Inspect SATA or data cables
+    * Reseat cables on:
+
+      * Drive
+      * Motherboard
+    * Replace damaged cables
+
+  * **5. Check BIOS/UEFI settings**
+
+    * Confirm drive is:
+
+      * Enabled
+      * Detected in BIOS/UEFI
+    * Verify settings:
+
+      * Secure Boot
+      * SATA mode (AHCI / RAID)
+
+  * **6. Check M.2 / NVMe drives**
+
+    * Make sure drive is:
+
+      * Fully inserted
+      * Screwed down properly
+    * Confirm detection in BIOS/UEFI
+
+* **Secure Boot Considerations**
+
+  * Secure Boot may:
+
+    * Block unsigned bootloaders
+    * Prevent boot if OS was changed
+  * Can be disabled temporarily for troubleshooting
+
+* **Quick Exam Tips**
+
+  * POST works but OS won’t load → **boot issue**
+  * Remove USB drives first
+  * Always check boot order
+  * Drive must appear in BIOS/UEFI to boot
+  * Wrong SATA mode can stop booting
+
+-----------------------------------------------------------------------
+4.2.6
+Lab: Troubleshoot Boot Issues
+You work at a computer repair store. A customer has brought in a computer for repairs. It has the following specifications:
+
+Intel i7-960 processor
+16 GB of DDR4 memory
+Three SATA hard drives (one with the operating system installed and the others for storing data)
+A single SATA optical (DVD) drive
+You replaced the power supply in the computer, and now the computer won't boot.
+
+In this lab, your task is to diagnose and correct the problems with this system.
+
+You'll know that you've successfully corrected all the problems when the computer successfully boots to Windows.
+
+In this scenario, all the problems are things that could occur when replacing a power supply.
