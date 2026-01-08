@@ -1160,3 +1160,669 @@ The new owner of the computer wants the machine to boot into Windows every time 
 * Never hot-swap a healthy disk
 
 ----------------------------------------------------------------------
+4.3.1 Troubleshoot Component Issues
+
+* **Common Symptoms**
+
+  * System lockups or freezing
+  * Random shutdowns
+  * Continuous rebooting
+  * OS crash screens:
+
+    * Windows: **BSOD**
+    * Linux: **Kernel panic**
+  * Application crashes
+
+---
+
+### **Common Causes**
+
+* Software issues
+* Disk or file corruption
+* Malware infections
+* Hardware failures (after software is ruled out)
+
+---
+
+### **Diagnostic Steps**
+
+#### **1. Eliminate Software Issues**
+
+* Check for:
+
+  * Corrupted system files
+  * Disk errors
+  * Malware or viruses
+* Run:
+
+  * Antivirus scans
+  * Disk check utilities
+  * OS repair tools
+
+---
+
+#### **2. Identify Patterns**
+
+* Determine if the issue is:
+
+  * Truly random **OR**
+  * Happens under specific conditions
+* Examples:
+
+  * Crashes after running for a long time → **Thermal issue**
+  * Crashes during heavy workloads → **Power or CPU issue**
+
+---
+
+#### **3. Check the Power Supply**
+
+* Verify PSU is providing:
+
+  * Stable voltage
+  * Enough wattage for components
+* Power issues can cause:
+
+  * Sudden shutdowns
+  * Reboots
+  * System instability
+
+---
+
+#### **4. Suspect Hardware Components**
+
+* If PSU is not the issue, check:
+
+  * **RAM**
+  * **CPU**
+  * **Motherboard**
+* Use:
+
+  * Vendor diagnostic tools
+  * Firmware-based diagnostics (BIOS/UEFI)
+  * Tools that run outside the OS for accuracy
+
+---
+
+#### **5. Observe Physical Symptoms**
+
+* If no diagnostic tools are available, look for:
+
+  * Overheating
+  * Burn marks or damaged components
+  * Swollen or leaking capacitors
+  * Loose connections
+  * Dust buildup blocking airflow
+
+---
+
+### **Exam Tips**
+
+* Always rule out **software first**
+* Reboots + shutdowns often point to **power or heat**
+* Firmware-based diagnostics are more reliable than OS tools
+* Physical inspection matters when software tools fail
+
+-----------------------------------------------------------------------------------------------
+4.3.2 Overheating
+
+* **What Is Overheating?**
+
+  * Overheating occurs when internal components exceed safe temperature limits
+  * Excessive heat can damage sensitive computer circuitry
+
+---
+
+### **Warning Signs of Overheating**
+
+* System feels hot to the touch
+* Random crashes or reboots
+* Burning smell or smoke
+
+  * Often indicates a failing or overheating **power supply**
+* Fans running loudly or constantly
+* System shutting down unexpectedly
+
+---
+
+### **Immediate Actions**
+
+* **Shut down the system immediately** if:
+
+  * You smell burning
+  * You see smoke
+  * The system is extremely hot
+* Unplug the system before inspecting
+
+---
+
+### **Important Safety Note**
+
+* CPUs and internal components get very hot during operation
+* Handle components carefully to avoid burns
+
+---
+
+### **Diagnosing Overheating Issues**
+
+#### **1. Temperature Sensors**
+
+* Most systems have built-in temperature sensors
+* Access sensors using:
+
+  * BIOS/UEFI
+  * Vendor monitoring software
+* Compare readings to manufacturer’s safe operating ranges
+
+---
+
+#### **2. CPU Fan**
+
+* Confirm the CPU fan:
+
+  * Is spinning
+  * Is connected to the correct power header
+  * Is not clogged with dust
+  * Is not jammed or damaged
+* Ensure the fan is:
+
+  * Powerful enough for the CPU
+  * Compatible with the processor
+  * (Older fans may not cool newer CPUs properly)
+
+---
+
+#### **3. Heat Sink**
+
+* Ensure the heat sink:
+
+  * Is firmly attached
+  * Makes full contact with the CPU
+* Clean off old thermal paste
+* Apply new thermal paste properly to improve heat transfer
+
+---
+
+#### **4. Airflow and Blanking Plates**
+
+* Use blanking plates to cover unused case openings
+* Open holes can:
+
+  * Disrupt airflow
+  * Reduce cooling efficiency
+* Ensure proper front-to-back airflow
+
+---
+
+#### **5. Environmental Factors**
+
+* Check room conditions:
+
+  * Not too hot
+  * Not overly dusty
+* Keep PC away from:
+
+  * Radiators
+  * Direct sunlight
+  * Enclosed spaces with poor ventilation
+
+---
+
+### **Secondary Effects of Overheating**
+
+* Loose connectors
+* Components shifting in sockets
+* Hairline cracks in circuit boards widening
+* Intermittent failures due to thermal expansion
+
+---
+
+### **Exam Tips**
+
+* Burning smell = **power off immediately**
+* Overheating often causes:
+
+  * Crashes
+  * Reboots
+  * Performance throttling
+* Always check **fans, heat sink, and airflow first**
+
+-------------------------------------------------------------------------------------
+4.3.3 Physical Damage
+
+* **What Is Physical Damage?**
+
+  * Physical damage affects **hardware components**
+  * Most commonly impacts:
+
+    * Peripherals
+    * Ports
+    * Cables
+  * Internal components are more likely damaged if the system was **dropped or transported**
+
+---
+
+### **Initial Inspection**
+
+* Examine the computer case closely
+
+  * Look for:
+
+    * Cracks
+    * Dents
+    * Bent metal
+* Even small damage may indicate:
+
+  * A fall
+  * A hard impact
+  * Possible internal damage
+
+---
+
+### **Peripheral, Port, and Cable Checks**
+
+* If a peripheral does not work:
+
+  * Inspect the **port**
+  * Inspect **both ends of the cable**
+* Look for:
+
+  * Bent pins
+  * Broken pins
+  * Dirty or corroded connectors
+* Check the entire cable length for:
+
+  * Cuts
+  * Fraying
+  * Kinks
+
+---
+
+### **Possible Motherboard Damage**
+
+* Motherboard damage is **rare but possible**
+
+#### **Common Causes**
+
+* **Electrostatic Discharge (ESD)**
+
+  * Static electricity damages sensitive components
+* **Electrical spikes**
+
+  * Power surges damaging soldered chips
+* **Overheating**
+
+  * Heat weakens or damages board components
+* **Careless insertion**
+
+  * Forcing cables or cards damages pins
+* **Dirt and chip creep**
+
+  * Dusty contacts cause errors
+  * Expansion/contraction over time causes cards to loosen
+
+---
+
+### **Visible Signs of Physical Damage**
+
+#### **Liquid Damage**
+
+* Look for:
+
+  * Sticky residue
+  * Corrosion
+  * Stains
+* Common sources:
+
+  * Spills
+  * Humidity
+  * Dust clogging fans or keyboards
+
+---
+
+#### **Burn Damage**
+
+* **Scorch marks**
+
+  * Indicate burned or failed components
+* **Swollen or bulging capacitors**
+
+  * Capacitors regulate electrical flow
+  * Swelling indicates:
+
+    * Component failure
+    * Manufacturing defect
+
+---
+
+### **Diagnosis and Troubleshooting**
+
+* Use **diagnostic software** to confirm motherboard damage
+* Replacing parts with “known good” components:
+
+  * Is time-consuming
+  * Is expensive
+  * Often impractical
+* Investigate:
+
+  * Environmental conditions
+  * Power issues
+  * Maintenance or handling practices
+
+---
+
+### **Exam Tips**
+
+* Bent pins = **physical damage**
+* Bulging capacitors = **motherboard failure**
+* Liquid damage = **inspect for corrosion**
+* Case dents = **possible internal damage**
+* ESD = **silent motherboard killer**
+
+
+------------------------------------------------------------------------------------
+4.3.4 Troubleshoot Performance Issues
+
+Performance issues are difficult to diagnose because **many different factors** can cause a system to feel slow. Always use a **structured, step-by-step approach**.
+
+---
+
+### **1. Check for Overheating**
+
+* High temperatures cause components to **throttle** (slow down) to prevent damage
+* Common symptoms:
+
+  * Sluggish performance
+  * Random slowdowns
+  * Loud or constantly running fans
+* Actions:
+
+  * Monitor **CPU and system temperatures**
+  * Check **fan speeds**
+  * Clean dust from fans and vents
+  * Improve airflow or upgrade cooling if needed
+
+---
+
+### **2. Check for Misconfigurations**
+
+* Performance problems often appear **after changes**, such as:
+
+  * New build
+  * Hardware upgrade
+  * Maintenance or repair
+* Always ask:
+
+  > **“What changed?”**
+* Examples:
+
+  * Memory upgrade disables **dual-channel mode**
+  * Incompatible RAM or CPU
+  * BIOS settings not optimized
+* Verify:
+
+  * Component compatibility
+  * BIOS/UEFI configuration
+  * Proper installation
+
+---
+
+### **3. Verify and Isolate the Problem**
+
+* Performance issues can come from:
+
+  * **CPU**
+  * **Memory**
+  * **Storage**
+  * **Network**
+* Use diagnostic tools to:
+
+  * Measure performance
+  * Compare results to known **baseline values**
+* Isolate which subsystem is slow
+* If performance is below baseline:
+
+  * Consider upgrading the affected component
+
+---
+
+### **4. Understand Bottlenecks**
+
+* A **bottleneck** is a slow component that limits overall system performance
+* Example:
+
+  * Fast CPU + lots of RAM + good GPU
+  * Still slow because of a **hard disk drive (HDD)**
+* SSDs are much faster than HDDs
+
+#### **Modern Bottlenecks**
+
+* Improper NVMe configuration
+* PCIe version limitations:
+
+  * PCIe 3.0 vs PCIe 4.0
+* Insufficient bandwidth or high latency
+
+---
+
+### **5. Rule Out Software, Configuration, and Network Issues**
+
+* Sluggish performance may not be hardware-related
+* Examples:
+
+  * Faulty network login scripts
+  * OS misconfiguration
+  * Background applications
+  * Malware
+* Steps:
+
+  * Check operating system health
+  * Review running applications
+  * Test network performance
+* If diagnostics show hardware is working correctly:
+
+  * Suspect **software or configuration issues**
+
+---
+
+### **Exam Tips**
+
+* Overheating = **thermal throttling**
+* Ask **“What changed?”** after upgrades
+* HDD in a modern system = **bottleneck**
+* Good diagnostics + bad performance = **software issue**
+* Always isolate the slow subsystem
+
+
+------------------------------------------------------------------------------------
+4.3.5 Troubleshoot Inaccurate System Date/Time
+
+Accurate system **date and time** are critical for proper computer operation. Incorrect time settings can cause:
+
+* Network authentication failures
+* Problems with domain logins
+* Failed or unreliable scheduled tasks (backups, updates, logs)
+
+---
+
+### **Real-Time Clock (RTC)**
+
+* The **RTC** keeps track of the system date and time
+* Powered by a **coin-cell lithium battery** when the PC is turned off
+* Most common battery type: **CR2032**
+* Located on the **motherboard**
+
+---
+
+### **RTC / CMOS Battery Issues**
+
+* If the system **loses time when powered off**, the battery is likely failing
+* Common symptoms:
+
+  * Date/time resets after shutdown
+  * BIOS/UEFI clock is incorrect
+* Solution:
+
+  * Replace the battery with the **same type** (usually CR2032)
+
+---
+
+### **CMOS vs Modern Systems**
+
+* The RTC battery is often called the **CMOS battery**
+* Older systems stored configuration data in **CMOS RAM**
+* Modern systems store settings in:
+
+  * **NVRAM**
+  * **Flash memory**
+* Today, the battery mainly supports the **RTC**, not system settings
+
+---
+
+### **Network Time Synchronization**
+
+* Modern systems often use **Network Time Protocol (NTP)**
+* NTP automatically syncs the system clock with network time servers
+* Helps keep time accurate even after restarts
+
+---
+
+### **Exam Tips**
+
+* Wrong time after power-off = **bad RTC/CMOS battery**
+* Replace with **CR2032**
+* RTC keeps time when system is off
+* NTP keeps clocks accurate on networks
+* Time issues can break **authentication and backups**
+
+--------------------------------------------------------------------------------------------
+4.3.6 Troubleshoot Missing Video Issues
+
+If **no image** appears on a monitor or projector, start with basic checks before replacing hardware.
+
+---
+
+### **Basic Display Checks**
+
+* Ensure the **monitor/projector is plugged in**
+* Confirm it is **powered on**
+* Wake the display:
+
+  * Press a key
+  * Cycle power
+* Make sure the display is **not in standby/sleep mode**
+
+---
+
+### **Input Source Issues (Very Common)**
+
+* Verify the **correct input source** is selected
+
+  * Example: HDMI vs DVI vs DisplayPort
+* Use the monitor’s **On-Screen Display (OSD)** buttons
+* OSD allows you to adjust:
+
+  * Input source
+  * Brightness
+  * Contrast
+  * Color
+  * Power-saving settings
+
+---
+
+### **Physical Cabling Issues**
+
+* Check video cable at **both ends**
+
+  * Secure connection
+  * Not loose, stretched, or damaged
+* Inspect connectors for **bent or broken pins**
+* Ensure cable meets **resolution requirements**
+
+  * Example:
+
+    * 4K requires **High-Speed HDMI**
+* Verify **port and cable compatibility**
+
+  * HDMI 2.1
+  * DisplayPort 1.4
+  * USB-C (video capable)
+
+---
+
+### **Known Good Technique**
+
+* Swap with a **known good cable**
+* Test monitor with **another PC**
+* Helps isolate whether the issue is:
+
+  * Monitor
+  * Cable
+  * GPU
+  * Computer
+
+---
+
+## **Projector-Specific Issues**
+
+### **Burnt-Out Bulb**
+
+* Projectors use **high-intensity bulbs**
+* Bulbs have a **limited lifespan**
+* Signs of failure:
+
+  * Dim image
+  * Bulb warning message
+  * Popping sound
+  * Scorch marks or broken filament
+* Solution:
+
+  * Replace the bulb
+
+⚠️ **Safety Note**
+
+* Projector bulbs get **extremely hot**
+* Allow full **cool-down** before replacing
+
+---
+
+### **Modern Projectors**
+
+* Newer models use:
+
+  * **LED**
+  * **Laser**
+* Benefits:
+
+  * Longer lifespan
+  * Fewer bulb failures
+
+---
+
+### **Intermittent Projector Shutdown**
+
+Most commonly caused by **overheating**.
+
+**Check:**
+
+* Fan operation
+* Dust buildup in vents
+* Blocked ventilation
+* Room temperature
+
+**If not overheating:**
+
+* Check for **loose power or signal cables**
+* Ensure bulb is **properly seated**
+* Update **projector firmware**
+
+---
+
+### **Exam Tips**
+
+* No video → check **power, input source, cable**
+* Wrong input source is VERY common
+* Use **known good cable/device**
+* Projector dim/no image → likely **bulb**
+* Random shutdown → usually **overheating**
+
+--------------------------------------------------------------------------------------------
