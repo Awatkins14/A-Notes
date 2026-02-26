@@ -1825,4 +1825,391 @@ Most commonly caused by **overheating**.
 * Projector dim/no image → likely **bulb**
 * Random shutdown → usually **overheating**
 
---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+4.3.1 Troubleshoot Component Issues
+
+Component issues can cause problems that are **hard to pin down** and may look random.
+
+---
+
+### **Common Symptoms**
+
+* System lockups / freezing
+* Random shutdowns
+* Continuous rebooting
+* Blue Screen of Death (Windows)
+* Kernel panic (Linux/macOS)
+* Application crashes
+
+---
+
+### **Likely Causes**
+
+* Software issues
+* Disk or file corruption
+* Malware
+* Failing hardware components
+
+---
+
+### **Diagnostic Steps**
+
+#### **1. Eliminate Software Issues**
+
+* Check for:
+
+  * OS corruption
+  * Application errors
+  * Malware or viruses
+* Run:
+
+  * Antivirus scans
+  * Disk/file system checks
+* Rule out software **before** replacing hardware
+
+---
+
+#### **2. Identify Patterns**
+
+* Determine if the issue is:
+
+  * Random (intermittent)
+  * Repeatable (pattern-based)
+* Examples:
+
+  * Crashes after long use → **thermal issue**
+  * Errors during heavy load → **CPU, RAM, or PSU**
+
+---
+
+#### **3. Check the Power Supply**
+
+* Verify PSU provides **stable voltage**
+* Unstable power can cause:
+
+  * Reboots
+  * Shutdowns
+  * Crashes
+* Fans spinning ≠ PSU working correctly
+
+---
+
+#### **4. Suspect Hardware**
+
+* If software and PSU are ruled out, check:
+
+  * RAM
+  * CPU
+  * Motherboard
+* Use:
+
+  * Vendor diagnostic tools
+  * Firmware/UEFI-based tests (preferred over OS tools)
+
+---
+
+#### **5. Observe Physical Symptoms**
+
+* If diagnostics are unavailable:
+
+  * Look for:
+
+    * Burn marks
+    * Swollen capacitors
+    * Loose components
+    * Overheating
+* Physical inspection can reveal:
+
+  * RAM seating issues
+  * Motherboard damage
+  * CPU cooling problems
+
+---
+
+### **Exam Tips**
+
+* Always **rule out software first**
+* Random + time-based crashes = **heat or power**
+* Firmware diagnostics are more reliable than OS tools
+* PSU issues can mimic CPU, RAM, or motherboard failure
+
+--------------------------------------------------------------------------
+4.3.2 Overheating
+
+Excessive heat can damage sensitive computer components and cause system instability.
+
+---
+
+### **Signs of Overheating**
+
+* System feels hot to the touch
+* Random shutdowns or reboots
+* System crashes or freezes
+* Unusual odors (burning smell)
+* Smoke (often from the power supply)
+* Loud or constantly running fans
+
+> **Important:**
+> If you smell burning or see smoke, **shut down immediately** and unplug the system.
+
+---
+
+### **Common Causes**
+
+* Dust-clogged vents or fans
+* Failed or blocked cooling components
+* Poor airflow inside the case
+* Hot or dusty environment
+* Improperly installed cooling hardware
+
+---
+
+### **Safety Note**
+
+* CPUs and internal components **get very hot**
+* Avoid touching components immediately after shutdown
+* Allow time to cool before handling
+
+---
+
+### **Diagnosing Overheating Issues**
+
+#### **1. Temperature Sensors**
+
+* Most systems have built-in temperature sensors
+* Access readings using:
+
+  * Vendor tools
+  * BIOS/UEFI
+  * System monitoring software
+* Compare readings to **vendor-recommended limits**
+
+---
+
+#### **2. CPU Fan**
+
+* Ensure the CPU fan:
+
+  * Is spinning
+  * Is connected to the correct power header
+  * Is not jammed or clogged with dust
+* Overheating can occur if:
+
+  * Fan is broken
+  * Fan is undersized
+  * Old fan is used on a newer CPU
+
+---
+
+#### **3. Heat Sink**
+
+* Verify the heat sink:
+
+  * Is firmly attached
+  * Makes proper contact with the CPU
+* Clean and replace:
+
+  * Old or dried thermal paste
+* Proper thermal paste improves heat transfer
+
+---
+
+#### **4. Blanking Plates**
+
+* Install blanking plates over unused case openings
+* Missing plates:
+
+  * Disrupt airflow
+  * Reduce cooling efficiency
+
+---
+
+#### **5. Environment**
+
+* Ensure:
+
+  * Room temperature is reasonable
+  * Area is clean and dust-free
+  * PC is not near:
+
+    * Radiators
+    * Heaters
+    * Direct sunlight
+
+---
+
+### **Secondary Effects of Overheating**
+
+* Loose connectors
+* Components shifting in sockets
+* Hairline cracks in circuit boards expanding
+* Intermittent or hard-to-diagnose failures
+
+---
+
+### **Exam Tips**
+
+* Overheating often causes **random reboots**
+* Dust buildup is a very common cause
+* CPU fan and heat sink issues are high-probability exam answers
+* Environment matters — not just hardware
+
+----------------------------------------------------------------------------
+4.3.3 Physical Damage
+
+Physical damage most often affects **peripherals, ports, and cables**, but internal components can also be damaged—especially if the system was dropped or transported.
+
+---
+
+### **Initial Inspection**
+
+* Inspect the outside of the system:
+
+  * Cracks
+  * Dents
+  * Bent panels
+* Even small damage can indicate:
+
+  * A fall
+  * A hard knock
+  * Possible internal damage
+
+---
+
+### **Peripheral, Port, and Cable Damage**
+
+If a device is not working:
+
+* Check ports and connectors for:
+
+  * Bent pins
+  * Broken pins
+  * Dirty or corroded contacts
+* Inspect cables for:
+
+  * Fraying
+  * Cuts
+  * Kinks or crushed sections
+  * Loose connectors
+
+---
+
+### **Motherboard Damage (Less Common, But Serious)**
+
+Motherboard issues are rare but possible. Common causes include:
+
+#### **1. ESD, Electrical Spikes, or Overheating**
+
+* Can damage:
+
+  * Soldered chips
+  * Traces
+  * Integrated components
+* Often invisible to the naked eye
+
+---
+
+#### **2. Careless Insertion**
+
+* Improper insertion of:
+
+  * Cables
+  * Adapter cards
+* Can bend or break:
+
+  * Connector pins
+  * Slot contacts
+
+---
+
+#### **3. Dirt and Chip Creep**
+
+* Dirt or dust can cause poor electrical contact
+* Chip creep:
+
+  * Adapter cards slowly loosen over time
+  * Caused by heating and cooling cycles
+  * Leads to intermittent errors
+
+---
+
+### **Visible Signs of Physical Damage**
+
+#### **Liquid Damage**
+
+* Look for:
+
+  * Liquid residue
+  * Corrosion
+  * Sticky keys
+  * Dust clogged with moisture
+* Commonly affects:
+
+  * Keyboard
+  * Motherboard
+  * Fans
+
+---
+
+#### **Scorch Marks & Capacitor Swelling**
+
+* Scorch marks indicate:
+
+  * Burnt or “blown” components
+* Swollen or bulging capacitors:
+
+  * Regulate electrical flow
+  * Indicate failure or manufacturing defects
+  * Common cause of system instability
+
+---
+
+### **Diagnosing Motherboard Damage**
+
+* Use **diagnostic software** to confirm faults
+* Swapping with “known good” parts:
+
+  * Is time-consuming
+  * Can be expensive
+* Software diagnostics are preferred
+
+---
+
+### **Root Cause Investigation**
+
+* Check for:
+
+  * Environmental issues (heat, moisture, dust)
+  * Improper handling
+  * Poor maintenance procedures
+* Fixing the root cause prevents repeat failures
+
+---
+
+### **Exam Tips**
+
+* Physical damage often affects **ports and cables first**
+* Bent pins = common A+ answer
+* Swollen capacitors = motherboard failure indicator
+* ESD damage may not be visible but still fatal
+
+
+-----------------------------------------------------------------------------
+
+4.4
+Lab: Resolve PC Hardware Support Tickets
+
+It is another busy day at the IT helpdesk. Three employees have submitted high-priority tickets because they cannot get their computers to work properly.
+
+To complete this lab, view each ticket in Issue Trax on the ITAdmin computer. Troubleshoot each problem and implement a solution. A problem will be considered solved when the Windows operating system is displayed on the computer's monitor. Write a polite and professional comment on each ticket describing the actions taken, then close the tickets.
+
+----------------------------------------------------------------------
+
+4.5
+Lab: Troubleshoot a Malfunctioning Computer
+
+You work at a computer repair store. A customer has given you a computer that won't boot.
+
+In this lab, your task is to diagnose and correct the problem.
+
+The computer will successfully start and load Windows when the problem is corrected.
