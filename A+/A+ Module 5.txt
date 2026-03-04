@@ -1,3 +1,1460 @@
 ---------------------------------------------------------------
 Module 5 
 --------------------------------------------------------------
+Lesson 5.1 – Network Types
+
+## **Core 1 Objective 2.7**
+
+Compare and contrast:
+
+* Internet connection types
+* Network types
+* Network characteristics
+
+---
+
+## **What Is a Network Type?**
+
+A **network type** categorizes a network based on the **geographic area it covers** and how it is managed.
+
+Choosing the correct network type helps with:
+
+* Installation planning
+* Support procedures
+* Cost management
+* Security planning
+
+---
+
+# **Common Network Types**
+
+---
+
+## **PAN (Personal Area Network)**
+
+**Definition:**
+A small network centered around one person.
+
+**Range:** A few meters
+
+**Examples:**
+
+* Bluetooth smartwatch + phone
+* Wireless earbuds + phone
+* Laptop + Bluetooth mouse
+
+✅ **Exam Answer:**
+Smartwatch + earbuds connected via Bluetooth = **PAN**
+
+---
+
+## **LAN (Local Area Network)**
+
+**Definition:**
+A network covering a small area such as:
+
+* Home
+* Office
+* School building
+
+**Characteristics:**
+
+* High speed
+* Privately managed
+* Usually Ethernet or Wi-Fi based
+
+Most wired LANs are based on:
+
+* **IEEE 802.3 (Ethernet standard)**
+
+✅ **Exam Answer:**
+Most cabled LANs use **IEEE 802.3**
+
+---
+
+## **WLAN (Wireless LAN)**
+
+**Definition:**
+A LAN that uses wireless technology instead of cables.
+
+Based on:
+
+* **IEEE 802.11 (Wi-Fi standard)**
+
+Used in:
+
+* Homes
+* Offices
+* Coffee shops
+
+---
+
+## **MAN (Metropolitan Area Network)**
+
+**Definition:**
+A network that covers the size of a city.
+
+Larger than a LAN, smaller than a WAN.
+
+✅ **Exam Answer:**
+A network covering a city = **MAN**
+
+---
+
+## **WAN (Wide Area Network)**
+
+**Definition:**
+A network that spans:
+
+* Large geographic areas
+* Multiple cities
+* Countries
+* Continents
+
+Example:
+
+* The Internet
+* Corporate networks connecting multiple offices
+
+If a small business has multiple offices across an area, they likely need a:
+
+* **WAN**
+
+---
+
+## **SAN (Storage Area Network)**
+
+**Definition:**
+A dedicated network for storage devices.
+
+Purpose:
+
+* Provides access to consolidated storage
+* Used in enterprise environments
+
+---
+
+## **CAN (Campus Area Network)**
+
+**Definition:**
+Connects multiple LANs across a limited campus area.
+
+Used by:
+
+* Universities
+* Large corporate campuses
+
+---
+
+## **Data Center**
+
+A **whole site dedicated to provisioning server resources** is called a:
+
+✅ **Data Center**
+
+Purpose:
+
+* Hosts servers
+* Provides cloud services
+* Stores enterprise data
+
+---
+
+# **Modular Network Design**
+
+If you create a network where each segment is designed as a **modular function**, you are using:
+
+* **Software-Defined Networking (SDN)** concepts
+  or
+* A **modular network architecture**
+
+This allows:
+
+* Scalability
+* Easier management
+* Logical segmentation
+
+---
+
+# **Quick Exam Answers (Learning Outcomes)**
+
+1. Network covering a city → **MAN**
+2. Smartwatch + earbuds via Bluetooth → **PAN**
+3. Network built with modular segments → **Modular architecture / SDN**
+4. Whole site for server provisioning → **Data Center**
+5. Most cabled LANs based on → **IEEE 802.3**
+
+--------------------------------------------------------------------------
+
+5.1.2 SOHO and Enterprise Networks
+
+---
+
+# **SOHO Networks**
+
+## **Definition**
+
+A **SOHO (Small Office/Home Office)** network is a small LAN designed for:
+
+* Home users
+* Small businesses
+* Small number of users
+
+---
+
+## **Typical Characteristics**
+
+* May use:
+
+  * A small server
+  * Or just client devices + printers
+* Usually relies on a single device called a:
+
+  * SOHO router
+  * Internet router
+  * Broadband router
+
+---
+
+## **SOHO Router Functions**
+
+A SOHO router typically combines:
+
+* Router
+* Switch
+* Wireless Access Point (AP)
+* Firewall
+* DHCP server
+* NAT
+
+All-in-one device.
+
+---
+
+## **Design Focus**
+
+* Low cost
+* Easy setup
+* Basic security
+* Supports small number of users
+
+---
+
+# **Enterprise Networks**
+
+## **Definition**
+
+An **Enterprise network** supports:
+
+* Large businesses
+* Universities
+* Government institutions
+* Hundreds or thousands of users
+
+Unlike SOHO networks:
+
+* Each network function is handled by a **separate device**
+* Designed for high reliability and scalability
+
+---
+
+# **Enterprise Network Design (Modular Architecture)**
+
+Enterprise LANs are built in **modular segments**.
+
+Each part has a dedicated function.
+
+---
+
+## **1. Access Layer (Work Areas)**
+
+* Client PCs
+* Printers
+* Connected via:
+
+  * Workgroup switches
+  * Structured cabling
+
+Wireless devices connect through:
+
+* Wireless Access Points (APs)
+
+---
+
+## **2. Distribution/Core Layer**
+
+* Core switches
+* Distribution switches
+* Routers
+* Firewalls
+
+Responsible for:
+
+* Routing traffic
+* Managing VLANs
+* Controlling access
+* High-speed backbone connectivity
+
+---
+
+## **3. Server Room / Data Center**
+
+* Servers separated from clients
+* Controlled access
+* Centralized storage and services
+
+---
+
+# **Screened Subnets (DMZ)**
+
+Internet-facing services are placed in a protected area called a:
+
+* **Screened subnet**
+* Also known as a **DMZ (Demilitarized Zone)**
+
+---
+
+## **Purpose of Screened Subnet**
+
+* Sits between:
+
+  * Private LAN
+  * Public Internet
+* Traffic is:
+
+  * Strictly filtered
+  * Monitored
+
+---
+
+## **Border Services in Enterprise Networks**
+
+Provide:
+
+* Internet access
+* Email services
+* Remote access
+* WAN branch office connectivity
+* VPN connections
+* Public web services
+
+---
+
+# **SOHO vs Enterprise Comparison**
+
+| Feature        | SOHO              | Enterprise                |
+| -------------- | ----------------- | ------------------------- |
+| Users          | Few               | Hundreds/Thousands        |
+| Devices        | All-in-one router | Separate devices          |
+| Scalability    | Limited           | High                      |
+| Security       | Basic             | Advanced layered security |
+| Network Design | Simple            | Modular architecture      |
+| Reliability    | Moderate          | High availability         |
+
+---
+
+# 🎯 Core 1 Exam Reminders
+
+* SOHO router = all-in-one device
+* Enterprise = modular, separate devices
+* Wireless clients connect via APs
+* Servers separated in secure room
+* Public services placed in screened subnet (DMZ)
+* Enterprise WAN uses VPNs for branch offices
+
+---------------------------------------------------------------------------
+
+5.1.3 Datacenters
+
+
+
+# **Server vs Client Roles**
+
+Most networks define two main computer roles:
+
+---
+
+## **Server**
+
+A **server** is a computer dedicated to:
+
+* Running network applications
+* Hosting shared resources
+* Providing services to other computers
+
+Examples:
+
+* File server
+* Web server
+* Email server
+* Database server
+
+---
+
+## **Client**
+
+A **client** computer:
+
+* Used by end users
+* Accesses applications and resources from servers
+* Performs daily work tasks
+
+Examples:
+
+* Desktop PCs
+* Laptops
+* Mobile devices
+
+---
+
+# **Server Room**
+
+On an enterprise LAN:
+
+* Servers are placed in a separate, secured area
+* Called a **server room**
+* Physically separated from user workstations
+* Improves:
+
+  * Security
+  * Cooling
+  * Organization
+  * Reliability
+
+---
+
+# **Datacenter**
+
+## **Definition**
+
+A **datacenter** is a whole site dedicated to provisioning server resources.
+
+Unlike a small server room:
+
+* A datacenter is an entire facility
+* Built specifically for hosting IT infrastructure
+
+---
+
+## **Datacenter Features**
+
+Designed for **high availability** and reliability.
+
+Includes:
+
+### **1. Dedicated Networking**
+
+* High-speed backbone connections
+* Redundant network paths
+
+---
+
+### **2. Dedicated Power**
+
+* Backup generators
+* Uninterruptible Power Supplies (UPS)
+* Redundant power feeds
+
+---
+
+### **3. Climate Control**
+
+* Precision cooling systems
+* Temperature and humidity monitoring
+* Prevents overheating
+
+---
+
+### **4. Physical Security**
+
+* Controlled access
+* Biometric locks
+* Surveillance systems
+* Security personnel
+
+---
+
+# **Why Datacenters Exist**
+
+Used when a company:
+
+* Has high server demands
+* Runs critical applications
+* Requires continuous uptime
+* Supports cloud services
+
+---
+
+# 🔥 Quick Comparison
+
+| Feature  | Server Room          | Datacenter                      |
+| -------- | -------------------- | ------------------------------- |
+| Size     | One room             | Entire facility                 |
+| Purpose  | Host company servers | Large-scale server provisioning |
+| Power    | Basic backup         | Redundant enterprise-level      |
+| Cooling  | Standard HVAC        | Dedicated cooling systems       |
+| Security | Restricted room      | Multi-layer security            |
+
+---
+
+# 🎯 Core 1 Exam Reminders
+
+* Server = provides services
+* Client = uses services
+* Server room = secure room in enterprise LAN
+* Datacenter = entire facility for server resources
+* Built for high availability
+
+-------------------------------------------------------------------------
+
+Here’s your **Lesson 5.2 – Networking Hardware** notes in the clean, Core 1 exam–ready style you like:
+
+---
+
+# **5.2 Networking Hardware**
+
+**Core 1 Objective:** 2.5 – Compare and contrast common networking hardware devices
+
+---
+
+# **Purpose of Networking Hardware**
+
+Networking hardware allows computers and devices to **connect, communicate, and share resources** over a network.
+
+When setting up a network, you’ll need to identify the correct hardware to match the network type.
+
+---
+
+# **1. Network Interface Card (NIC)**
+
+* A **NIC** is the computer component responsible for establishing the **physical connection** to a network.
+* Can be **wired** (Ethernet) or **wireless** (Wi-Fi).
+* Provides the computer with a **MAC address** (unique identifier).
+
+**MAC Address Note:**
+
+* The first 24 bits of a MAC address are the **Organizationally Unique Identifier (OUI)**, identifying the manufacturer.
+* The last 24 bits are a unique number assigned by the manufacturer.
+
+---
+
+# **2. Cables and Connectors**
+
+* Network cables run from wall ports to devices and are **terminated with connectors**:
+
+  * **RJ-45** for Ethernet
+  * **RJ-11** for telephone lines
+
+* Proper termination ensures reliable connections and prevents signal loss.
+
+---
+
+# **3. Switches**
+
+* Switches connect devices within a **LAN**, forwarding traffic based on **MAC addresses**.
+
+### **Types of Switches**
+
+1. **Unmanaged Switch**
+
+   * Works **out of the box** without configuration
+   * Good for **small networks** or plug-and-play setups
+
+2. **Managed Switch**
+
+   * Configurable for advanced features: VLANs, QoS, SNMP
+   * Suitable for **enterprise networks**
+
+---
+
+# **4. Power over Ethernet (PoE)**
+
+* PoE delivers **electrical power through Ethernet cables** to devices like phones, cameras, and APs.
+
+**Standards:**
+
+* **IEEE 802.3af** → 15.4W
+* **IEEE 802.3at (PoE+)** → 25.5W
+* **IEEE 802.3bt (PoE++ / 4PPoE)** → ~51W (high-power devices)
+
+---
+
+# 🔹 Quick Exam Reminders
+
+| Question                       | Answer                                   |
+| ------------------------------ | ---------------------------------------- |
+| Physical connection to network | NIC                                      |
+| First 24 bits of MAC           | Organizationally Unique Identifier (OUI) |
+| Cable termination              | RJ-45 (Ethernet)                         |
+| Plug-and-play switch           | Unmanaged switch                         |
+| PoE standard ~51W              | IEEE 802.3bt                             |
+
+---------------------------------------------------------------------------
+
+Here’s a **clean, exam-ready summary** of your **5.2.1 – Network Interface Cards (NICs)** notes:
+
+---
+
+# **5.2.1 Network Interface Cards (NICs)**
+
+## **Purpose of a NIC**
+
+* A **Network Interface Card (NIC)** establishes the **physical connection** between a computer and a network.
+
+* Can use:
+
+  * **Copper twisted pair cables** (e.g., 1000BASE-T)
+  * **Fiber optic cables** (light pulses for high-speed transmission)
+
+* Most modern motherboards have a **built-in Gigabit Ethernet adapter**.
+
+* Expansion NICs can:
+
+  * Support different media (fiber, higher-speed Ethernet)
+  * Provide multiple ports for **link aggregation** (e.g., 4 × 1 Gbps → 4 Gbps combined)
+
+---
+
+## **How NICs Work**
+
+* Converts electrical or optical signals into **digital data**.
+
+* **Framing and addressing** are handled by the Ethernet data link protocol.
+
+* Every NIC has a **unique MAC address** that identifies the **source and destination** of Ethernet frames.
+
+---
+
+## **MAC Address Structure**
+
+* **Size:** 48 bits (6 bytes)
+* **Representation:** 12 hexadecimal digits (0–9, A–F), usually separated by colons or hyphens:
+
+  * Example: `00:60:8C:12:3A:BC` or `00608C123ABC`
+
+### **MAC Address Breakdown**
+
+1. **Organizationally Unique Identifier (OUI)** – first 24 bits
+
+   * Identifies the **manufacturer** of the NIC.
+2. **NIC-Specific Identifier** – last 24 bits
+
+   * Unique for each NIC
+
+### **Special Flags in MAC**
+
+* First two hex digits converted to binary: last two bits are flags:
+
+  1. **Individual vs. Group/Multicast** – last bit: 0 = individual, 1 = multicast
+  2. **Universally vs. Locally Administered** – second-to-last bit: 0 = globally unique, 1 = locally assigned
+
+**Example:**
+
+* MAC `01:13:10:6B:17:A8` → `01` = `00000001`
+
+  * Last bit = 1 → multicast
+  * Next bit = 0 → globally unique
+
+------------------------------------------------------------------------
+5.2.2
+Lab: Select and Install a Network Adapter
+
+You work as the IT administrator for a small corporate network. To accommodate specific network communication needs for an upcoming project, you need to upgrade the network connection's speed for the Windows workstation located in the Executive Office.
+
+In this lab, your task is to:
+
+Install the network interface card with the fastest speed into the Exec computer.
+Connect the Exec computer to the local area network using the new network card and the appropriate cable.
+From the workstation's operating system, use the ping command to confirm that the workstation has a connection to the local network and the internet using the following:
+Local server IP address: 192.168.0.10
+ISP & internet provider: 198.28.2.254
+
+-----------------------------------------------------------------------
+5.2.3 Patch Panels
+
+## **Purpose**
+
+* Patch panels are **central connection points** for structured cabling in offices or enterprise networks.
+* They organize and terminate **cables running through walls** from wall ports.
+
+---
+
+## **Connections**
+
+1. **Back of the Patch Panel:**
+
+   * Uses **Insulation Displacement Connector (IDC) punchdown blocks** to terminate cables.
+   * Wires are pressed into the IDC without stripping insulation.
+
+2. **Front of the Patch Panel:**
+
+   * Pre-wired **RJ45 ports** provide connection points.
+   * **Patch cords** connect the patch panel ports to **switch ports**.
+
+---
+
+## **Advantages**
+
+* Simplifies changing network connections without rerunning cables.
+* Centralizes network management for easier troubleshooting and maintenance.
+
+-------------------------------------------------------------------------
+
+5.2.5
+Lab: Connect Patch Panel Cables
+
+You are a network technician for a small corporate network. Today, you moved a new workstation to Office 1, and you now need to connect the computer to the Ethernet local area network and the internet.
+
+In this lab, your task is to connect the workstation to the wired network as follows:
+
+In the Networking Closet:
+
+Use the appropriate twisted-pair cable to make a connection between the patch panel and the switch.
+Use port Off 1 on the patch panel.
+Use port 3 on the Cisco switch.
+In Office 1:
+
+Connect the Office1 desktop computer to the local area network using the appropriate twisted-pair cable.
+Configure the Office1 desktop computer to obtain IP and DNS addresses automatically from the DHCP server on the local network.
+Use the Settings app to confirm that the workstation is properly connected to the local area network and the internet.
+To configure DHCP:
+
+Right-click the network icon at the bottom-right corner of the screen.
+Select Network and internet settings.
+Select Ethernet.
+Scroll down to the IP/DNS assignment areas, then select Edit.
+
+-------------------------------------------------------------------------
+
+5.2.6 Switches
+
+## **Purpose**
+
+* Connects **multiple devices** within a LAN.
+* Provides **one dedicated port per device**.
+
+---
+
+## **How Switches Work**
+
+1. **MAC Address Table:**
+
+   * Records which MAC addresses are on which ports.
+   * Helps forward frames **only to the correct port**, reducing unnecessary traffic.
+
+2. **Frame Forwarding:**
+
+   * Reads the **source and destination MAC** of incoming frames.
+   * If the destination MAC is unknown, the frame is **flooded to all ports**.
+
+3. **Collision Domains:**
+
+   * Each port is a **separate collision domain**.
+   * Full-duplex connections allow **simultaneous send and receive** at maximum network speed.
+
+---------------------------------------------------------------------------
+
+5.2.8
+Lab: Connect Computers with a Switch
+
+In this lab, you will design a small office/home office (SOHO) network using the network modeler:
+
+Add the computers to the canvas
+In the tools tray, select the End Devices icon.
+Drag all three computers to the modeler canvas.
+Add the switch to the canvas
+In the tools tray, select the Switches icon.
+Drag the switch to the modeler canvas.
+Connect the computers to the switch
+In the tools tray, select the Create Link icon.
+Click on Home-PC1 and select the Ethernet port.
+Click on the Switch and select an open port.
+Use the same process to connect the other two computers to the switch.
+Add the router to the canvas
+In the tools tray, select the Routers icon.
+Drag the router to the modeler canvas.
+Connect the switch to the router
+In the tools tray, make sure the Create Link icon is toggled on. If it isn't, click it.
+Use Create Link to connect the router to the switch.
+
+---------------------------------------------------------------------
+5.2.9 Unmanaged vs Managed Switches
+
+## **Unmanaged Switch**
+
+* Works **out-of-the-box** with **no configuration needed**.
+* Connect devices and it establishes **Ethernet connectivity automatically**.
+* Typically has **4–8 ports** for **small networks or SOHO setups**.
+* Example: the built-in 4-port switch in most ISP-provided routers.
+
+---
+
+## **Managed Switch**
+
+* Designed for **larger LANs and enterprise networks**.
+* Works like an unmanaged switch initially but allows **administrator configuration**:
+
+  * Security settings
+  * VLANs, port management, traffic monitoring, etc.
+* Typically **24–48 ports** for workgroup clients, servers, and printers.
+* Includes **uplink ports** to connect to other switches.
+* Can be **configured via web GUI or command-line interface (CLI)**.
+
+---
+
+## **Modular Switch**
+
+* Enterprise-grade, chassis-based switches.
+* Interconnect **multiple switch units** with a **shared backplane and power supply**.
+* Can provide **hundreds of access ports** from a single modular system.
+
+------------------------------------------------------------------------
+
+*5.2.10 – Power over Ethernet (PoE)
+
+---
+
+# **5.2.10 Power over Ethernet (PoE)**
+
+PoE allows a **network switch to provide electrical power over standard Ethernet cabling** to devices such as VoIP phones, wireless access points, and IP cameras.
+
+---
+
+## **IEEE PoE Standards**
+
+| Standard    | Type                    | Max Power (usable)           | Typical Devices                                                          |
+| ----------- | ----------------------- | ---------------------------- | ------------------------------------------------------------------------ |
+| **802.3af** | Type 1 (2-pair PoE)     | ~13 W                        | VoIP phones, basic APs, basic cameras                                    |
+| **802.3at** | Type 2 (PoE+)           | ~25 W                        | Advanced APs, PTZ cameras, video IP phones                               |
+| **802.3bt** | Type 3 / Type 4 (PoE++) | Type 3: 51 W<br>Type 4: 73 W | LED lighting, digital signage, point-of-sale systems, high-power devices |
+
+---
+
+## **How PoE Works**
+
+1. **Detection Phase:** The switch detects if the connected device supports PoE.
+2. **Power Allocation:** Determines required power and sets the voltage appropriately.
+3. **Non-PoE Safety:** If the device is non-PoE, no power is sent, preventing damage.
+
+---
+
+## **PoE Devices**
+
+* **Endspan (PSE) Switch:** A PoE-enabled switch that supplies power directly.
+* **PoE Injector (Midspan):** Adds PoE capability to a non-PoE switch.
+
+  * Connects between switch and device.
+  * Maximum total cable length: 100 m (328 ft).
+
+---
+
+## **Benefits of PoE**
+
+* Eliminates need for separate AC adapters.
+* Centralized power management and energy-saving schemes (e.g., sleep states, power capping).
+* Simplifies installation of networked devices in hard-to-reach locations.
+
+---------------------------------------------------------------------------
+5.3.1 Unshielded Twisted Pair (UTP)
+
+## **What It Is**
+
+* The **most common type of network cable**.
+* Made of **copper wiring**.
+* Contains **4 pairs of wires** (8 total wires).
+
+---
+
+## **How It’s Built**
+
+* Each pair of wires is:
+
+  * **Twisted together**
+  * Twisted at **different rates** from other pairs
+* Twisting reduces **electromagnetic interference (EMI)**.
+* Uses **balanced signaling**:
+
+  * One wire carries a positive signal.
+  * The other carries an equal but opposite signal.
+  * Helps cancel out interference.
+
+---
+
+## **Limitations**
+
+* Signal weakens over distance (**attenuation**).
+* Maximum recommended length:
+  **100 meters (328 feet)** per cable run.
+
+---
+
+## **Why It’s Popular**
+
+* Affordable
+* Easy to install
+* Reliable for standard LAN distances
+
+------------------------------------------------------------------------
+
+5.3.2 Shielded Twisted Pair (STP)
+
+## **What It Is**
+
+* Twisted pair cable with **extra shielding** to protect against interference.
+* Used in environments with **high electromagnetic interference (EMI)**:
+
+  * Near fluorescent lights
+  * Power lines
+  * Motors
+  * Generators
+
+---
+
+## **Types of Shielded Cable**
+
+### **F/UTP (Foiled Unshielded Twisted Pair)**
+
+* Single **foil shield** around all wire pairs.
+* Also called:
+
+  * ScTP (Screened Twisted Pair)
+  * FTP (Foiled Twisted Pair)
+* ✔ Good EMI protection
+* ✔ Moderate cost
+
+---
+
+### **S/FTP (Shielded Foiled Twisted Pair)**
+
+* **Braided outer screen**
+* Each pair also has **foil shielding**
+* ✔ Best protection against EMI and crosstalk
+* ✖ More expensive
+* ✖ Less flexible
+* Variant: **F/FTP** (foil outer shield + foil pairs)
+
+---
+
+### **U/FTP (Unshielded with Foiled Twisted Pair)**
+
+* No outer shield
+* Each pair individually foil shielded
+* ✔ Good EMI and crosstalk protection
+
+---
+
+## **Important Installation Note**
+
+* Shielding **must be bonded (grounded) properly**.
+* If not grounded, shielding can act like an **antenna** and cause interference.
+* Modern cables, connectors, and patch panels support proper bonding.
+
+---
+
+## 🔑 Exam Comparison: UTP vs STP
+
+| Feature        | UTP           | STP            |
+| -------------- | ------------- | -------------- |
+| Shielding      | No            | Yes            |
+| Cost           | Cheaper       | More expensive |
+| Flexibility    | More flexible | Less flexible  |
+| EMI Protection | Basic         | High           |
+| Max Distance   | 100m          | 100m           |
+
+-------------------------------------------------------------------------
+
+5.3.4 Cat (Category) Standards
+
+A **Category (Cat)** rating defines the **performance level** of twisted-pair cabling.
+Higher Cat number = **higher speed capability**.
+
+Defined by: **TIA/EIA-568-C** cabling standards.
+
+---
+
+# 📊 Cat Cable Comparison Chart
+
+| Cat        | Max Speed                        | Max Distance | Ethernet Standard          |
+| ---------- | -------------------------------- | ------------ | -------------------------- |
+| **Cat 5**  | 100 Mbps                         | 100 m        | 100BASE-TX (Fast Ethernet) |
+| **Cat 5e** | 1 Gbps                           | 100 m        | 1000BASE-T (Gigabit)       |
+| **Cat 6**  | 1 Gbps (100m)<br>10 Gbps (55m)   | 100 m / 55 m | 1000BASE-T / 10GBASE-T     |
+| **Cat 6A** | 10 Gbps                          | 100 m        | 10GBASE-T                  |
+| **Cat 7**  | 10 Gbps (100m)<br>100 Gbps (15m) | 100 m / 15 m | 10GBASE-T / 100GBASE-T     |
+| **Cat 8**  | 25–40 Gbps                       | 30 m         | 25GBASE-T / 40GBASE-T      |
+
+---
+
+# 🧠 Important Exam Details
+
+## **Cat 5**
+
+* Supports only **100 Mbps**
+* Obsolete (no longer sold)
+* Must be replaced for Gigabit networks
+
+---
+
+## **Cat 5e**
+
+* Supports **1 Gbps at 100m**
+* Still acceptable for most home/client networks
+
+---
+
+## **Cat 6**
+
+* More reliable than 5e
+* Supports:
+
+  * 1 Gbps up to 100m
+  * 10 Gbps up to 55m
+* Very common today
+
+---
+
+## **Cat 6A**
+
+* Supports **10 Gbps at full 100m**
+* Thicker and harder to install
+* Recommended for:
+
+  * Healthcare
+  * 802.3bt (PoE++)
+  * Wireless AP backhaul
+
+---
+
+## **Cat 7**
+
+* Mainly used in **data centers**
+* Uses **GG45 or TERA connectors**
+* Not widely used in homes/offices
+* RJ45 may not support full Cat 7 performance
+
+---
+
+## **Cat 8**
+
+* Designed for **short, high-speed data center runs**
+* Max length: **30 meters**
+* Two types:
+
+  * **Cat 8.1** → uses RJ45 (backward compatible)
+  * **Cat 8.2** → uses GG45/TERA (not backward compatible)
+
+--------------------------------------------------------------------------
+
+5.3.5 Copper Cabling Connectors
+
+## **RJ45 (8P8C) Connector**
+
+* Used for **Ethernet twisted-pair cabling**
+* Also called **8P8C**
+
+  * 8 Positions
+  * 8 Contacts
+* Used with **4-pair Ethernet cable (8 wires total)**
+
+---
+
+## **Wire Color Coding**
+
+Each twisted pair has a color:
+
+* 🟠 Orange
+* 🟢 Green
+* 🔵 Blue
+* 🟤 Brown
+
+Each pair contains:
+
+* One **white wire with color stripe**
+* One **solid color wire**
+
+Example:
+
+* White/Orange + Orange
+* White/Green + Green
+
+---
+
+# **T568A vs T568B Wiring Standards**
+
+Defined by **TIA/EIA-568**
+
+## **T568A**
+
+* Pin 1 → White/Green
+* Pin 2 → Green
+* Pin 3 → White/Orange
+* Pin 6 → Orange
+
+## **T568B**
+
+* Pin 1 → White/Orange
+* Pin 2 → Orange
+* Pin 3 → White/Green
+* Pin 6 → Green
+
+👉 The **green and orange pairs are swapped** between A and B.
+
+---
+
+## **Important Exam Rule**
+
+* Use the **same standard on both ends** → **Straight-through cable**
+* Different standard on each end → **Crossover cable**
+
+---
+
+# **RJ11 Connector**
+
+* Used for **telephone lines and DSL**
+* Typically supports **2 pairs (4 wires)**
+* Smaller than RJ45
+
+-------------------------------------------------------------------------
+5.3.7 Copper Cabling Installation Tools
+
+## 🏢 Structured Cabling System Overview
+
+In an office network:
+
+1. **Computer NIC → Patch cord → Wall port**
+2. **Wall port → Permanent cable (in walls/ceiling)**
+3. **Permanent cable → Patch panel (equipment room)**
+4. **Patch panel → Ethernet switch**
+
+---
+
+# 🧵 Two Types of Cable in Structured Cabling
+
+## 1️⃣ Patch Cords
+
+* Use **RJ45 plugs**
+* Use **stranded cable** (more flexible)
+* Max length per patch cord: **5 meters**
+* More flexible but **more attenuation**
+
+---
+
+## 2️⃣ Permanent Cable
+
+* Runs inside walls/ceilings
+* Uses **solid cable** (thicker wire)
+* Terminated with **IDC (punchdown blocks)**
+* More reliable over distance
+
+---
+
+## 📏 Distance Rule (VERY IMPORTANT)
+
+* Total link (channel) = **100 meters max**
+* Includes:
+
+  * Permanent cable
+  * Both patch cords
+* Patch cords max = **5m each**
+
+---
+
+# 🛠 Installation Tools
+
+## 🔧 Cable Stripper
+
+* Removes outer jacket
+* Must avoid damaging inner wires
+* Rotate tool gently to score jacket
+* Cat 6/6A includes:
+
+  * **Plastic star filler** (cut off with snips)
+  * **Ripcord** (used to open jacket)
+
+---
+
+## 🔨 Punchdown Tool
+
+* Used for **IDCs (wall ports & patch panels)**
+* Steps:
+
+  1. Untwist pairs (no more than ½ inch / 13 mm)
+  2. Follow **T568A or T568B**
+  3. Press wires into IDC
+* Blades cut insulation and make contact
+
+---
+
+## 🔌 Crimper
+
+* Used to attach **RJ45 plugs to patch cords**
+* Arrange wires in correct order
+* Insert into plug
+* Squeeze tool to:
+
+  * Pierce insulation
+  * Lock plug onto cable
+
+---------------------------------------------------------------------------
+5.3.8 Copper Cabling Test Tools
+
+After terminating cables, you must **test them immediately** to verify:
+
+* Proper electrical contact
+* Correct pin positions
+* No wiring errors
+
+Fixing problems early is much easier before devices are connected
+
+---------------------------------------------------------------------------
+
+5.3.9 Network Taps
+
+A **network tap (Test Access Point)** is a device used to **capture and monitor network traffic** on a cable.
+It sends the copied traffic to a **packet analyzer or protocol analyzer** (like Wireshark).
+
+This helps IT professionals **analyze network activity and troubleshoot problems**.
+
+---
+
+## Passive TAP
+
+A **passive TAP** does not require power.
+
+**How it works:**
+
+* Uses an **inductor or optical splitter** to copy the signal.
+* Sends the copied signal to a **monitor port**.
+
+**Key points**
+
+* No processing or logic decisions
+* Captures **all frames**, even corrupted ones
+* Performance **not affected by network load**
+* **Very reliable** since it has no power requirement
+
+---
+
+## Active TAP
+
+An **active TAP** is a **powered device**.
+
+**How it works:**
+
+* Regenerates and copies the signal before sending it to the monitor port.
+
+**Key points**
+
+* Used when signals are **too complex for passive taps**
+* Often required for **Gigabit Ethernet over copper**
+* Works with certain **fiber connections**
+
+**Disadvantage**
+
+* If power fails, the **tap becomes a point of failure** in the network.
+
+---
+
+## Mirror Port (Alternative Monitoring Method)
+
+Network traffic can also be monitored using a **mirror port** on a switch.
+
+**Mirror Port**
+
+* Copies traffic from selected switch ports
+* Sends the copied frames to a monitoring device
+* Used for **network sniffing and analysis**
+
+---------------------------------------------------------------------------
+
+5.3.10 Copper Cabling Installation Considerations
+
+When installing network cabling, you must **follow local building codes and fire regulations**. Specific cable types are required depending on the installation environment.
+
+---
+
+## **Plenum Cable**
+
+* **Plenum space:** Area in a building for HVAC airflow (false ceilings or raised floors)
+* **Why special cable is needed:** Fire can spread quickly in plenum spaces because of airflow.
+* **Requirements for plenum cable:**
+
+  * Fire-retardant
+  * Self-extinguishing
+  * Low smoke emission
+  * Compliant with NEC fire safety standards
+* **Materials:** Treated PVC or fluorinated ethylene polymer (FEP)
+* **Markings:**
+
+  * **CMP** – Plenum-rated cable
+  * **CMG/CM** – General-purpose cable
+* **Bandwidth:** Same as regular cable, flexibility may be slightly reduced
+
+---
+
+## **Direct Burial / Outside Plant (OSP) Cable**
+
+Used for cabling **outside the building** or between buildings.
+
+### **Challenges**
+
+* UV exposure from sunlight
+* Temperature extremes
+* Moisture/damp conditions
+* Rodent damage
+
+### **Installation Types**
+
+1. **Aerial Cable**
+
+   * Strung between poles or anchors
+   * Must be UV-resistant
+
+2. **Conduit-protected Cable**
+
+   * Provides protection from physical damage
+   * Still vulnerable to damp and temperature extremes
+
+3. **Direct Burial Cable**
+
+   * Laid underground and covered with earth or concrete
+   * Often gel-filled and/or armored for protection
+
+--------------------------------------------------------------------------
+
+5.3.11 Optical Cabling (Fiber Optic)
+
+## 🔹 Why Use Fiber Instead of Copper?
+
+Copper:
+
+* Uses **electrical signals**
+* Sensitive to **interference (EMI)**
+* Signal weakens over distance (**attenuation**)
+
+Fiber:
+
+* Uses **light pulses (lasers or LEDs)**
+* Not affected by EMI
+* Much **longer distances**
+* Much **higher bandwidth (Gbps–Tbps)**
+
+---
+
+# 🔬 Fiber Structure
+
+A fiber optic cable contains:
+
+* **Core** → ultra-thin glass that carries light
+* **Cladding** → reflects light back into core
+* **Buffer coating** → protective layer
+* **Outer jacket** → overall protection
+
+---
+
+# 🌐 Types of Fiber
+
+## 1️⃣ Single-Mode Fiber (SMF)
+
+* Core size: **8–10 microns**
+* Uses **laser diode**
+* Wavelength: **1310 nm or 1550 nm**
+* Supports:
+
+  * **10 Gbps or higher**
+  * **Long distances (kilometers)**
+
+✔ Used for WANs and long-distance links
+✔ More expensive
+
+---
+
+## 2️⃣ Multi-Mode Fiber (MMF)
+
+* Core size: **50 or 62.5 microns**
+* Uses **LED or VCSEL**
+* Wavelength: **850 nm or 1300 nm**
+* Shorter distances than SMF
+
+✔ Cheaper
+✔ Used mainly in LANs
+✖ Less distance and speed than SMF
+
+---
+
+# 🔌 Fiber Connectors
+
+## ST (Straight Tip)
+
+* Push-and-twist (bayonet)
+* Older multimode networks
+
+---
+
+## SC (Subscriber Connector)
+
+* Push/pull design
+* Simplex or duplex
+* Used for single-mode or multi-mode
+
+---
+
+## LC (Lucent Connector)
+
+* Smaller form factor
+* Push/pull with tab
+* Higher port density
+* Very common in modern networks
+
+---
+
+# ⚠️ Important Handling Notes
+
+* Fiber connectors are **easy to damage**
+* Avoid repeated plugging/unplugging
+* Always use **dust caps** on unused ports
+* Can use:
+
+  * Same connectors both ends (LC-LC)
+  * Mixed connectors (SC-LC)
+
+-----------------------------------------------------------------------
+
+5.3.13 Coaxial Cabling
+
+## 🔹 Structure of Coaxial Cable
+
+Coaxial cable carries electrical signals using **two conductors on the same axis**:
+
+1. **Core conductor** → Carries the signal
+2. **Dielectric insulation** → Plastic layer around the core
+3. **Shielding conductor** → Wire mesh, protects from EMI and serves as ground
+4. **Outer jacket** → Protective sheath
+
+> Unlike twisted pair, coax uses **shielding** instead of balancing to reduce interference.
+
+---
+
+## 🔹 Common Uses
+
+* CCTV installations (security cameras)
+* Cable Access TV (CATV)
+* Broadband cable modems
+
+---
+
+## 🔹 Coaxial Connectors
+
+### 1️⃣ F-Type Connector
+
+* Screw-down style
+* Common for cable TV and broadband
+* Provides a reliable connection for high-frequency signals
+
+### 2️⃣ BNC (Bayonet Neill-Concelman) Connector
+
+* Bayonet coupling mechanism
+* Used for **video, radio, and television cabling**
+* Quick connect/disconnect, secure
+
+--------------------------------------------------------------------------
