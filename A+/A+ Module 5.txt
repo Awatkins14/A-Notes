@@ -1458,3 +1458,236 @@ Coaxial cable carries electrical signals using **two conductors on the same axis
 * Quick connect/disconnect, secure
 
 --------------------------------------------------------------------------
+
+5.4.1 Access Points (APs)
+
+## 📡 Wireless Basics
+
+* Wireless networks use **radio waves**.
+* Use **antennas** tuned to specific frequencies.
+* Most WLANs follow **IEEE 802.11 (Wi-Fi)** standards.
+
+---
+
+# 🏗 Infrastructure Mode (Most Common)
+
+Most Wi-Fi networks use **Infrastructure Mode**.
+
+### What this means:
+
+* Devices (called **stations**) connect to the network through an **Access Point (AP)**.
+* This setup is called a **Basic Service Set (BSS)**.
+* The AP’s radio **MAC address** is called the **BSSID**.
+
+---
+
+# 🔄 What an Access Point Does
+
+An AP can:
+
+1. ✅ Create a **wireless-only network**
+2. ✅ Act as a **bridge** between wireless and wired networks
+
+The wired network is called the:
+
+> **Distribution System (DS)**
+
+The AP connects to the wired network like a normal device:
+
+* Through a wall port
+* Using Ethernet cable
+* Connected to a switch
+
+---
+
+# 🔌 Powering an AP
+
+* Enterprise networks often use **PoE (Power over Ethernet)**.
+* PoE sends **power + data over the same Ethernet cable**.
+
+----------------------------------------------------------------------
+
+5.4.2 Frequency Bands
+
+## 📡 Frequency Bands Basics
+
+* Every Wi-Fi device operates on a **radio frequency band**.
+* A frequency band is divided into **channels**.
+* Think of channels like **lanes on a highway**.
+
+---
+
+# 📶 Channels
+
+* Each band is split into smaller ranges called **channels**.
+* Channels allow multiple Wi-Fi networks to operate without interfering.
+* All channels in a band are the same width.
+* Some standards allow **channel bonding**:
+
+  * Combines channels into one wider channel
+  * ✅ Wider channel = more data throughput
+  * ❌ But increases chance of interference
+
+---
+
+# 📊 The Three Main Wi-Fi Bands
+
+---
+
+## 🔵 2.4 GHz
+
+### ✔ Strengths
+
+* Best at penetrating walls and solid objects
+* Longest range
+
+### ❌ Weaknesses
+
+* Fewer channels
+* Very congested
+* More interference
+
+### Common Interference Sources
+
+* Bluetooth
+* Microwave ovens
+* Other Wi-Fi networks
+
+### 📏 Nominal Indoor Range:
+
+~45 m (150 ft)
+
+---
+
+## 🟢 5 GHz
+
+### ✔ Strengths
+
+* More channels
+* Less congestion
+* Higher data speeds
+* Less interference
+
+### ❌ Weaknesses
+
+* Shorter range than 2.4 GHz
+* Not as good at penetrating walls
+
+### 📏 Nominal Indoor Range:
+
+~30 m (100 ft)
+
+---
+
+## 🟣 6 GHz (Newest Band)
+
+### ✔ Strengths
+
+* Fastest speeds
+* Least congestion (new band)
+* Very stable connections
+
+### ❌ Weaknesses
+
+* Shortest range
+* Weakest wall penetration
+
+### 📏 Nominal Indoor Range:
+
+~15 m (50 ft)
+
+---
+
+# ⚠ Important Exam Notes
+
+* Real-world full-speed connection usually only works at:
+
+  * **1/3 to 1/2 of maximum range**
+* Range is limited by:
+
+  * Building materials
+  * Interference
+  * Power output regulations
+
+--------------------------------------------------------------------------
+
+Here are your **clean, test-ready A+ notes** for **5.4.3 – IEEE 802.11a** 👇
+
+---
+
+# **5.4.3 IEEE 802.11a**
+
+## 📡 Overview
+
+* Operates on **5 GHz band only**
+* Maximum data rate: **54 Mbps**
+* Uses **20 MHz channel width**
+* Has **23 non-overlapping channels**
+
+---
+
+# ⚡ Performance & Characteristics
+
+### ✔ Advantages
+
+* Less interference than 2.4 GHz
+* More non-overlapping channels
+* Better performance in less crowded environments
+
+### ❌ Disadvantages
+
+* Shorter range than 2.4 GHz
+* Lower wall penetration
+* Older standard (mostly replaced today)
+
+---
+
+# 🌍 Regulatory Considerations
+
+Wi-Fi use depends on country regulations:
+
+* Power output is limited → affects range
+* Channel availability may vary by country
+* Must comply with radar protection rules
+
+---
+
+# 🚨 Dynamic Frequency Selection (DFS)
+
+Devices in 5 GHz must support **DFS**.
+
+### What DFS does:
+
+* Detects radar or satellite signals
+* Automatically disables the channel if radar is detected
+* Prevents interference with:
+
+  * Weather radar
+  * Military radar
+  * Satellite systems
+
+If radar is detected → the AP switches channels.
+
+---
+
+# 📶 U-NII Bands (5 GHz Organization)
+
+The 5 GHz band is divided into:
+
+**U-NII (Unlicensed National Information Infrastructure) sub-bands**
+
+* Each sub-band = 5 MHz wide
+* Wi-Fi channels are spaced 4 sub-bands apart
+* This creates **20 MHz channel width**
+
+---
+
+# 🧠 A+ Exam Memory Points
+
+* 802.11a = 5 GHz only
+* Max speed = 54 Mbps
+* 23 non-overlapping 20 MHz channels
+* Uses DFS to avoid radar interference
+* Shorter range than 2.4 GHz
+
+---------------------------------------------------------------------------
