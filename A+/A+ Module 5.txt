@@ -1611,11 +1611,7 @@ The AP connects to the wired network like a normal device:
 
 --------------------------------------------------------------------------
 
-Here are your **clean, test-ready A+ notes** for **5.4.3 – IEEE 802.11a** 👇
-
----
-
-# **5.4.3 IEEE 802.11a**
+5.4.3 IEEE 802.11a
 
 ## 📡 Overview
 
@@ -1691,3 +1687,708 @@ The 5 GHz band is divided into:
 * Shorter range than 2.4 GHz
 
 ---------------------------------------------------------------------------
+
+5.4.4 IEEE 802.11b / 802.11g
+
+## 📡 802.11b Overview
+
+* Uses **2.4 GHz frequency band**
+* Maximum speed: **11 Mbps**
+* Released around the same time as **802.11a**
+* Uses **DSSS (Direct-Sequence Spread Spectrum)** modulation
+
+### Channel Details
+
+* Up to **14 channels**
+* Channels spaced **5 MHz apart**
+* Channel width: **22 MHz**
+
+### Problem: Channel Overlap
+
+Because channels are **22 MHz wide but spaced only 5 MHz apart**, they overlap heavily.
+
+Only **3 channels do not overlap**:
+
+* **Channel 1**
+* **Channel 6**
+* **Channel 11**
+
+These are the recommended channels for avoiding interference.
+
+### Channel Availability by Region
+
+* **Americas:** Channels **1–11**
+* **Europe:** Channels **1–13**
+* **Japan:** Channels **1–14**
+
+---
+
+# ⚡ 802.11g Overview
+
+* Also uses **2.4 GHz**
+* Maximum speed: **54 Mbps**
+* Designed as an **upgrade for 802.11b**
+* **Backward compatible with 802.11b**
+
+### Modulation Method
+
+802.11g uses **OFDM (Orthogonal Frequency-Division Multiplexing)**.
+
+Benefits:
+
+* More efficient
+* Higher data rates
+* Uses smaller **20 MHz channel width**
+
+---
+
+# 📊 Key Differences
+
+| Feature       | 802.11b | 802.11g                          |
+| ------------- | ------- | -------------------------------- |
+| Frequency     | 2.4 GHz | 2.4 GHz                          |
+| Max Speed     | 11 Mbps | 54 Mbps                          |
+| Channel Width | 22 MHz  | 20 MHz                           |
+| Modulation    | DSSS    | OFDM                             |
+| Compatibility | —       | Backward compatible with 802.11b |
+
+---
+
+# ⚠ Important A+ Exam Points
+
+* **2.4 GHz band → channel overlap**
+* Only **channels 1, 6, 11 are non-overlapping**
+* **802.11b = 11 Mbps**
+* **802.11g = 54 Mbps**
+* **802.11g supports legacy 802.11b devices**
+
+---
+
+# 🧠 Quick Memory Trick
+
+**B = Basic speed (11 Mbps)**
+**G = Greater speed (54 Mbps)**
+
+Both operate on **2.4 GHz**.
+
+---------------------------------------------------------------------------
+
+5.4.5 IEEE 802.11n (Wi-Fi 4)
+
+## 📡 Overview
+
+* Works on **2.4 GHz and 5 GHz**
+* Introduced **major speed and reliability improvements**
+* Can support **dual-band operation**
+
+### Dual Band
+
+* Devices that use **both 2.4 GHz and 5 GHz simultaneously** are called **dual-band**.
+* Each band uses a **separate radio**.
+* Some older devices support **2.4 GHz only**.
+
+---
+
+# 📶 Channel Bonding
+
+802.11n introduced **channel bonding**.
+
+* Combines **two 20 MHz channels**
+* Creates a **40 MHz channel**
+
+### Benefit
+
+* More bandwidth
+* Higher data speeds
+
+### Limitation
+
+* Not practical in **2.4 GHz networks** because channels overlap
+* Mostly used in **5 GHz band**
+
+---
+
+# 📡 MIMO Technology
+
+**MIMO = Multiple Input Multiple Output**
+
+* Uses **multiple antennas** to send and receive signals
+* Improves:
+
+  * Speed
+  * Reliability
+  * Signal strength
+
+### Antenna Configurations
+
+Written as:
+
+* **1×1**
+* **2×2**
+* **3×3**
+
+Example:
+**2×2 = 2 transmit antennas + 2 receive antennas**
+
+---
+
+# ⚡ Speed
+
+Per data stream:
+
+* **72 Mbps** (20 MHz channel)
+* **150 Mbps** (40 MHz bonded channel)
+
+Access points often marketed as **Nxxx**.
+
+Example:
+
+* **N600 router**
+
+  * 2×2 MIMO
+  * 300 Mbps on **2.4 GHz**
+  * 300 Mbps on **5 GHz**
+  * Total advertised speed = **600 Mbps**
+
+---
+
+# 🧠 A+ Exam Key Points
+
+* 802.11n = **Wi-Fi 4**
+* Works on **2.4 GHz and 5 GHz**
+* Introduced **MIMO**
+* Introduced **channel bonding (40 MHz)**
+* Supports **dual-band routers**
+* Speeds up to **600 Mbps**
+
+---
+
+# ⚡ Quick Memory Trick
+
+**N = New improvements**
+
+* **Dual band**
+* **MIMO antennas**
+* **Channel bonding**
+* **Much faster speeds**
+
+-----------------------------------------------------------------------
+5.4.7 Wi-Fi 5 and Wi-Fi 6
+
+These standards continue improving **speed, bandwidth, and the ability to handle many connected devices**.
+
+---
+
+# 📡 Wi-Fi 5 (802.11ac)
+
+## Basic Characteristics
+
+* Works on **5 GHz only**
+* Uses **channel bonding** up to **80 MHz and 160 MHz**
+* Supports up to **8 spatial streams** (usually **4×4** in real devices)
+
+### Speed
+
+* **433 Mbps per stream** on an **80 MHz channel**
+
+Routers are marketed with **AC ratings** such as **AC5300**.
+
+Example AC5300 router:
+
+* **1000 Mbps** (2.4 GHz)
+* **2166 Mbps** (first 5 GHz radio)
+* **2166 Mbps** (second 5 GHz radio)
+
+These numbers represent **combined theoretical speeds**, not actual single-device speed.
+
+---
+
+## Tri-Band Routers
+
+Some Wi-Fi 5 routers are **tri-band**:
+
+* **1 × 2.4 GHz radio**
+* **2 × 5 GHz radios**
+
+This helps support **more devices simultaneously**.
+
+---
+
+# 📡 MU-MIMO (Multi-User MIMO)
+
+Traditional Wi-Fi:
+
+* AP communicates with **one device at a time**
+
+Wi-Fi 5 improvement:
+
+**Downlink MU-MIMO (DL MU-MIMO)**
+Allows the AP to **send data to up to 4 devices simultaneously**.
+
+---
+
+# 📡 Wi-Fi 6 (802.11ax)
+
+Wi-Fi 6 improves both **speed and efficiency**.
+
+## Frequency Bands
+
+* Works on **2.4 GHz and 5 GHz**
+
+### Wi-Fi 6E
+
+Adds support for **6 GHz band**
+
+Advantages of 6 GHz:
+
+* More available spectrum
+* Less congestion
+* Easier use of **80 MHz and 160 MHz channels**
+
+Disadvantage:
+
+* **Shorter range**
+
+---
+
+## Speed
+
+* **600 Mbps per stream (80 MHz channel)**
+
+Example router rating:
+
+**AX6000**
+
+* ~1148 Mbps on **2.4 GHz**
+* ~4804 Mbps on **5 GHz**
+
+---
+
+# 📡 Improvements in Wi-Fi 6
+
+### 1️⃣ More Simultaneous Devices
+
+* Wi-Fi 5: **Up to 4 clients**
+* Wi-Fi 6: **Up to 8 clients**
+
+---
+
+### 2️⃣ Uplink MU-MIMO
+
+Wi-Fi 6 adds **uplink MU-MIMO**:
+
+Devices can **send data to the AP simultaneously**.
+
+---
+
+### 3️⃣ OFDMA (Orthogonal Frequency Division Multiple Access)
+
+OFDMA improves efficiency by:
+
+* Dividing channels into **smaller sub-channels**
+* Allowing **many devices to transmit at once**
+
+Result:
+
+* Better performance in **crowded networks**
+* Higher client density
+
+---
+
+# 📊 Quick Comparison
+
+| Feature              | Wi-Fi 5 (802.11ac) | Wi-Fi 6 (802.11ax) |
+| -------------------- | ------------------ | ------------------ |
+| Frequency            | 5 GHz              | 2.4 GHz + 5 GHz    |
+| Wi-Fi 6E             | —                  | Adds 6 GHz         |
+| Max per-stream speed | 433 Mbps           | 600 Mbps           |
+| MU-MIMO              | Downlink only      | Uplink + Downlink  |
+| Simultaneous clients | Up to 4            | Up to 8            |
+| Efficiency tech      | —                  | OFDMA              |
+
+-------------------------------------------------------------------------
+
+5.4.8 Wi-Fi 7 (802.11be)
+
+## 📡 Overview
+
+* Latest generation Wi-Fi standard
+* Works on **2.4 GHz, 5 GHz, and 6 GHz bands**
+* Designed for **extremely high speeds and very low latency**
+
+Maximum theoretical speed:
+⚡ **Up to 46 Gbps**
+
+---
+
+# 📶 Wider Channels
+
+Wi-Fi 7 introduces **320 MHz channels** (in the **6 GHz band**).
+
+Benefits:
+
+* Much higher bandwidth
+* Faster data transfer speeds
+
+Comparison:
+
+| Wi-Fi Standard | Channel Width |
+| -------------- | ------------- |
+| Wi-Fi 5        | 80 / 160 MHz  |
+| Wi-Fi 6        | 160 MHz       |
+| **Wi-Fi 7**    | **320 MHz**   |
+
+---
+
+# 🔗 Multi-Link Operation (MLO)
+
+**MLO allows devices to use multiple bands at the same time.**
+
+Devices can transmit across:
+
+* **2.4 GHz**
+* **5 GHz**
+* **6 GHz**
+
+Benefits:
+
+* Lower latency
+* Faster speeds
+* More stable connections
+
+Example:
+A device could send data on **5 GHz and 6 GHz simultaneously**.
+
+---
+
+# 📊 Multi-Resource Units (MRUs)
+
+Wi-Fi 7 divides channels into smaller pieces called **MRUs**.
+
+The access point can:
+
+* Allocate **more MRUs** to devices that need more bandwidth
+* Allocate **fewer MRUs** to devices that need less bandwidth
+
+Benefits:
+
+* Better efficiency
+* Better performance in crowded networks
+* Dynamic bandwidth allocation
+
+---
+
+# 📈 Key Improvements Over Wi-Fi 6
+
+| Feature             | Wi-Fi 6   | Wi-Fi 7                |
+| ------------------- | --------- | ---------------------- |
+| Max Speed           | ~9.6 Gbps | **~46 Gbps**           |
+| Channel Width       | 160 MHz   | **320 MHz**            |
+| Multi-band use      | Limited   | **MLO (simultaneous)** |
+| Resource allocation | OFDMA     | **MRU**                |
+
+--------------------------------------------------------------------------
+
+5.4.9 Wireless LAN Installation Considerations
+
+## 📡 SSID (Service Set Identifier)
+
+* The **SSID** is the **network name** used to identify a wireless network.
+* Wireless clients use the SSID to connect to an access point.
+
+Key points:
+
+* Maximum length: **32 bytes**
+* Recommended characters:
+
+  * **Letters (A–Z)**
+  * **Numbers (0–9)**
+  * **Hyphen (-)**
+  * **Underscore (_)**
+
+Example SSIDs:
+
+* OfficeWiFi
+* Company_Network
+* Guest-WiFi
+
+---
+
+# ⚙️ Configuring an Access Point
+
+When setting up an access point, several settings must be configured.
+
+---
+
+# 1️⃣ Same SSID vs Different SSID for Bands
+
+Modern routers often support **2.4 GHz and 5 GHz bands**.
+
+### Same SSID
+
+Both bands use the **same network name**.
+
+Example:
+
+* HomeWiFi (2.4 GHz)
+* HomeWiFi (5 GHz)
+
+Result:
+
+* The device automatically selects the **band with the strongest signal**.
+
+Advantages:
+✔ Easier for users
+✔ Automatic band selection
+
+---
+
+### Different SSIDs
+
+Each band has a **different network name**.
+
+Example:
+
+* HomeWiFi_2.4
+* HomeWiFi_5G
+
+Result:
+
+* Users manually choose which band to connect to.
+
+Advantages:
+✔ More control over which band is used
+
+---
+
+# 2️⃣ Operation Mode
+
+The **operation mode** determines which wireless standards the access point supports.
+
+Examples:
+
+* **802.11n**
+* **802.11ac**
+* **802.11ax**
+
+Important concept:
+
+⚠ Supporting **older devices (legacy standards)** may reduce network performance.
+
+Why?
+
+The AP must adjust speeds and features to remain compatible.
+
+---
+
+# 3️⃣ Channel Selection
+
+Each wireless band uses **channels**.
+
+If **multiple access points overlap**, they must use **non-overlapping channels** to prevent interference.
+
+Example (2.4 GHz common channels):
+
+| Channel | Usage           |
+| ------- | --------------- |
+| 1       | Non-overlapping |
+| 6       | Non-overlapping |
+| 11      | Non-overlapping |
+
+---
+
+# 4️⃣ Channel Bonding
+
+Channel bonding combines channels to create **wider bandwidth**.
+
+Example:
+
+* **20 MHz + 20 MHz = 40 MHz channel**
+
+Benefits:
+✔ Higher speeds
+✔ More bandwidth
+
+Risk:
+⚠ Increased interference in crowded areas
+
+Most practical in:
+
+* **5 GHz band**
+
+---
+
+# 🔒 Security Configuration
+
+Besides SSID and channels, you must also configure **security settings**.
+
+Security controls:
+
+* Who can connect
+* Encryption type
+* Authentication
+
+Common security methods:
+
+* **WPA2**
+* **WPA3**
+
+---------------------------------------------------------------------------
+ 
+5.4.10 Wi-Fi Analyzers
+
+## 📡 What is a Wi-Fi Analyzer?
+
+A **Wi-Fi analyzer** is a tool used to:
+
+* Measure **wireless signal strength**
+* Detect **nearby wireless networks**
+* Help choose the **best Wi-Fi channel**
+* Troubleshoot **wireless performance issues**
+
+Wi-Fi analyzers can be:
+
+* **Software** (apps on laptops or smartphones)
+* **Hardware** devices
+
+A software analyzer can:
+
+* Show the **access point you are connected to**
+* Detect **other nearby access points**
+* Display **channel usage and signal strength**
+
+---
+
+# 📊 Signal Strength (dBm)
+
+Wi-Fi signal strength is measured in **dBm (decibels relative to 1 milliwatt)**.
+
+Important facts:
+
+* **0 dBm = 1 milliwatt (mW)**
+* Wi-Fi signals are usually **negative values**
+
+Example values:
+
+| Signal Strength | Power       |
+| --------------- | ----------- |
+| 0 dBm           | 1 mW        |
+| -30 dBm         | 0.001 mW    |
+| -60 dBm         | 0.000001 mW |
+
+Because Wi-Fi devices transmit **very low power**, values are normally negative.
+
+---
+
+# 📶 Interpreting Signal Strength
+
+**Values closer to 0 are stronger signals.**
+
+Typical ranges:
+
+| dBm Value        | Signal Quality             |
+| ---------------- | -------------------------- |
+| -30 dBm          | Excellent                  |
+| -50 dBm          | Very good                  |
+| -65 dBm          | Good                       |
+| -70 dBm          | Weak                       |
+| -80 dBm or worse | Poor / connection problems |
+
+Key points:
+
+* Around **-65 dBm = good signal**
+* **Worse than -80 dBm = packet loss likely**
+
+---
+
+# 📉 Understanding dB (Decibels)
+
+dB values use a **logarithmic scale**, meaning small changes represent big differences.
+
+Examples:
+
+* **+3 dB = signal doubles**
+* **-3 dB = signal halves**
+
+So even small changes can greatly affect performance.
+
+---
+
+# 🔊 Signal-to-Noise Ratio (SNR)
+
+**SNR = Signal strength – Noise level**
+
+It measures how strong the Wi-Fi signal is compared to background noise.
+
+Formula:
+
+SNR = Signal (dBm) – Noise (dBm)
+
+Example:
+
+Signal = **-65 dBm**
+Noise = **-90 dBm**
+
+SNR = **25 dB**
+
+This is a **good connection**.
+
+Another example:
+
+Signal = **-65 dBm**
+Noise = **-80 dBm**
+
+SNR = **15 dB**
+
+This is **much worse performance**.
+
+---
+
+# 📡 Example from Wi-Fi Analyzer
+
+A Wi-Fi analyzer may show:
+
+* Nearby **wireless networks**
+* **SSID names**
+* **Channels used**
+* **Signal strength**
+
+Example situation:
+
+* Home network uses **two access points**
+* Both use the **same SSID**
+* Channels **6 and 11** used on **2.4 GHz**
+* Stronger signal indicates the **closest access point**
+
+On **5 GHz**, fewer signals appear because:
+
+📌 **5 GHz has shorter range than 2.4 GHz**
+
+--------------------------------------------------------------------------
+
+5.4.13
+Lab: Secure a Small Wireless Network
+
+In this scenario, you've installed a new router in your home office. You've already connected your desktop computer (Home-PC) to the router with an Ethernet cable. Your next step is to set up the wireless network so you can connect your laptop (Home-Laptop) over Wi-Fi.
+
+To configure the wireless access point, use Chrome on Home-PC.
+
+Address: 192.168.0.254
+Username: admin
+Password: password
+If this were a real network, you would change those right away, but that's not part of this lab.
+
+Perform the following tasks:
+
+Give the network an SSID (network name):
+The SSID can be changed on the Basic Settings subtab of the Wireless tab.
+Add the SSID Pretty Fly Wi-Fi to the 2.4GHz interface.
+Before you leave this page, scroll to the bottom and click Apply Settings to save your work.
+Add encryption and a password to the wireless network:
+The encryption and password can be configured on the Wireless Security subtab of the Wireless tab.
+Use WPA2-PSK encryption.
+Set H@rd2Guess as the shared key (password).
+Before you leave this page, scroll to the bottom and click Apply Settings to save your work.
+Return to the Computer Desk and connect the laptop to the wireless network you just configured.
+
+-----------------------------------------------------------------------
