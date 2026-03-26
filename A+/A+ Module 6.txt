@@ -1,2 +1,835 @@
 Module 6
 _________________________________________________________________________
+
+
+6.1.1 Internet Connection Types and Modems
+
+## What is the Internet?
+
+The **Internet** is a **global network of networks** that connects millions of devices worldwide.
+
+The core infrastructure of the Internet includes:
+
+* **High-bandwidth fiber optic cables**
+* **Internet Exchange Points (IXPs)**
+
+These are built mainly by:
+
+* Telecommunications companies
+* Academic institutions
+
+---
+
+# Internet Exchange Points (IXPs)
+
+An **Internet Exchange Point (IXP)** is a location where different networks connect and exchange Internet traffic.
+
+At an IXP:
+
+* **Internet Service Providers (ISPs)** connect their networks
+* Traffic is exchanged between networks
+
+This allows data to move **efficiently across the Internet**.
+
+---
+
+# Internet Service Providers (ISPs)
+
+An **ISP** provides Internet access to customers.
+
+ISPs connect to each other using two main methods:
+
+### Transit
+
+* One ISP **pays another ISP** to carry its traffic.
+
+### Peering
+
+* Two ISPs **exchange traffic directly** without payment.
+
+---
+
+# ISP Hierarchy (Tier System)
+
+ISPs are organized in **tiers** depending on their size and connections.
+
+### Tier 1 ISP
+
+* Largest providers
+* Own global networks
+* Do not need to pay for transit
+
+### Tier 2 ISP
+
+* Connect to Tier 1 providers
+* May peer with other ISPs
+
+### Tier 3 ISP
+
+* Local or regional providers
+* Purchase transit from higher-tier ISPs
+
+---
+
+# How Customers Connect to the Internet
+
+Home or office networks connect to an ISP using a **WAN connection**.
+
+The connection goes to the ISP’s **Point of Presence (PoP)**.
+
+Examples of PoP locations:
+
+* Local telephone exchange
+* ISP facility
+* Network hub
+
+---
+
+# Internet Connection Type
+
+An **Internet connection type** refers to:
+
+* The **technology used**
+* The **hardware involved**
+* The **communication protocols**
+
+These connect a **home or business network** to the ISP.
+
+Examples (covered later in A+):
+
+* DSL
+* Cable
+* Fiber
+* Satellite
+* Cellular
+
+---
+
+#  Point-to-Point Connection
+
+Most WAN connections are **point-to-point**.
+
+This means:
+
+➡ Only **two devices** are connected on the link.
+
+Example:
+
+* Customer modem
+* ISP network equipment
+
+This differs from **Ethernet**, where many devices can share the same network.
+
+---
+
+# Digital Modems
+
+A **digital modem** connects the local network to the ISP.
+
+The modem:
+
+* Converts signals so they can travel across the ISP’s network
+* Acts as the **WAN interface** for the network
+
+In a home network:
+
+Internet → ISP → **Modem** → Router → Local devices
+
+___________________________________________________________________________
+6.1.2 Digital Subscriber Line (DSL) Modems
+
+## Public Switched Telephone Network (PSTN)
+
+Many Internet connections use the **Public Switched Telephone Network (PSTN)**.
+
+The PSTN is the global telephone system.
+
+Structure of the PSTN:
+
+* Core network uses **fiber optic cables**
+* Edge connections often use **copper telephone lines**
+
+The copper wire connecting homes to the telephone network is called:
+
+* **Local loop**
+* **Last mile**
+* **Plain Old Telephone System (POTS)**
+
+---
+
+# What is DSL?
+
+**Digital Subscriber Line (DSL)** uses existing **copper telephone lines** to provide Internet access.
+
+DSL works by:
+
+* Using **higher frequencies on the phone line for data**
+* Allowing **voice calls and Internet at the same time**
+
+Technologies used:
+
+* Advanced modulation
+* Echo canceling
+
+This allows **full-duplex communication** (sending and receiving data at the same time).
+
+---
+
+# Types of DSL
+
+## Asymmetric DSL (ADSL)
+
+ADSL provides **faster download speeds than upload speeds**.
+
+Typical speeds:
+
+* Download: up to **24 Mbps**
+* Upload: about **1.4–3.3 Mbps**
+
+This type is mainly used in **homes** because most users download more data than they upload.
+
+---
+
+## Symmetric DSL (SDSL)
+
+SDSL provides **equal upload and download speeds**.
+
+Commonly used for:
+
+* Businesses
+* Branch offices
+* Situations where more data is uploaded
+
+---
+
+# DSL Modem
+
+A **DSL modem** connects a home or office network to the telephone line.
+
+The modem may be:
+
+1. **Standalone device**
+2. **Built into a SOHO router**
+
+SOHO means **Small Office / Home Office**.
+
+Connection flow example:
+
+Internet → ISP → DSL modem → Router → Devices
+
+---
+
+# DSL Ports
+
+Common ports on a DSL modem:
+
+**RJ11**
+
+* Connects the modem to the **telephone line**
+
+**RJ45**
+
+* Connects the modem to a **router or local network**
+
+---
+
+# DSL Splitters (Filters)
+
+A **DSL splitter** separates:
+
+* Voice signals
+* Data signals
+
+Without a splitter:
+
+* Phone calls may have noise
+* Internet may disconnect
+
+Splitters can be:
+
+* Installed on each phone socket
+* Built into modern wall outlets
+
+___________________________________________________________________
+
+6.1.3 Cable Modems
+
+## Cable Internet
+
+**Cable Internet** is usually provided through a **Cable Access TV (CATV)** service.
+
+This network type is commonly called:
+
+* **Hybrid Fiber Coax (HFC)**
+* **Broadband cable**
+* **Cable Internet**
+
+---
+
+# Hybrid Fiber Coax (HFC)
+
+A **Hybrid Fiber Coax (HFC)** network uses two types of cabling:
+
+**Fiber optic cables**
+
+* Used in the **core network**
+* Very fast and high bandwidth
+
+**Coaxial cables**
+
+* Used to connect **homes and businesses**
+
+So the path looks like:
+
+Internet → ISP → Fiber network → Coax cable → Customer modem
+
+---
+
+# DOCSIS Standard
+
+Cable Internet uses the **Data Over Cable Service Interface Specification (DOCSIS)**.
+
+DOCSIS defines how data is sent over cable TV networks.
+
+Typical speeds:
+
+**Older DOCSIS versions**
+
+* Download: up to **42.88 Mbps (North America)**
+* Download: up to **55.62 Mbps (Europe)**
+* Upload: up to **30.72 Mbps**
+
+**DOCSIS 4**
+
+* Download: up to **10 Gbps**
+* Upload: up to **6 Gbps**
+
+DOCSIS 4 achieves this using **multiplexed channels** (multiple channels combined to increase speed).
+
+---
+
+# Cable Modem Installation
+
+Cable modem installation is similar to DSL installation.
+
+The cable modem connects:
+
+**To the ISP network**
+
+* Using a **coaxial cable**
+* Connector type: **F-type threaded connector**
+
+**To the local network**
+
+* Using **Ethernet (RJ45)**
+
+---
+
+# Cable Network Infrastructure
+
+In a cable network:
+
+1. Homes connect using **coaxial cable**
+2. The coax connects to a **Cable Modem Termination System (CMTS)**
+3. The CMTS sends traffic through the **fiber backbone**
+4. The data reaches the **ISP Point of Presence (PoP)**
+5. Then traffic goes to the **Internet**
+
+---
+
+# Important Components
+
+**Cable Modem**
+
+* Connects home network to cable provider
+
+**CMTS (Cable Modem Termination System)**
+
+* Device at the provider that communicates with cable modems
+
+**Coaxial Cable**
+
+* Connects homes to the cable network
+
+**RJ45 Ethernet**
+
+* Connects modem to router
+
+_____________________________________________________________________
+
+6.1.4
+Lab: Connect a Cable Modem
+
+You are working on a small office/home office (SOHO) network. You have just signed up for cable Internet access for the network. The cable company has installed the line into your home and given you a preconfigured modem for your network.
+
+Your task in this lab is to:
+
+Connect the components to make the Internet connection.
+Add the cable modem to the Workspace.
+Connect the modem to the ISP's cable line using the RG-6 coaxial cable.
+Connect the computer to the cable modem using a Cat6a Ethernet cable.
+Use the AC to DC power adapter to plug in the modem.
+
+_______________________________________________________________________
+
+Lesson 6.2 – TCP/IP Concepts
+
+## 🎯 Why This Matters (A+ Objective 2.6)
+
+As a CompTIA A+ tech, you need to:
+
+* Configure **IP settings on PCs**
+* Set up **SOHO routers**
+* Ensure devices can **communicate on a network and access the Internet**
+
+TCP/IP is the **foundation of all of this**.
+
+---
+
+# 🌐 What is TCP/IP?
+
+**TCP/IP (Transmission Control Protocol / Internet Protocol)** is a **protocol suite** used for:
+
+* Logical addressing
+* Data transmission
+* Routing across networks
+
+---
+
+# 🧱 TCP/IP Model (4 Layers)
+
+## 1️⃣ Application Layer
+
+* Provides network services to apps
+
+Examples:
+
+* HTTP (web)
+* FTP (files)
+* SMTP (email)
+* DNS (name resolution)
+
+---
+
+## 2️⃣ Transport Layer
+
+* Manages data delivery
+
+Protocols:
+
+* **TCP** → reliable (error checking, retransmission)
+* **UDP** → fast (no guarantee)
+
+---
+
+## 3️⃣ Internet Layer
+
+* Handles **IP addressing and routing**
+
+Protocols:
+
+* IPv4
+* IPv6
+
+---
+
+## 4️⃣ Network Interface Layer
+
+* Handles physical network communication
+
+Examples:
+
+* Ethernet
+* Wi-Fi
+
+---
+
+# 🔄 IPv4 vs IPv6
+
+## IPv4
+
+* 32-bit address
+* Written in decimal (e.g., 192.168.1.1)
+* Limited addresses (~4.3 billion)
+
+---
+
+## IPv6
+
+* 128-bit address
+* Written in hexadecimal (e.g., 2001:db8::1)
+* Huge number of addresses (virtually unlimited)
+
+---
+
+## Key Differences
+
+| Feature       | IPv4    | IPv6         |
+| ------------- | ------- | ------------ |
+| Size          | 32-bit  | 128-bit      |
+| Format        | Decimal | Hexadecimal  |
+| Address Space | Limited | Massive      |
+| NAT needed    | Yes     | Not required |
+
+---
+
+# 📊 IPv4 Address Classes
+
+IPv4 addresses are divided into **classes**:
+
+| Class | Range                       | Use             |
+| ----- | --------------------------- | --------------- |
+| A     | 1.0.0.0 – 126.255.255.255   | Large networks  |
+| B     | 128.0.0.0 – 191.255.255.255 | Medium networks |
+| C     | 192.0.0.0 – 223.255.255.255 | Small networks  |
+
+### Private IP Ranges (Important!)
+
+* Class A: **10.0.0.0 – 10.255.255.255**
+* Class B: **172.16.0.0 – 172.31.255.255**
+* Class C: **192.168.0.0 – 192.168.255.255**
+
+These are used in **home and business networks**.
+
+---
+
+# 📡 DHCP (Dynamic Host Configuration Protocol)
+
+## What DHCP Does
+
+DHCP automatically assigns:
+
+* IP address
+* Subnet mask
+* Default gateway
+* DNS server
+
+This makes network setup **easy and automatic**.
+
+---
+
+## 🔄 DHCP Process (DORA)
+
+1. **Discover** → Client looks for DHCP server
+2. **Offer** → Server offers an IP address
+3. **Request** → Client requests the IP
+4. **Acknowledge** → Server confirms assignment
+
+---
+
+## ❌ What Happens if DHCP Fails?
+
+If DHCP fails:
+
+* Device assigns itself an address in:
+
+  * **169.254.x.x** (APIPA)
+
+This means:
+
+* ❌ No Internet access
+* ❌ Cannot reach other networks
+
+But:
+
+* ✔ Can communicate with local devices (sometimes)
+
+-------------------------------------------------------------------------
+
+# 6.2.1 - TCP/IP
+
+## What is a Protocol?
+A **protocol** is a set of rules that allows networked devices (hosts) to communicate using a structured format.
+
+- Defines how data is sent, received, and interpreted
+- Ensures devices understand each other
+- Multiple protocols often work together
+
+---
+
+## Protocol Suite
+A **protocol suite** is a group of protocols designed to work together.
+
+- Most modern networks use the **TCP/IP (Transmission Control Protocol / Internet Protocol) suite**
+- Each protocol in the suite has a specific role
+
+---
+
+## Layered Model Concept
+To understand how protocols function, networking uses a **layered model**.
+
+- Each layer has a specific job
+- Layers work together to send and receive data
+- Lower layers **encapsulate** data from higher layers
+
+### Encapsulation
+Encapsulation is the process where:
+- Each layer adds its own **header** to the data
+- Data moves down the layers before transmission
+- At the receiving end, headers are removed (decapsulation)
+
+---
+
+## TCP/IP Model Overview
+The **TCP/IP model** consists of **four layers**:
+
+### 1. Application Layer
+- Provides network services to applications
+- Examples: Web browsing, email
+
+### 2. Transport Layer
+- Responsible for end-to-end communication
+- Ensures data is delivered correctly
+- Protocols: TCP (reliable), UDP (faster, less reliable)
+
+### 3. Internet Layer
+- Handles addressing and routing of data packets
+- Main protocol: IP (Internet Protocol)
+
+### 4. Network Access Layer
+- Deals with physical transmission of data
+- Includes hardware and network media
+
+---
+
+## Key Points to Remember
+- Protocols = rules for communication
+- TCP/IP is the standard protocol suite used today
+- Data moves through layers using encapsulation
+- Each layer has a specific role in communication
+
+-------------------------------------------------------------------------
+
+# 6.2.2 - Link (Network Interface) Layer
+
+## Overview
+The **Link layer** (also called the **Network Interface layer**) is responsible for placing data onto the physical network.
+
+- Prepares data for transmission over the network medium
+- Works closely with physical hardware
+- Does **not directly use TCP/IP protocols**
+
+---
+
+## Key Functions
+- Packages data into units called **frames**
+- Handles communication over the **local network**
+- Manages access to the physical medium (cables, wireless signals)
+
+---
+
+## Technologies at This Layer
+Different networking technologies operate at the Link layer:
+
+- **Ethernet** (wired networks)
+- **Wi-Fi** (wireless networks)
+- **DSL** (Digital Subscriber Line)
+- **Cable modems**
+
+---
+
+## Local Communication
+- Communication only happens within a **local network segment**
+- This layer does **not route data between different networks**
+- Routing is handled by higher layers (Internet layer)
+
+---
+
+## Frames and MAC Addresses
+
+### Frames
+- Data is packaged into **frames** before being sent
+- Frames include:
+  - Source address
+  - Destination address
+  - Data payload
+
+### MAC Address
+- Each device has a unique **MAC (Media Access Control) address**
+- Used to identify devices on a local network
+- Operates only within the local segment
+
+---
+
+## Key Points to Remember
+- Link layer = physical network access
+- Uses **frames** to send data
+- Works only on local networks
+- Devices are identified using **MAC addresses**
+- Supports technologies like Ethernet and Wi-Fi
+
+--------------------------------------------------------------------------
+
+# 6.2.3 - Internet Layer
+
+## Overview
+The **Internet layer** is responsible for **packet addressing and routing** across networks.
+
+- Enables communication between different networks (network of networks)
+- Uses the **Internet Protocol (IP)**
+
+---
+
+## End System Hosts
+Devices that communicate on an IP network are called **end system hosts**.
+
+Examples:
+- PC
+- Laptop
+- Mobile device
+- Server
+
+---
+
+## Routing and Routers
+- Data traveling between networks must pass through an **intermediate system**
+- This system is called a **router**
+- Routers forward packets from one network to another
+
+---
+
+## IP and Addressing
+- Each device has an **IP address**
+- IP addresses are used to identify devices across networks
+- Data is packaged into units called **packets**
+
+---
+
+## Address Resolution Protocol (ARP)
+
+### Purpose
+ARP is used to map:
+- **IP address → MAC address**
+
+### Why ARP is Needed
+- IP works at the **Internet layer**
+- MAC addresses work at the **Link layer**
+- ARP connects these two layers so data can be delivered correctly
+
+### How It Works
+- A device sends a request asking:  
+  “Who has this IP address?”
+- The correct device replies with its **MAC address**
+
+---
+
+## IP Characteristics
+
+### 1. Connectionless
+- No dedicated connection is established before sending data
+- Each packet is sent independently
+
+### 2. Best-Effort Delivery
+- IP does **not guarantee delivery**
+- Packets may:
+  - Be lost
+  - Arrive out of order
+  - Be duplicated
+  - Be delayed
+
+---
+
+## Key Points to Remember
+- Internet layer handles **addressing and routing**
+- Uses **IP (Internet Protocol)**
+- Routers forward packets between networks
+- ARP maps IP addresses to MAC addresses
+- IP is **connectionless and unreliable (best-effort)**
+
+----------------------------------------------------------------------
+
+# 6.2.5 - Application Layer
+
+## Overview
+The **Application layer** provides high-level network services to users and applications.
+
+- Performs functions beyond basic data transport and addressing
+- Enables services like web browsing and email
+- Acts as the interface between users and the network
+
+---
+
+## Application Layer Protocols
+There are many protocols in the TCP/IP suite that operate at this layer.
+
+### Examples of Services
+- Web services
+- Email
+- Network configuration and management
+
+### Key Role
+- Allows applications to communicate over the network
+- Defines how data is formatted and processed for user-level services
+
+---
+
+## Ports and Communication
+- Each application protocol uses a **port number**
+- Ports allow multiple services to run on a single device
+
+### How It Works
+- A **client** connects to a **server** using a specific port
+- The port identifies which service is being requested
+
+---
+
+## TCP/IP Development
+
+### Origins
+- Originally developed by the **U.S. Department of Defense**
+
+### Current Status
+- Now an **open standard**
+- Anyone can contribute to its development
+
+---
+
+## Internet Engineering Task Force (IETF)
+- Responsible for developing and maintaining TCP/IP standards
+- Organized into working groups
+
+---
+
+## Request for Comments (RFCs)
+- Official documents that define standards and protocols
+- Published by the IETF
+
+### Repository
+- All RFCs are stored at: https://www.rfc-editor.org
+
+---
+
+## Key Points to Remember
+- Application layer provides **user-facing network services**
+- Uses protocols for web, email, and more
+- Communication happens through **ports**
+- TCP/IP is an **open standard**
+- Standards are published as **RFCs by the IETF**
+
+------------------------------------------------------------------------
+
+6.2.7
+Lab: Configure IP Addresses
+
+You work as the IT administrator for a small corporate network. You need to configure the workstation in the executive office so that it can connect to the local network and the internet. The workstation has two network interface cards (named Ethernet and Ethernet 2). Having two network cards allows the workstation to connect to the local network (as shown in the exhibits) and another small network, which is not yet built.
+
+In this lab, your task is to:
+
+Configure IP version 4 TCP/IP using the settings specified in the table below (for both network cards).
+From the Exec computer, ping the preferred DNS server assigned to the Ethernet NIC to verify that it can communicate successfully.
+TCP/IP Setting
+or Info	Ethernet	Ethernet 2
+Subnet	192.168.0.0/24	10.0.0.0/16
+IP address	Use the last valid address on the subnet.	Use the last valid address on the subnet.
+Subnet mask	Use the default mask that matches the /24 subnet.	Use the default mask that matches the /16 subnet.
+Default gateway	Choose the appropriate address for the router as shown in the exhibits.	Leave blank
+Preferred DNS server address	Use the address of an external DNS server as shown in the exhibits.	Leave blank
+Alternate DNS server address	Use the address of an external DNS server as shown in the exhibits.	Leave blank
+To access IPv4 settings:
+
+From the Settings app, go to Network & internet, then Advanced network settings.
+Select More network adapter options.
+Right-click a connection and select Properties.
+Select Internet Protocol Version 4, then select Properties.
+
+----------------------------------------------------------------------
